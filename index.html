@@ -12,7 +12,11 @@
         <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
         
     </head>
-
+    <style>
+    .none{
+        display: none;
+    }
+    </style>
 	<body>
         <div class="investigation_box">
             <div id="training_object_box" class="investigation_training_object">
@@ -28,11 +32,12 @@
                 </ul>
                 <button id="training_object_btn">完成</button>
             </div>
-            <div class="investigation_direction">
+            <div id="investigation_direction" class="investigation_direction">
                 <div class="investigation_direction_label">
                     请选择课程方向
                 </div>
                 <div id="direction_box" class="investigation_direction_box">
+                   
                     <!-- <div class="investigation_leaf_box">
                         <input type="checkbox"/>
                         <span>子方向1-1</span>
@@ -66,8 +71,9 @@
                     </div> -->
                 </div>
                 <div id="child_direction_box" class="investigation_child_direction_box">
-
+                        <!-- <div>子方向</div> -->
                 </div>
+                <button id="direction_btn">完成</button>
             </div>
             <div class="investigation_filter">
                 <div class="investigation_filter_title">
