@@ -25,7 +25,16 @@
                         "child_list":[
                             
                         ]}
-                ]}
+                ]},
+                {"id":"2",
+                    "name":"方向1-2",
+                    "depth":"2",
+                    "is_leaf":"1",
+                    "priority":"0",
+                    "filter_list":[1,3],
+                    "child_list":[
+                        
+                    ]}
         ]},{"id":"2",
             "name":"课程2",
             "depth":"1",
