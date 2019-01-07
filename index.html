@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>调查问卷</title>
-		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/training_object.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/direction.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/course.js" type="text/javascript" charset="utf-8"></script>
@@ -15,7 +15,6 @@
         <script src="js/reset.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/get_code.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/form.js" type="text/javascript" charset="utf-8"></script>
-        
         <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -23,6 +22,11 @@
     .none{
         display: none;
     }
+    .box{width: 100%;}
+      .main{width: 100%;height:100vh;top:0;background-color: rgba(0,0,0,0.54);display: none;position: fixed;z-index: 1;}
+      .mainbox{width: 70%;height:100px;top:100px;left:10%;margin: 0 auto;position: fixed;background-color: rgba(255,255,255,0.8);padding: 20px;display: none;}
+      .kkk{width: 100%;}
+      .close{color: red;cursor: pointer;}
     </style>
 	<body>
         <div class="investigation_box">
@@ -125,6 +129,31 @@
                 <button id="investigation_submit" class="investigation_submit">提交</button>
            </div>
         </div>
-		
-	</body>
+        <div class="main">
+            <div class="mainbox">
+              <div id="alert_msg" class="close"></div>
+              <button id="close_alert_msg">确定</button>
+            </div>
+          </div>
+        <div class="box">
+          <div class="kkk">
+            <!-- <input class="btn" type="button" value="点击淡入弹窗" /> -->
+          </div>
+        </div>
+    </body>
+    <script>
+        $(function(){
+          $("#training_object_btn").click(function(){
+            $(".main").fadeIn();
+            $(".mainbox").delay(500).slideDown();
+            setInterval(close, 3000)
+          });
+          $("#close_alert_msg").click(function(){
+            $(".main").fadeOut()
+          })
+          function close(){
+            $(".main").fadeOut()
+          }
+        });
+      </script>
 </html>

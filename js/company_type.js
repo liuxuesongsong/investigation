@@ -61,7 +61,6 @@ $(function(){
                 if(check_company_type[i].checked){
                     selected_message_ids.push(check_company_type[i].value)
                     selected_message_val=selected_message_val+$(check_company_type[i]).siblings().eq(0).html()+",";
-                    console.log($(check_company_type[i]).siblings().eq(0).html())
                 }
             }
             $(id).html(selected_message_val.slice(0,selected_message_val.length-1));

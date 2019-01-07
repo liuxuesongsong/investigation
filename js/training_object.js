@@ -36,6 +36,9 @@ $(function(){
         $("#direction_box").append(main_direction_title);
         var child_direction_title=$("<div>子方向</div>");  
         $("#child_direction_box").append(child_direction_title);
+        // var child_direction_all_select=$("<div class='investigation_un_leaf_allCheck'><input name='all_check_direction' type='checkbox'/><span>全选</span></div>"); 
+        // // var all_select_span= $("<span>全选</span>"); 
+        // $("#child_direction_box").append(child_direction_all_select);
         //循环问题1中复选框
         for(var c = 0;c<check_training_object.length;c++){
             if(check_training_object[c].checked){
