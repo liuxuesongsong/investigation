@@ -186,7 +186,6 @@ input[type=checkbox]:checked:after {
 
 .investigation_direction_box {
   display: block;
-  height: 5em;
   padding-left: 2em;
   padding-bottom: 2em; }
 
@@ -224,27 +223,33 @@ input[type=checkbox]:checked:after {
   .investigation_leaf_box .investigation_direction_message {
     float: left;
     width: 100%;
+    margin-top: 1em;
     line-height: 1em;
     padding-bottom: 0.5em; }
+    .investigation_leaf_box .investigation_direction_message span {
+      float: left; }
+    .investigation_leaf_box .investigation_direction_message input {
+      float: left; }
 
 .investigation_child_direction_box {
   padding: 0 0 1em 4em;
-  height: 8em;
+  height: 9em;
   box-sizing: border-box; }
-  .investigation_child_direction_box .investigation_un_leaf_allCheck {
+  .investigation_child_direction_box .investigation_direction_message {
     float: left;
     width: 100%;
     overflow: hidden;
     line-height: 1em;
-    padding-bottom: 1em; }
-    .investigation_child_direction_box .investigation_un_leaf_allCheck .investigation_un_leaf_ul {
+    padding-bottom: 1em;
+    padding-top: 1em; }
+    .investigation_child_direction_box .investigation_direction_message .investigation_un_leaf_ul {
       float: left;
       width: 100%; }
-    .investigation_child_direction_box .investigation_un_leaf_allCheck input {
+    .investigation_child_direction_box .investigation_direction_message input {
       width: 14px;
       height: 14px;
       float: left; }
-    .investigation_child_direction_box .investigation_un_leaf_allCheck span {
+    .investigation_child_direction_box .investigation_direction_message span {
       float: left;
       line-height: 1em; }
   .investigation_child_direction_box .investigation_un_leaf_ul {
@@ -265,7 +270,7 @@ input[type=checkbox]:checked:after {
 
 .investigation_filter {
   display: block; }
-  .investigation_filter .investigation_filter_title {
+  .investigation_filter .investigation_course_title {
     font-size: 1.2em;
     padding-bottom: 1em; }
   .investigation_filter .interest_courses {
@@ -277,15 +282,11 @@ input[type=checkbox]:checked:after {
       padding: 0 0.5em;
       margin-right: 1em;
       margin-bottom: 0.5em; }
-  .investigation_filter .investigation_course_title {
-    padding-left: 2em;
-    padding-bottom: 1em; }
   .investigation_filter .investigation_course_ul {
     padding-left: 2em;
     display: block;
     overflow-x: hidden;
-    overflow-y: scroll;
-    height: 6em; }
+    overflow-y: scroll; }
     .investigation_filter .investigation_course_ul li {
       float: left;
       width: 100%;
@@ -335,7 +336,7 @@ input[type=checkbox]:checked:after {
     box-sizing: border-box;
     padding-left: 0.5em;
     border: none;
-    width: 12em;
+    width: 9em;
     outline: none;
     float: left;
     background-color: #f5f5f5; }
@@ -371,9 +372,9 @@ input[type=checkbox]:checked:after {
 .investigation_company_duty_box {
   display: block;
   padding-bottom: 1em; }
-  .investigation_company_duty_box .investigation_company_duty_title {
+  .investigation_company_duty_box .investigation_duty_type_title {
     padding-bottom: 1em; }
-    .investigation_company_duty_box .investigation_company_duty_title span {
+    .investigation_company_duty_box .investigation_duty_type_title span {
       font-size: 1.2em; }
   .investigation_company_duty_box .investigation_company_duty_ul {
     display: block;
