@@ -1,164 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-<<<<<<< HEAD
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>调查问卷</title>
-    <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/training_object.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/direction.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/course.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/company_type.js" type="text/javascript" charset="utf-8"></script>
-
-    <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
-</head>
-<style>
-    .none {
-        display: none;
-    }
-</style>
-
-<body>
-    <div class="investigation_box">
-        <div id="training_object_box" class="investigation_training_object">
-            <div id="select_training_object" class="investigation_training_object_label">
-                <span>请选择培训的对象(多选)</span>
-                <span id="selected_message_one"></span>
-            </div>
-            <ul id="training_object_ul" class="investigation_training_object_ul">
-                <!-- <li>方向1</li>
-                    <li>方向2</li>
-                    <li>方向3</li>
-                    <li>方向4</li> -->
-            </ul>
-            <button id="training_object_btn">完成</button>
-        </div>
-        <div id="investigation_direction" class="investigation_direction none">
-            <div class="investigation_direction_label">
-                <span>请选择需要的课程方向(多选)</span>
-                <span id="selected_message_two"></span>
-            </div>
-            <div id="direction_box" class="investigation_direction_box">
-
-                <!-- <div class="investigation_leaf_box">
-                        <input type="checkbox"/>
-                        <span>子方向1-1</span>
-                    </div>
-                    <div class="investigation_un_leaf_box">
-                        <div class="investigation_un_leaf_title">
-                                方向1
-                        </div>
-                       <div class="investigation_un_leaf_allCheck">
-                            <input type="checkbox"/>
-                            <span>
-                                全选
-                            </span>
-                        </div>
-                        <ul class="investigation_un_leaf_ul">
-                            <li>
-                                <input type="checkbox"/>
-                                <span>子方向1-1</span>
-                                
-                            </li>
-                            <li>
-                                <input type="checkbox"/>
-                                <span>子方向1-2</span>
-                            </li>
-                            <li>
-                                <input type="checkbox"/>
-                                <span>子方向1-3</span>
-                            </li>
-                        </ul> 
-                       
-                    </div> -->
-            </div>
-            <div id="child_direction_box" class="investigation_child_direction_box">
-                <!-- <div>子方向</div> -->
-            </div>
-            <button id="direction_btn">完成</button>
-        </div>
-        <div id="investigation_course" class="investigation_filter none">
-            <div class="investigation_course_title">
-                <span>请选择感兴趣的课程(多选)</span>
-                <span id="selected_message_three"></span>
-            </div>
-            <div id="filter_list" class="investigation_filter_box">
-                <!-- <span>高级</span>
-                    <span>中级</span>
-                    <span>低级</span>
-                    <span>长期3天以上</span>
-                    <span>短期1-3天</span>
-                    <span>培训认证</span>
-                    <span>非培训认证</span> -->
-            </div>
-            <!-- <div class="investigation_course_title">
-                        选择课程
-                    </div> -->
-            <ul id="investigation_course_ul" class="investigation_course_ul">
-                <!-- <li>
-                            <input type="checkbox"/>
-                            <span>课程1</span>
-                            
-                        </li>
-                        <li>
-                            <input type="checkbox"/>
-                            <span>课程1</span>
-                        </li>
-                        <li>
-                            <input type="checkbox"/>
-                            <span>课程1</span>
-                        </li> -->
-            </ul>
-            <button id="course_btn">完成</button>
-        </div>
-        <div id="investigation_company_type" class="investigation_company_type none">
-            <div class="investigation_company_type_title">
-                请选择您的企业战略类型(多选)
-            </div>
-            <ul id="investigation_company_type_ul" class="investigation_company_type_ul">
-
-            </ul>
-            <button id="company_type_btn">
-                完成
-            </button>
-        </div>
-        <div id="investigation_duty_type" class="investigation_duty_type none">
-            <div class="investigation_duty_type_title">
-                请选择您本人在公司的职务类型(单选)
-            </div>
-            <ul id="investigation_duty_type_ul" class="investigation_duty_type_ul">
-
-            </ul>
-            <button id="duty_type_btn">
-                完成
-            </button>
-        </div>
-        <div id="investigation_form" class="none">
-            <div class="investigation_people_name">
-                <label>
-                    姓名：
-                </label>
-                <input />
-            </div>
-            <div class="investigation_people_tel">
-                <label>
-                    手机号：
-                </label>
-                <input />
-                <button id="get_code">获取验证码</button>
-            </div>
-            <div class="investigation_people_code">
-                <label>
-                    验证码：
-                </label>
-                <input />
-            </div>
-            <button class="investigation_submit">提交</button>
-=======
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
@@ -175,7 +17,7 @@
         <script src="js/form.js" type="text/javascript" charset="utf-8"></script>
         
         <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
-        
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <style>
     .none{
@@ -204,8 +46,8 @@
                     <span id="selected_message_two"></span>
                     <button id="reset_direction" class="none">重选</button>
                 </div>
-                <div id="direction_message">
-                    <div id="direction_box" class="investigation_direction_box">
+                <div id="direction_message" class="investigation_direction_box">
+                    <div id="direction_box" class="investigation_leaf_box">
                     </div>
                     <div id="child_direction_box" class="investigation_child_direction_box">
                             <!-- <div>子方向</div> -->
@@ -221,7 +63,7 @@
                     <button id="reset_course" class="none">重选</button>
                 </div>
                 <div id="course_message">
-                    <div id="filter_list" class="investigation_filter_box">
+                    <div id="filter_list" class="interest_courses">
                     </div>
                     <ul id="investigation_course_ul" class="investigation_course_ul">
                     </ul> 
@@ -229,7 +71,7 @@
                 </div>
             </div>
             <!-- 问题4 -->
-            <div id="investigation_company_type" class="investigation_company_type none">
+            <div id="investigation_company_type" class="investigation_company_type_box none">
                 <div id="select_company_type" class="investigation_company_type_title">
                         <span>请选择您的企业战略类型(多选)</span>
                         <span id="selected_message_four"></span>
@@ -245,14 +87,14 @@
                 </div>
             </div>
               <!-- 问题5 -->
-            <div id="investigation_duty_type" class="investigation_duty_type none">
+            <div id="investigation_duty_type" class="investigation_company_duty_box none">
                 <div id="select_duty_type" class="investigation_duty_type_title">
                     <span>请选择您本人在公司的职务类型(单选)</span>
                     <span id="selected_message_five"></span>
                     <button id="reset_duty_type" class="none">重选</button>
                 </div>
                <div id="duty_type_message">
-                    <ul id="investigation_duty_type_ul" class="investigation_duty_type_ul">
+                    <ul id="investigation_duty_type_ul" class="investigation_company_duty_ul">
                     </ul>
                     <button id="duty_type_btn">
                         完成
@@ -260,7 +102,7 @@
                </div>
             </div>
              <!-- 提交的表单 -->
-           <div id="investigation_form" class="none">
+           <div id="investigation_form" class="investigation_form_box none">
                 <div class="investigation_people_name">
                     <label>
                         姓名：
@@ -282,10 +124,7 @@
                 </div>
                 <button id="investigation_submit" class="investigation_submit">提交</button>
            </div>
->>>>>>> f317b0e38bda835a4a7b3b41866dc20a15423038
         </div>
-    </div>
-
-</body>
-
+		
+	</body>
 </html>
