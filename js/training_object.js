@@ -18,6 +18,7 @@ $(function(){
     training_object_ul();
   //点击问题1中的完成按钮
     $("#training_object_box").on("click","#training_object_btn",function training_object_btn(){
+        $("#investigation_direction").removeClass("none");
         training_object_arr=[];
         var check_training_object = document.getElementsByName("check_training_object");
     //选择问题1后显示选择信息

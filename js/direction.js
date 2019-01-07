@@ -1,6 +1,8 @@
 $(function(){
      //点击问题2完成
  $("#investigation_direction").on("click","#direction_btn",function direction_btn(){
+     $("#investigation_course").removeClass("none");
+    //  training_object_arr=[];
     console.log(training_object_arr)
     //training_object_arr问题1 被选中的id数组
     var training_child_list_arr =[];

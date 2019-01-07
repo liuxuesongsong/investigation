@@ -11,6 +11,7 @@
         <script src="js/training_object.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/direction.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/course.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/company_type.js" type="text/javascript" charset="utf-8"></script>
         
         <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
         
@@ -35,7 +36,7 @@
                 </ul>
                 <button id="training_object_btn">完成</button>
             </div>
-            <div id="investigation_direction" class="investigation_direction">
+            <div id="investigation_direction" class="investigation_direction none">
                 <div class="investigation_direction_label">
                     <span>请选择需要的课程方向(多选)</span>
                     <span id="selected_message_two"></span>
@@ -79,7 +80,7 @@
                 </div>
                 <button id="direction_btn">完成</button>
             </div>
-            <div id="investigation_course" class="investigation_filter">
+            <div id="investigation_course" class="investigation_filter none">
                 <div class="investigation_course_title">
                     <span>请选择感兴趣的课程(多选)</span>
                     <span id="selected_message_three"></span>
@@ -113,23 +114,29 @@
                     </ul> 
                     <button id="course_btn">完成</button>
             </div>
-            <div id="investigation_company_type" class="investigation_company_type">
+            <div id="investigation_company_type" class="investigation_company_type none">
                 <div class="investigation_company_type_title">
                     请选择您的企业战略类型(多选)
                 </div>
                 <ul id="investigation_company_type_ul" class="investigation_company_type_ul">
 
                 </ul>
+                <button id="company_type_btn">
+                    完成
+                </button>
             </div>
-            <div id="investigation_duty_type" class="investigation_duty_type">
+            <div id="investigation_duty_type" class="investigation_duty_type none">
                 <div class="investigation_duty_type_title">
                     请选择您本人在公司的职务类型(单选)
                 </div>
                 <ul id="investigation_duty_type_ul" class="investigation_duty_type_ul">
                     
                 </ul>
+                <button id="duty_type_btn">
+                    完成
+                </button>
             </div>
-           <div id="investigation_form">
+           <div id="investigation_form" class="none">
                 <div class="investigation_people_name">
                     <label>
                         姓名：
