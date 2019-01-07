@@ -1,15 +1,18 @@
 $(function(){
      //点击问题2完成
  $("#investigation_direction").on("click","#direction_btn",function direction_btn(){
-     $("#investigation_course").removeClass("none");
-    //  training_object_arr=[];
-    console.log(training_object_arr)
-    //training_object_arr问题1 被选中的id数组
+    //打开问题3和内容,问题2的重置
+    $("#investigation_course,#reset_direction,#course_message").removeClass("none");
+    //关闭问题2列表,4,5,提交的表单
+    $("#direction_message,#investigation_company_type,#investigation_duty_type,#investigation_form").addClass("none");
+    //  checked_training_object_arr=[];
+    console.log(checked_training_object_arr)
+    //checked_training_object_arr问题1 被选中的id数组
     var training_child_list_arr =[];
-    for(var m = 0;m<training_object_arr.length;m++){
+    for(var m = 0;m<checked_training_object_arr.length;m++){
         for(var n = 0;n<type.length;n++){
             //通过问题1被选中筛选出来方向的child_list
-            if(training_object_arr[m]==type[n].id){
+            if(checked_training_object_arr[m]==type[n].id){
                 var training_child_list=type[n].child_list;
                for(var o = 0;o<training_child_list.length;o++){
                 training_child_list_arr.push(training_child_list[o])
@@ -32,8 +35,8 @@ $(function(){
     }
     //子方向复选框
     var check_direction=document.getElementsByName("check_direction");
-     //子方向复选框被选中checked_direction  id数组
-    var checked_direction = [];
+     //子方向复选框被选中checked_direction_arr  id数组
+    checked_direction_arr = [];
     var filter_list_arr=[];
     var selected_message_two="";
     //叶子节点中复选框选中的节点
@@ -41,7 +44,7 @@ $(function(){
         if(check_direction[i].checked){
             for(var j = 0;j<direction_arr.length;j++){
                 if(check_direction[i].value==direction_arr[j].id){
-                    checked_direction.push(direction_arr[j].id)
+                    checked_direction_arr.push(direction_arr[j].id)
                     selected_message_two=selected_message_two+direction_arr[j].name+","
                     console.log(direction_arr[j].name)
                     for(var t = 0;t<direction_arr[j].filter_list.length;t++){
@@ -51,7 +54,6 @@ $(function(){
                     // console.log(direction_arr[j].filter_list)
                 }
             }
-            // checked_direction.push(check_direction[i].value)
             // console.log(check_direction[i].value)
         }
     }
@@ -78,7 +80,6 @@ for(var p = 0;p<splice_filter_list_arr.length;p++){
 console.log(filter_value_list_arr)
 console.log("问题2完成")
 //课程的type_id
-console.log(checked_direction)
 // $("#filter_list").html("");
 // for(var v = 0;v<filter_value_list_arr.length;v++){
 //  var filter_span=$("<span name="+filter_value_list_arr[v].id+" class='filter_value_list'>"+filter_value_list_arr[v].name+"</span>");
@@ -89,8 +90,8 @@ console.log(checked_direction)
  filter_all_datas=[];
  $("#investigation_course_ul").html("");
 for(var a = 0;a<data.length;a++){
-    for(var b = 0;b<checked_direction.length;b++){
-        if(data[a].type_id==checked_direction[b]){
+    for(var b = 0;b<checked_direction_arr.length;b++){
+        if(data[a].type_id==checked_direction_arr[b]){
             filter_all_data.push(data[a]);
             filter_all_datas.push(data[a])
            var course_li = $("<li></li>");
