@@ -2,37 +2,26 @@ $(function(){
     //点击问题3完成
     $("#investigation_course").on("click","#course_btn",function course_btn(){
     console.log("问题3完成咯");
-    $("#investigation_company_type").removeClass("none");
-    var course_ids_arr=[];
+    //关闭问题3内容，5,表单
+    $("#course_message,#investigation_duty_type,#investigation_form").addClass("none");
+    //打开问题4和内容,打开问题3重置
+    $("#investigation_company_type,#company_type_message,#reset_course").removeClass("none");
+    //课程id数组
+    course_ids_arr=[];
     // var selected_message_three="";
     var check_course = document.getElementsByName("check_course");
+    var sum_course = 0;
     for(var i = 0;i<check_course.length;i++){
         if(check_course[i].checked){
-            // selected_message_three=selected_message_three+check_course[i].nextSibling.val()+",";
-            // console.log(check_course[i].next())
             course_ids_arr.push(check_course[i].value)
+           sum_course++;
         }
     }
 
-    // $("#selected_message_three").html(selected_message_three.slice(0,selected_message_three.length-1));
+     $("#selected_message_three").html(sum_course+"个");
 
-    console.log(course_ids_arr)
     })
 
-    duty_type_list()
-    function duty_type_list(){
-        console.log("hhh")
-        
-        for(var i = 0;i<duty_type.length;i++){
-           
-            var duty_type_li = $("<li></li");
-            var duty_type_input = $("<input value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
-            var duty_type_span = $("<span>"+duty_type[i].name+"</span>");
-            $(duty_type_li).append(duty_type_input);
-            $(duty_type_li).append(duty_type_span);
-            $("#investigation_duty_type_ul").append(duty_type_li);
-        }
-       
-    }
+  
    
 })
