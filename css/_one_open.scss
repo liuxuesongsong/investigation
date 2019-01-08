@@ -1,0 +1,99 @@
+.investigation_training_object {
+    margin: 1em;
+    margin-right: 1px;
+    background-color: $primary-color-text;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 0.5em solid $border_bottom-color;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.investigation_training_object::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    transform: rotate(224deg);
+    border-width: 16px;
+    border-color: $border_bottom-color transparent transparent $border_bottom-color;
+    border-style: solid;
+    border-top-left-radius: 0.8em;
+    right: 3em;
+    bottom: -22px;
+}
+
+.investigation_training_object::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $primary-color-text;
+    right: 4em;
+    bottom: -14px;
+    z-index: 1;
+}
+
+.investigation_training_object_label {
+    span {
+        font-size: 1.5em;
+        color: $primary-color;
+    }
+    span:nth-of-type(2) {
+        font-size: 1em;
+        color: $secondary-text-color;
+    }
+    button {
+        background-color: $accent-color;
+        color: $primary-color-text;
+    }
+}
+
+.investigation_training_object_ul span {
+    color: $primary-text-color;
+    font-size: 1em;
+}
+
+.investigation_training_object_ul li {
+    background-color: $background-color;
+}
+
+.investigation_training_object_ul li.active {
+    background-color: $primary-color;
+    input[type=checkbox] {
+        background-color: $primary-color-text;
+    }
+}
+
+.investigation_training_object_ul {
+    overflow: hidden;
+    padding-left: 1em;
+    li {
+        padding-left: 0.8em;
+        float: left;
+        width: 30%;
+        box-sizing: border-box;
+        margin-right: 0.5em;
+        line-height: 2em;
+        border-radius: 2px;
+    }
+    input {
+        margin-top: 6px;
+        margin-right: 4px;
+        float: left;
+    }
+    span {
+        float: left;
+    }
+}
+
+.investigation_finish_btn {
+    button {
+        display: block;
+        width: 6em;
+        line-height: 2em;
+        background-color: $accent-color;
+        color: $primary-color-text;
+    }
+}

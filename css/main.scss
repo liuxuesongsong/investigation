@@ -1,95 +1,15 @@
-/* reset */
-
-body,
-ol,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-th,
-td,
-dl,
-dd,
-form,
-fieldset,
-legend,
-input,
-textarea,
-select {
-    margin: 0;
-    padding: 0
-}
-
-body {
-    font: 14px"Microsoft YaHei", "Arial Narrow", HELVETICA;
-    background: #fff;
-    -webkit-text-size-adjust: 100%;
-}
-
-html,
-body {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-
-input,
-textarea {
-    -webkit-appearance: none;
-}
-
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-
-a {
-    color: #2d374b;
-    text-decoration: none
-}
-
-a:hover {
-    color: #cd0200;
-    text-decoration: underline
-}
-
-em {
-    font-style: normal
-}
-
-li {
-    list-style: none
-}
-
-img {
-    border: 0;
-    vertical-align: middle
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-p {
-    word-wrap: break-word
-}
-
+@import 'reset';
+@import 'color';
+@import 'max_box.scss';
+@import 'one_open.scss';
+@import 'two_box.scss';
+@import 'three_box.scss';
 .investigation_training_object {
     padding-bottom: 1em;
 }
 
-.investigation_box {
-    padding: 4em 1em 1em 1em;
-}
-
 .investigation_training_object_label {
     padding-bottom: 1em;
-    span {
-        font-size: 1.2em;
-    }
 }
 
 input[type=radio] {
@@ -154,10 +74,10 @@ input[type=checkbox] {
     -moz-appearance: none;
     appearance: none;
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background: transparent;
-    border: 1px solid #000;
+    border: 1px solid $primary-text-color;
     outline: none;
     border-radius: 0;
     cursor: pointer;
@@ -170,7 +90,7 @@ input[type=checkbox]:after {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    color: #000;
+    color: $primary-text-color;
     text-align: center;
     line-height: 10px;
     -webkit-transition: all ease-in-out 300ms;
@@ -189,176 +109,10 @@ input[type=checkbox]:checked:after {
     opacity: 1;
 }
 
-.investigation_training_object_ul {
-    overflow: hidden;
-    padding-left: 2em;
-    li {
-        float: left;
-        width: 33%;
-        padding-bottom: 1em;
-        line-height: 1em;
-    }
-    input {
-        float: left;
-    }
-    span {
-        float: left;
-        padding-left: 0.2em;
-    }
-}
 
-.investigation_direction {
-    .investigation_direction_label {
-        padding-bottom: 1em;
-        font-size: 1.2em;
-    }
-}
 
-.investigation_direction_box {
-    display: block;
-    padding-left: 2em;
-    padding-bottom: 2em;
-}
 
-.direction_box {
-    overflow: hidden;
-}
 
-.investigation_leaf_box,
-.investigation_child_direction_box {
-    float: left;
-    width: 50%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    .investigation_un_leaf_ul {
-        float: left;
-    }
-}
-
-.investigation_leaf_box::-webkit-scrollbar,
-.investigation_child_direction_box::-webkit-scrollbar {
-    display: block;
-    width: 6px;
-    height: 0;
-    border-radius: 4px;
-    background-color: #c9c9c9;
-}
-
-.investigation_leaf_box::-webkit-scrollbar-thumb,
-.investigation_child_direction_box::-webkit-scrollbar-thumb {
-    display: block;
-    width: 6px;
-    border-radius: 4px;
-    background-color: #757575;
-}
-
-.investigation_leaf_box {
-    float: left;
-    line-height: 1em;
-    .investigation_direction_message {
-        float: left;
-        width: 100%;
-        margin-top: 1em;
-        line-height: 1em;
-        padding-bottom: 0.5em;
-        span {
-            float: left;
-        }
-        input {
-            float: left;
-        }
-    }
-}
-
-.investigation_child_direction_box {
-    padding: 0 0 1em 4em;
-    height: 9em;
-    box-sizing: border-box;
-    .investigation_direction_message {
-        float: left;
-        width: 100%;
-        overflow: hidden;
-        line-height: 1em;
-        padding-bottom: 1em;
-        padding-top: 1em;
-        .investigation_un_leaf_ul {
-            float: left;
-            width: 100%;
-        }
-        input {
-            width: 14px;
-            height: 14px;
-            float: left;
-        }
-        span {
-            float: left;
-            line-height: 1em;
-        }
-    }
-    .investigation_un_leaf_ul {
-        float: left;
-        width: 100%;
-        overflow: hidden;
-        input {
-            width: 14px;
-            height: 14px;
-            float: left;
-        }
-        span {
-            float: left;
-            line-height: 1em;
-        }
-        li {
-            float: left;
-            width: 100%;
-            padding-bottom: 0.5em;
-        }
-    }
-}
-
-.investigation_filter {
-    display: block;
-    .investigation_course_title {
-        font-size: 1.2em;
-        padding-bottom: 1em;
-    }
-    .interest_courses {
-        overflow: hidden;
-        padding-left: 2em;
-        span {
-            border: 1px solid #757575;
-            float: left;
-            padding: 0 0.5em;
-            margin-right: 1em;
-            margin-bottom: 0.5em;
-        }
-    }
-    .investigation_course_ul {
-        padding-left: 2em;
-        display: block;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        li {
-            float: left;
-            width: 100%;
-            line-height: 1em;
-            margin-bottom: 0.5em;
-        }
-    }
-    .investigation_course_ul::-webkit-scrollbar {
-        display: block;
-        width: 6px;
-        height: 0;
-        border-radius: 4px;
-        background-color: #c9c9c9;
-    }
-    .investigation_course_ul::-webkit-scrollbar-thumb {
-        display: block;
-        width: 6px;
-        border-radius: 4px;
-        background-color: #757575;
-    }
-}
 
 .investigation_form_box {
     display: block;
@@ -423,7 +177,7 @@ input[type=checkbox]:checked:after {
     }
     .investigation_company_type_ul {
         display: block;
-        padding-left: 2em;
+        padding-left: 1em;
         overflow: hidden;
         li {
             float: left;
@@ -452,7 +206,7 @@ input[type=checkbox]:checked:after {
     }
     .investigation_company_duty_ul {
         display: block;
-        padding-left: 2em;
+        padding-left: 1em;
         overflow: hidden;
         li {
             float: left;

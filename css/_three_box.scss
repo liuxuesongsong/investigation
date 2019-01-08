@@ -1,0 +1,57 @@
+.investigation_filter {
+    display: block;
+    margin: 1em;
+    margin-right: 0;
+    background-color: $primary-color-text;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 0.5em solid $border_bottom-color;
+    .investigation_course_title {
+        font-size: 1.5em;
+        color: $primary-text-color;
+        padding-bottom: 1em;
+        button {
+            background-color: $accent-color;
+            color: $primary-color-text;
+        }
+    }
+    .interest_courses {
+        overflow: hidden;
+        padding-left: 1em;
+        span {
+            border: 1px solid $accent-color;
+            float: left;
+            color: $secondary-text-color;
+            padding: 0 0.5em;
+            margin-bottom: 0.5em;
+        }
+        span.active{
+            color: $primary-color-text;
+            background-color: $accent-color;
+        }
+    }
+    .investigation_course_ul {
+        padding-left: 1em;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        li {
+            float: left;
+            width: 100%;
+            line-height: 1em;
+            margin-bottom: 0.5em;
+        }
+    }
+    .investigation_course_ul::-webkit-scrollbar {
+        display: block;
+        width: 6px;
+        height: 0;
+        border-radius: 4px;
+        background-color: #c9c9c9;
+    }
+    .investigation_course_ul::-webkit-scrollbar-thumb {
+        display: block;
+        width: 6px;
+        border-radius: 4px;
+        background-color: #757575;
+    }
+}

@@ -1,0 +1,27 @@
+.investigation_box {
+    position: relative;
+    padding-top: 4em;
+    .investigation_box_bgcolor {
+        top: 0;
+        left: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        z-index: -10;
+        .investigation_box_left {
+            float: left;
+            display: block;
+            width: 30%;
+            height: 100vh;
+            background-color: $theme_left_bgcolor;
+        }
+        .investigation_box_right {
+            float: left;
+            display: block;
+            width: 70%;
+            background: $background-color;
+            height: 100vh;
+        }
+    }
+}
