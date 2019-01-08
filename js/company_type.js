@@ -30,6 +30,11 @@ $(function(){
         }
         //点击完成问题4 
         $("#investigation_company_type").on("click","#company_type_btn",function company_type_btn(){
+           //判断是否选中
+            is_selected("check_company_type","请选择您的企业战略类型")
+            if(is_selected_sum==0){
+                return false
+            }
             //打开问题5,内容。重置
             $("#investigation_duty_type,#duty_type_message,#reset_company_type").removeClass("none");
             //关闭问题4内容，表单
@@ -41,6 +46,11 @@ $(function(){
         })
          //点击完成问题5
         $("#investigation_duty_type").on("click","#duty_type_btn",function duty_type_btn(){
+             //判断是否选中
+            is_selected("check_duty_type","请选择您本人在公司的职务类型")
+            if(is_selected_sum==0){
+                return false
+            }
             //打开表单。重置
             $("#investigation_form,#reset_duty_type").removeClass("none");
             //关闭问题5内容

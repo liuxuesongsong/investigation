@@ -1,6 +1,11 @@
 $(function(){
      //点击问题2完成
  $("#investigation_direction").on("click","#direction_btn",function direction_btn(){
+     //判断是否选中
+    is_selected("check_direction","请选择需要的课程方向")
+    if(is_selected_sum==0){
+        return false
+    }
     //打开问题3和内容,问题2的重置
     $("#investigation_course,#reset_direction,#course_message").removeClass("none");
     //关闭问题2列表,4,5,提交的表单

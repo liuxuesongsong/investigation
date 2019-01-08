@@ -21,6 +21,9 @@ $(function(){
         //验证手机有效性
         var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
         if(!myreg.test($("#telephone").val())) {
+            $(".main").fadeIn();
+            $("#alert_msg").html("请输入有效的手机号码！")
+            setInterval(close, 3000);
             // $(r_phone_error).html('请输入有效的手机号码！');
             return false;
         }
@@ -37,8 +40,8 @@ $(function(){
             data: {
                 number: mobile
             },
-            error: function(msg) {
-                // console.log(msg.codeid);
+            error: function(data) {
+                is_selected("check_duty_type",data.msg)
             },
             success: function(msg) {
                 // codeid = msg.codeid;
@@ -47,6 +50,9 @@ $(function(){
         });
 
     } else {
+        $(".main").fadeIn();
+        $("#alert_msg").html("请输入电话号码")
+        setInterval(close, 3000);
         // $(r_phone_error).html("请输入电话号码");
     }
 
