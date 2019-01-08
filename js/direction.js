@@ -43,14 +43,14 @@ $(function(){
      //子方向复选框被选中checked_direction_arr  id数组
     checked_direction_arr = [];
     var filter_list_arr=[];
-    var selected_message_two="";
+     //问题被选中的个数信息
+     selected_message("check_direction","#selected_message_two","#selected_message_two_label")
     //叶子节点中复选框选中的节点
     for(var i = 0;i<check_direction.length;i++){
         if(check_direction[i].checked){
             for(var j = 0;j<direction_arr.length;j++){
                 if(check_direction[i].value==direction_arr[j].id){
                     checked_direction_arr.push(direction_arr[j].id)
-                    selected_message_two=selected_message_two+direction_arr[j].name+","
                     console.log(direction_arr[j].filter_list)
 
                     for(var t = 0;t<direction_arr[j].filter_list.length;t++){
@@ -65,7 +65,7 @@ $(function(){
     }
     // var filter_list_arr = [1,23,1,1,1,3,23,5,6,7,9,9,8,5];
     //
-     $("#selected_message_two").html(selected_message_two.slice(0,selected_message_two.length-1));
+    //  $("#selected_message_two").html(checked_direction_arr.length);
 
 splice_filter_list_arr = removeDuplicatedItem(filter_list_arr);
 console.log(splice_filter_list_arr);

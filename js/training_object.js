@@ -34,23 +34,20 @@ $(function(){
         checked_training_object_arr=[];
         var check_training_object = document.getElementsByName("check_training_object");
         //选择问题1后显示选择信息
-        var selected_message_one="";
-        
         $("#direction_box").html("");
         $("#child_direction_box").html("");
         $("#investigation_course_ul").html("");
         $("#filter_list").html("");
-        $("#selected_message_one_label").html("已选")
+         //问题被选中的个数信息
+        selected_message("check_training_object","#selected_message_one","#selected_message_one_label")
         //创建问题2的内容
         var main_direction_title=$("<div>主要方向</div>");  
         $("#direction_box").append(main_direction_title);
         var child_direction_title=$("<div>子方向</div>");  
         $("#child_direction_box").append(child_direction_title);
         //循环问题1中复选框
-        var selected_message_one_sum = 0;
         for(var c = 0;c<check_training_object.length;c++){
             if(check_training_object[c].checked){
-                selected_message_one_sum++;
                 //循环类型
                 for(var i = 0;i<type.length;i++){
                     // console.log(check_training_object[c].value)
@@ -108,10 +105,6 @@ $(function(){
                 }
             }
         }
-        console.log(selected_message_one_sum)
-        //  console.log(checked_training_object_arr)
-        //$("#selected_message_one").html(selected_message_one.slice(0,selected_message_one.length-1));
-        $("#selected_message_one").html(selected_message_one_sum);
         //单选框点击函数
         $(".is_leaf").on("click",":radio",function check_radio(){
             
