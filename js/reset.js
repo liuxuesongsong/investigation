@@ -1,12 +1,14 @@
 $(function(){
     //重选的函数
-    function reset_fun(parent_id,id,show_id){
+    function reset_fun(parent_id,id,show_id,button_id){
         $(parent_id).on("click",$(id),function reset_message(){
             $(show_id).removeClass("none");
+            $(button_id).html("重选")
+
         })
     }
      // 重置问题1
-    reset_fun("#select_training_object","#reset_training_object","#training_object_message")  
+    reset_fun("#select_training_object","#reset_training_object","#training_object_message","#training_object_btn")  
     // 重置问题2
     reset_fun("#select_direction","#reset_direction","#direction_message")
     // 重置问题3

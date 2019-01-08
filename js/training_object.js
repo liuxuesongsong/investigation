@@ -1,11 +1,14 @@
 $(function(){
    //点击问题1
+  
     $("#training_object_box").on("click","#select_training_object",function select_training_object(){
       
     })
   //问题1列表
 //    checked_training_object_arr=[];
    function training_object_ul(){
+       
+    // var type = JSON.parse(sessionStorage.type).data;
         for(var i = 0;i<type.length;i++){
             var li = $("<li></li>");
             var input =$("<input value="+type[i].id+" name='check_training_object' type='checkbox'/>");
@@ -18,7 +21,12 @@ $(function(){
     training_object_ul();
   //点击问题1中的完成按钮
     $("#training_object_box").on("click","#training_object_btn",function training_object_btn(){
-       //打开问题2和内容,打开重置按钮
+       //判断是否选中
+       is_selected("check_training_object","请选择培训的对象")
+       if(is_selected_sum==0){
+           return false
+       }
+        //打开问题2和内容,打开重置按钮
         $("#investigation_direction,#direction_message,#reset_training_object").removeClass("none");
         //
         //关闭问题1的选择。关闭3,4,5,提交的表单
@@ -26,19 +34,17 @@ $(function(){
         checked_training_object_arr=[];
         var check_training_object = document.getElementsByName("check_training_object");
         //选择问题1后显示选择信息
-        var selected_message_one="";
         $("#direction_box").html("");
         $("#child_direction_box").html("");
         $("#investigation_course_ul").html("");
         $("#filter_list").html("");
+         //问题被选中的个数信息
+        selected_message("check_training_object","#selected_message_one","#selected_message_one_label")
         //创建问题2的内容
         var main_direction_title=$("<div>主要方向</div>");  
         $("#direction_box").append(main_direction_title);
         var child_direction_title=$("<div>子方向</div>");  
         $("#child_direction_box").append(child_direction_title);
-        // var child_direction_all_select=$("<div class='investigation_un_leaf_allCheck'><input name='all_check_direction' type='checkbox'/><span>全选</span></div>"); 
-        // // var all_select_span= $("<span>全选</span>"); 
-        // $("#child_direction_box").append(child_direction_all_select);
         //循环问题1中复选框
         for(var c = 0;c<check_training_object.length;c++){
             if(check_training_object[c].checked){
@@ -79,6 +85,7 @@ $(function(){
                                 $("#direction_box").append(un_leaf_div);
                                 //子方向
                                 var un_leaf_child_list=child_list[j].child_list;
+                                console.log(child_list[j].child_list)
                                 for(var m = 0;m<un_leaf_child_list.length;m++){
                                     var un_leaf_div=$("<div id='un_leaf"+un_leaf_child_list[m].id+"' class='investigation_direction_message none'></div>");
                                     //   console.log(un_leaf_child_list[j])
@@ -98,8 +105,6 @@ $(function(){
                 }
             }
         }
-        //  console.log(checked_training_object_arr)
-        $("#selected_message_one").html(selected_message_one.slice(0,selected_message_one.length-1));
         //单选框点击函数
         $(".is_leaf").on("click",":radio",function check_radio(){
             

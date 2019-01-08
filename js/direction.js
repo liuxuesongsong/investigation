@@ -1,6 +1,11 @@
 $(function(){
      //点击问题2完成
  $("#investigation_direction").on("click","#direction_btn",function direction_btn(){
+     //判断是否选中
+    is_selected("check_direction","请选择需要的课程方向")
+    if(is_selected_sum==0){
+        return false
+    }
     //打开问题3和内容,问题2的重置
     $("#investigation_course,#reset_direction,#course_message").removeClass("none");
     //关闭问题2列表,4,5,提交的表单
@@ -38,15 +43,16 @@ $(function(){
      //子方向复选框被选中checked_direction_arr  id数组
     checked_direction_arr = [];
     var filter_list_arr=[];
-    var selected_message_two="";
+     //问题被选中的个数信息
+     selected_message("check_direction","#selected_message_two","#selected_message_two_label")
     //叶子节点中复选框选中的节点
     for(var i = 0;i<check_direction.length;i++){
         if(check_direction[i].checked){
             for(var j = 0;j<direction_arr.length;j++){
                 if(check_direction[i].value==direction_arr[j].id){
                     checked_direction_arr.push(direction_arr[j].id)
-                    selected_message_two=selected_message_two+direction_arr[j].name+","
-                    console.log(direction_arr[j].name)
+                    console.log(direction_arr[j].filter_list)
+
                     for(var t = 0;t<direction_arr[j].filter_list.length;t++){
                         filter_list_arr.push(direction_arr[j].filter_list[t])  
                     }
@@ -59,7 +65,7 @@ $(function(){
     }
     // var filter_list_arr = [1,23,1,1,1,3,23,5,6,7,9,9,8,5];
     //
-     $("#selected_message_two").html(selected_message_two.slice(0,selected_message_two.length-1));
+    //  $("#selected_message_two").html(checked_direction_arr.length);
 
 splice_filter_list_arr = removeDuplicatedItem(filter_list_arr);
 console.log(splice_filter_list_arr);
@@ -68,10 +74,14 @@ filter_value_list_arr=[];
 $("#filter_list").html("");
 for(var p = 0;p<splice_filter_list_arr.length;p++){
     for(var q in filter){
+      
         if(q==splice_filter_list_arr[p]){
+            var filter_ul = $("<ul class='filter_list_ul'></ul>");
+            $("#filter_list").append(filter_ul);
             for(var x = 0;x<filter[q].value_list.length;x++){
-                var filter_span=$("<span style='color:blue' data_state='0' filter_id="+filter[q].value_list[x].id+" name="+filter[q].name+" class='filter_value_list'>"+filter[q].value_list[x].name+"  </span>");
-                $("#filter_list").append(filter_span);
+                
+                var filter_li=$("<li data_state='0' filter_id="+filter[q].value_list[x].id+" name="+filter[q].name+" class='filter_list_li'>"+filter[q].value_list[x].name+"  </li>");
+                $(filter_ul).append(filter_li);
                 filter_value_list_arr.push(filter[q].value_list[x])
             }
         }
@@ -89,46 +99,44 @@ console.log("问题2完成")
  filter_all_data=[];
  filter_all_datas=[];
  $("#investigation_course_ul").html("");
-for(var a = 0;a<data.length;a++){
-    for(var b = 0;b<checked_direction_arr.length;b++){
-        if(data[a].type_id==checked_direction_arr[b]){
-            filter_all_data.push(data[a]);
-            filter_all_datas.push(data[a])
-           var course_li = $("<li></li>");
-           var course_input = $("<input value="+data[a].id+" name='check_course' type='checkbox'/>");
-           var course_span = $("<span>"+data[a].name+"</span>");
-           $(course_li).append(course_input);
-           $(course_li).append(course_span);
-           $("#investigation_course_ul").append(course_li);
-            // console.log(data[a])
+    for(var a = 0;a<data.length;a++){
+        for(var b = 0;b<checked_direction_arr.length;b++){
+            if(data[a].parent_id==checked_direction_arr[b]){
+                filter_all_data.push(data[a]);
+                filter_all_datas.push(data[a])
+            var course_li = $("<li></li>");
+            var course_input = $("<input value="+data[a].id+" name='check_course' type='checkbox'/>");
+            var course_span = $("<span>"+data[a].name+"</span>");
+            $(course_li).append(course_input);
+            $(course_li).append(course_span);
+            $("#investigation_course_ul").append(course_li);
+                // console.log(data[a])
+            }
         }
     }
-}
 
 
  })  
- $("#filter_list").on("click",".filter_value_list", function filter_value_list_btn(){
+ $("#filter_list").on("click",".filter_list_li", function filter_value_list_btn(){
      var filter_value_list_state=document.getElementsByClassName("filter_value_list");
     //  console.log($(".filter_value_list")[0][attr("data_state")])
       if($(this).attr("data_state")=="0"){
         $(this).attr("data_state","1")
-        $(this).css("color","red")
+        $(this).addClass("active")
       
      }else{
         $(this).attr("data_state","0")
-        $(this).css("color","blue")
+        $(this).removeClass("active")
      } 
      var filter_same_arr=[];
      var sum0 = 0,sum1=0;
-     $("span[data_state='0']").each(function(){
+     $("li[data_state='0']").each(function(){
         sum0++;
      })
-     console.log(sum0)
-     console.log(filter_value_list_arr.length)
      if(sum0==filter_value_list_arr.length){
         filter_same_arr=filter_all_data;
      }
-    $("span[data_state='1']").each(function(){
+    $("li[data_state='1']").each(function(){
         sum1++;
         console.log($(this))
          var name=$(this).attr("name");

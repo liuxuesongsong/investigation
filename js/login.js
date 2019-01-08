@@ -12,15 +12,15 @@ $(function(){
         }
     }
     var count = 60,
-	codeid;
-    $("#investigation_form").on("click","#get_code",function get_code(){
+    codeid;
+    $("#login_get_code").click(function(){
         var dealType, //验证方式		
-        mobile = $("#telephone").val();
+        mobile = $("#login_telephone").val();
     if(mobile != '') {
 
         //验证手机有效性
         var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
-        if(!myreg.test($("#telephone").val())) {
+        if(!myreg.test($("#login_telephone").val())) {
             $(".main").fadeIn();
             $("#alert_msg").html("请输入有效的手机号码！")
             setInterval(close, 3000);
@@ -56,5 +56,6 @@ $(function(){
         // $(r_phone_error).html("请输入电话号码");
     }
 
-});
+    })
+
 })
