@@ -3,7 +3,7 @@ $(function(){
         company_type_list()
         function company_type_list(){
             console.log("hhh")
-            console.log(company_type)
+            // console.log(company_type)
             for(var i = 0;i<company_type.length;i++){
                 var company_type_li = $("<li></li");
                 var company_type_input = $("<input value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")

@@ -13,6 +13,7 @@ $(function(){
         $("#investigation_company_type,#company_type_message,#reset_course").removeClass("none");
         //课程id数组
         course_ids_arr=[];
+        
         // var selected_message_three="";
         var check_course = document.getElementsByName("check_course");
         var sum_course = 0;
