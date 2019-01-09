@@ -42,10 +42,6 @@
     }
 }
 
-.investigation_training_object_ul span {
-    font-size: 1em;
-}
-
 .investigation_training_object_ul li {
     background-color: $background-color;
     color: $primary-text-color;
@@ -78,7 +74,7 @@
         margin-right: 4px;
         float: left;
     }
-    span {
+    label {
         float: left;
     }
 }

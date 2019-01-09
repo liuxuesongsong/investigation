@@ -7,22 +7,21 @@
         width: 100%;
         overflow: hidden;
         line-height: 1em;
-        padding-bottom: 0.5em;
         box-sizing: border-box;
-        padding-top: 1em;
         .investigation_un_leaf_ul {
             float: left;
             width: 100%;
         }
         input {
+            margin-top: 0.4em;
             width: 14px;
             height: 14px;
             float: left;
             margin-right: 2px;
         }
-        span {
+        label {
             float: left;
-            line-height: 1em;
+            line-height: 2em;
         }
     }
     .investigation_un_leaf_ul {
@@ -122,6 +121,9 @@
         }
         span:first-child {
             margin-left: 1em;
+        }
+        label {
+            float: left;
         }
         input {
             float: left;

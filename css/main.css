@@ -218,9 +218,6 @@ input[type=checkbox]:checked:after {
     background-color: #FC766A;
     margin-left: 2px; }
 
-.investigation_training_object_ul span {
-  font-size: 1em; }
-
 .investigation_training_object_ul li {
   background-color: #f5f5f5;
   color: #5C89CC; }
@@ -248,7 +245,7 @@ input[type=checkbox]:checked:after {
     margin-top: 6px;
     margin-right: 4px;
     float: left; }
-  .investigation_training_object_ul span {
+  .investigation_training_object_ul label {
     float: left; }
 
 .investigation_finish_btn button {
@@ -267,20 +264,19 @@ input[type=checkbox]:checked:after {
     width: 100%;
     overflow: hidden;
     line-height: 1em;
-    padding-bottom: 0.5em;
-    box-sizing: border-box;
-    padding-top: 1em; }
+    box-sizing: border-box; }
     .investigation_child_direction_box .investigation_direction_message .investigation_un_leaf_ul {
       float: left;
       width: 100%; }
     .investigation_child_direction_box .investigation_direction_message input {
+      margin-top: 0.4em;
       width: 14px;
       height: 14px;
       float: left;
       margin-right: 2px; }
-    .investigation_child_direction_box .investigation_direction_message span {
+    .investigation_child_direction_box .investigation_direction_message label {
       float: left;
-      line-height: 1em; }
+      line-height: 2em; }
   .investigation_child_direction_box .investigation_un_leaf_ul {
     float: left;
     width: 100%;
@@ -359,6 +355,8 @@ input[type=checkbox]:checked:after {
       float: left; }
     .investigation_leaf_box .investigation_direction_message span:first-child {
       margin-left: 1em; }
+    .investigation_leaf_box .investigation_direction_message label {
+      float: left; }
     .investigation_leaf_box .investigation_direction_message input {
       float: left;
       margin-left: 1em;
@@ -464,7 +462,8 @@ input[type=checkbox]:checked:after {
     width: 100%;
     line-height: 2em;
     margin-bottom: 0.5em;
-    color: #5C89CC; }
+    color: #5C89CC;
+    overflow: hidden; }
   .investigation_filter .investigation_course_ul li.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
@@ -473,9 +472,11 @@ input[type=checkbox]:checked:after {
     .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after {
       color: #FFFFFF; }
   .investigation_filter .investigation_course_ul input {
+    float: left;
     margin-top: 0.5em;
     margin-right: 2px; }
-  .investigation_filter .investigation_course_ul span {
+  .investigation_filter .investigation_course_ul label {
+    float: left;
     line-height: 2em; }
 .investigation_filter .investigation_course_ul::-webkit-scrollbar {
   display: block;
@@ -507,7 +508,7 @@ input[type=checkbox]:checked:after {
       line-height: 1em; }
     .investigation_company_type_box .investigation_company_type_ul input {
       float: left; }
-    .investigation_company_type_box .investigation_company_type_ul span {
+    .investigation_company_type_box .investigation_company_type_ul label {
       float: left;
       padding-left: 0.2em; }
   .investigation_company_type_box .investigation_company_type_ul li {
@@ -699,7 +700,7 @@ input[type=checkbox]:checked:after {
     .investigation_company_duty_box .investigation_company_duty_ul input {
       float: left;
       margin-top: 0.4em; }
-    .investigation_company_duty_box .investigation_company_duty_ul span {
+    .investigation_company_duty_box .investigation_company_duty_ul label {
       float: left;
       line-height: 2em;
       padding-left: 0.2em; }
