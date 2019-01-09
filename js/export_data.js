@@ -6,7 +6,6 @@ var export_data = {
     filter:["4","5","6"],//问题3
     company_type:["2","3"],//问题4
     job_type:["1"]//问题5
-
 };
 var all_type_data = [
     {

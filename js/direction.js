@@ -1,6 +1,8 @@
 $(function(){
      //点击问题2完成
- $("#investigation_direction").on("click","#direction_btn",function direction_btn(){
+ $("#direction_btn").click(function(){
+    $("#reset_direction").addClass("open")
+    $("#reset_direction").removeClass("close")
      //判断是否选中
     is_selected("check_direction","请选择需要的课程方向")
     if(is_selected_sum==0){
@@ -60,7 +62,6 @@ $(function(){
     }
 
 splice_filter_list_arr = removeDuplicatedItem(filter_list_arr);
-console.log(splice_filter_list_arr);
 //筛选后的过滤器数组
 filter_value_list_arr=[];
 $("#filter_list").html("");
@@ -79,14 +80,7 @@ for(var p = 0;p<splice_filter_list_arr.length;p++){
         }
     }
 }
-console.log(filter_value_list_arr)
-console.log("问题2完成")
 //课程的type_id
-// $("#filter_list").html("");
-// for(var v = 0;v<filter_value_list_arr.length;v++){
-//  var filter_span=$("<span name="+filter_value_list_arr[v].id+" class='filter_value_list'>"+filter_value_list_arr[v].name+"</span>");
-//  $("#filter_list").append(filter_span);
-// }
 //通过问题2筛选出来的课程
  filter_all_data=[];
  filter_all_datas=[];
@@ -97,16 +91,15 @@ console.log("问题2完成")
                 filter_all_data.push(course_data[a]);
                 filter_all_datas.push(course_data[a])
             var course_li = $("<li></li>");
-            var course_input = $("<input value="+course_data[a].id+" name='check_course' type='checkbox'/>");
-            var course_span = $("<span>"+course_data[a].name+"</span>");
+            var course_input = $("<input id ='course_input+"+a+"' value="+course_data[a].id+" name='check_course' type='checkbox'/>");
+            var course_label = $("<label for ='course_input+"+a+"' >"+course_data[a].name+"</label>");
             $(course_li).append(course_input);
-            $(course_li).append(course_span);
+            $(course_li).append(course_label);
             $("#investigation_course_ul").append(course_li);
                 // console.log(course_data[a])
             }
         }
     }
-console.log(course_input)
 $("input:checkbox").click(function(){
     if($(this).prop("checked")){
         $(this).parent().addClass("active")
@@ -138,20 +131,13 @@ $("input:checkbox").click(function(){
      }
     $("li[data_state='1']").each(function(){
         sum1++;
-        console.log($(this))
          var name=$(this).attr("name");
          var filter_id = $(this).attr("filter_id");
     // var filter_filter_data=filter_all_data;
     //筛选器筛选后的课程
-    console.log(filter_all_data)
     for(var i = 0;i<filter_all_data.length;i++){
-
-        console.log(filter_all_data[i][name])
-        // console.log($(this).attr("data_state"))
         if(filter_all_data[i][name]!=undefined){
-            console.log(filter_id)
             if(filter_all_data[i][name]==filter_id){
-                console.log(filter_all_data[i].name)
                 filter_same_arr.push(filter_all_data[i])
             }
         }
@@ -166,33 +152,25 @@ $("input:checkbox").click(function(){
     filter_same_arr=filter_all_data;
  }
   splice_filter_same_arr = removeDuplicatedItem(filter_same_arr);
-  console.log(splice_filter_same_arr);
-      // console.log(filter_same_arr)
       $("#investigation_course_ul").html("");
       for(var m = 0;m<splice_filter_same_arr.length;m++){
           var course_li = $("<li></li>");
-          var course_input = $("<input value="+splice_filter_same_arr[m].id+" name='check_course' type='checkbox'/>");
-          var course_span = $("<span>"+splice_filter_same_arr[m].name+"</span>");
+          var course_input = $("<input id ='filter_course_input+"+m+"' value="+splice_filter_same_arr[m].id+" name='check_course' type='checkbox'/>");
+          var course_label = $("<label for ='filter_course_input+"+m+"'>"+splice_filter_same_arr[m].name+"</label>");
           $(course_li).append(course_input);
-          $(course_li).append(course_span);
+          $(course_li).append(course_label);
           $("#investigation_course_ul").append(course_li);
       }
-    //  for(var x = 0;x<$(".filter_value_list").length;x++){
-    //     console.log($(".filter_value_list")())
-    //  }
-    //筛选点击的筛选项
-    
-  
-    // console.log(filter_same_arr)
-    //  if($(this).attr("data_state")=="0"){
-    //     $(this).attr("data_state","1")
-        
-      
-    //  }else{
-    //     $(this).attr("data_state","0")
-    //  }
-// console.log($(this).attr("data_state"))
+    //   input 添加激活状态
+      $("input:checkbox").click(function(){
+        if($(this).prop("checked")){
+            $(this).parent().addClass("active")
+        }else{
+            $(this).parent().removeClass("active")
+        }
+    })
  })
+//  removeDuplicatedItem 数组去重
  function removeDuplicatedItem(arr) {
     for(var u = 0; u < arr.length-1; u++){
         for(var v = u+1; v < arr.length; v++){

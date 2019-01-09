@@ -2,7 +2,6 @@ $(function(){
    //点击问题1
 
     $("#training_object_box").on("click","#select_training_object",function select_training_object(){
-      
     })
  
   //问题1列表
@@ -11,11 +10,11 @@ $(function(){
        
     // var type = JSON.parse(sessionStorage.type).data;
         for(var i = 0;i<type.length;i++){
-            var li = $("<li></li>");
-            var input =$("<input value="+type[i].id+" name='check_training_object' type='checkbox'/>");
-            var span = $("<span>"+type[i].name+"</span>");
+            var li = $("<li class='training_object_li'></li>");
+            var input =$("<input id='train_object_input+"+i+"' value="+type[i].id+" name='check_training_object' type='checkbox'/>");
+            var label = $("<label for='train_object_input+"+i+"'>"+type[i].name+"</label>");
             $(li).append(input);
-            $(li).append(span);
+            $(li).append(label);
             $("#training_object_ul").append(li);
         }
     }
@@ -29,6 +28,8 @@ $(function(){
     })
   //点击问题1中的完成按钮
     $("#training_object_btn").click(function(){
+      $("#reset_training_object").addClass("open")
+      $("#reset_training_object").removeClass("close")
        //判断是否选中
        is_selected("check_training_object","请选择培训的对象")
        if(is_selected_sum==0){
@@ -72,11 +73,11 @@ $(function(){
                                 
                                 var leaf_div=$("<div class='investigation_direction_message'></div>");
                                 //   var leaf_radio=$("<input value="+child_list[j].id+" name='investigation' type='radio'/>");
-                                var leaf_span=$("<span>"+child_list[j].name+"</span>");
-                                var leaf_input=$("<input value="+child_list[j].id+" name='check_direction' type='checkbox'/>");
+                                var leaf_label=$("<label for='direction_message+"+j+"'>"+child_list[j].name+"</label>");
+                                var leaf_input=$("<input id='direction_message+"+j+"' value="+child_list[j].id+" name='check_direction' type='checkbox'/>");
                                 //   $(leaf_div).append(leaf_radio);
                                 $(leaf_div).append(leaf_input);
-                                $(leaf_div).append(leaf_span);
+                                $(leaf_div).append(leaf_label);
                               
                                 
                                 
@@ -97,10 +98,10 @@ $(function(){
                                 for(var m = 0;m<un_leaf_child_list.length;m++){
                                     var un_leaf_div=$("<div id='un_leaf"+un_leaf_child_list[m].id+"' class='investigation_direction_message none is_radio'></div>");
                                     //   console.log(un_leaf_child_list[j])
-                                    var un_leaf_input=$("<input value="+un_leaf_child_list[m].id+" name='check_direction' type='checkbox'/>");
-                                    var un_leaf_span=$("<span>"+un_leaf_child_list[m].name+"</span>");
+                                    var un_leaf_input=$("<input id='un_leaf_input+"+m+"' value="+un_leaf_child_list[m].id+" name='check_direction' type='checkbox'/>");
+                                    var un_leaf_label=$("<label for='un_leaf_input+"+m+"'>"+un_leaf_child_list[m].name+"</label>");
                                     $(un_leaf_div).append(un_leaf_input);
-                                    $(un_leaf_div).append(un_leaf_span);
+                                    $(un_leaf_div).append(un_leaf_label);
                                    
                                     //   $("#child_direction_box").addClass("none");
                                     $("#child_direction_box").append(un_leaf_div);
@@ -123,13 +124,11 @@ $(function(){
         //单选框点击函数
         $(".is_leaf").click(function(){
             var class_is_leaf=document.getElementsByName("is_leaf")
-            console.log(class_is_leaf)
             $(class_is_leaf).removeClass("active")
             var check_training_object = document.getElementsByName("check_training_object");
             //选择问题1后显示选择信息
             for(var c = 0;c<check_training_object.length;c++){
                 if(check_training_object[c].checked){
-                    console.log(check_training_object[c].value)
                     for(var i = 0;i<type.length;i++){
                         if(check_training_object[c].value==type[i].id){
                             var child_list=type[i].child_list;
@@ -163,7 +162,7 @@ $(function(){
                 }
             }
         })
-
+          
     })
    
     

@@ -5,10 +5,10 @@ $(function(){
             // console.log(company_type)
             for(var i = 0;i<company_type.length;i++){
                 var company_type_li = $("<li></li");
-                var company_type_input = $("<input value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")
-                var company_type_span = $("<span>"+company_type[i].name+"</span>");
+                var company_type_input = $("<input id ='company_type_input+"+i+"' value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")
+                var company_type_label = $("<label for ='company_type_input+"+i+"'>"+company_type[i].name+"</label>");
                 $(company_type_li).append(company_type_input);
-                $(company_type_li).append(company_type_span);
+                $(company_type_li).append(company_type_label);
                 $("#investigation_company_type_ul").append(company_type_li);
             }
             $("input:checkbox").click(function(){
@@ -26,19 +26,17 @@ $(function(){
             for(var i = 0;i<duty_type.length;i++){
                
                 var duty_type_li = $("<li></li");
-                var duty_type_input = $("<input value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
-                var duty_type_span = $("<span>"+duty_type[i].name+"</span>");
+                var duty_type_input = $("<input id ='duty_type_input+"+i+"' value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
+                var duty_type_label = $("<label for ='duty_type_input+"+i+"'>"+duty_type[i].name+"</label>");
                 $(duty_type_li).append(duty_type_input);
-                $(duty_type_li).append(duty_type_span);
+                $(duty_type_li).append(duty_type_label);
                 $("#investigation_duty_type_ul").append(duty_type_li);
             }
             $("input:radio").click(function(){
-                console.log("in")
                 var check_duty_type = document.getElementsByName("check_duty_type");
                 for(var m = 0;m<check_duty_type.length;m++){
                     
                     if(check_duty_type[m].checked){
-                        console.log($(check_duty_type[m]).parent())
                         $(check_duty_type[m]).parent().addClass("active")
                     }else{
                         $(check_duty_type[m]).parent().removeClass("active")
@@ -49,8 +47,10 @@ $(function(){
            
         }
         //点击完成问题4 
-        $("#investigation_company_type").on("click","#company_type_btn",function company_type_btn(){
-           //判断是否选中
+        $("#company_type_btn").click(function(){
+            $("#reset_company_type").addClass("open")
+            $("#reset_company_type").removeClass("close")
+            //判断是否选中
             is_selected("check_company_type","请选择您的企业战略类型")
             if(is_selected_sum==0){
                 return false
@@ -65,8 +65,10 @@ $(function(){
             company_type_arr = selected_message_ids;
         })
          //点击完成问题5
-        $("#investigation_duty_type").on("click","#duty_type_btn",function duty_type_btn(){
-             //判断是否选中
+        $("#duty_type_btn").click(function(){
+            $("#reset_duty_type").addClass("open")
+            $("#reset_duty_type").removeClass("close")
+            //判断是否选中
             is_selected("check_duty_type","请选择您本人在公司的职务类型")
             if(is_selected_sum==0){
                 return false
