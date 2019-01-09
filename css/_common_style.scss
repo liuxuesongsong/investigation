@@ -1,0 +1,51 @@
+// 卡片下拉框
+.investigation_training_object::after,
+.investigation_direction::after,
+.investigation_filter::after,
+.investigation_company_type_box::after,
+.investigation_company_duty_box::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    transform: rotate(224deg);
+    border-width: 16px;
+    border-color: $border_bottom-color transparent transparent $border_bottom-color;
+    border-style: solid;
+    border-top-left-radius: 0.8em;
+    right: 3em;
+    bottom: -22px;
+}
+
+.investigation_training_object::before,
+.investigation_direction::before,
+.investigation_filter::before,
+.investigation_company_type_box::before,
+.investigation_company_duty_box::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $primary-color-text;
+    right: 4em;
+    bottom: -14px;
+    z-index: 1;
+}
+
+// 卡片共同样式
+.investigation_training_object,
+.investigation_direction,
+.investigation_filter,
+.investigation_company_type_box,
+.investigation_company_duty_box {
+    margin: 1em;
+    margin-right: 1px;
+    background-color: $primary-color-text;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 0.5em solid $border_bottom-color;
+    position: relative;
+    margin-bottom: 2em;
+    padding: 1em;
+}

@@ -1,10 +1,4 @@
 .investigation_filter {
-    display: block;
-    margin: 1em;
-    margin-right: 0;
-    background-color: $primary-color-text;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-    border-bottom: 0.5em solid $border_bottom-color;
     .investigation_course_title {
         font-size: 1.5em;
         color: $primary-text-color;
@@ -13,20 +7,43 @@
             background-color: $accent-color;
             color: $primary-color-text;
         }
+        .investigation_reset_box {
+            span {
+                font-size: 1em;
+            }
+        }
     }
     .interest_courses {
         overflow: hidden;
         padding-left: 1em;
-        span {
-            border: 1px solid $accent-color;
+        .filter_list_ul {
+            display: block;
             float: left;
-            color: $secondary-text-color;
-            padding: 0 0.5em;
-            margin-bottom: 0.5em;
-        }
-        span.active{
-            color: $primary-color-text;
-            background-color: $accent-color;
+            margin-right: 2em;
+            overflow: hidden;
+            margin-bottom: 1em;
+            li {
+                border: 1px solid $accent-color;
+                float: left;
+                line-height: 2em;
+                padding: 0 0.5em;
+                color: $secondary-text-color;
+                background-color: $primary-color-text;
+            }
+            li:first-child {
+                margin-right: -1px;
+                border-top-left-radius: 0.5em;
+                border-bottom-left-radius: 0.5em;
+            }
+            li:last-child {
+                margin-left: -1px;
+                border-top-right-radius: 0.5em;
+                border-bottom-right-radius: 0.5em;
+            }
+            li.active {
+                background-color: $accent-color;
+                color: $primary-color-text;
+            }
         }
     }
     .investigation_course_ul {

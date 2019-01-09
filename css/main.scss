@@ -4,12 +4,24 @@
 @import 'one_open.scss';
 @import 'two_box.scss';
 @import 'three_box.scss';
+@import 'four_box.scss';
+@import 'common_style.scss';
 .investigation_training_object {
     padding-bottom: 1em;
 }
 
 .investigation_training_object_label {
     padding-bottom: 1em;
+}
+
+.investigation_finish_btn {
+    color: $primary-color-text;
+    background-color: $accent-color;
+    text-align: center;
+    width: 6em;
+    line-height: 2em;
+    display: block;
+    margin: auto;
 }
 
 input[type=radio] {
@@ -23,7 +35,7 @@ input[type=radio] {
     vertical-align: top;
     width: 14px;
     height: 14px;
-    border: 1px solid #000;
+    border: 1px solid $primary-text-color;
     outline: none;
     cursor: pointer;
     /*设置为圆形，看起来是个单选框*/
@@ -50,7 +62,7 @@ input[type=radio]:after {
     right: 0;
     bottom: 0;
     margin: auto;
-    background: #000;
+    background: $primary-text-color;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
@@ -109,11 +121,6 @@ input[type=checkbox]:checked:after {
     opacity: 1;
 }
 
-
-
-
-
-
 .investigation_form_box {
     display: block;
     border: 1px solid #000;
@@ -166,38 +173,11 @@ input[type=checkbox]:checked:after {
     }
 }
 
-.investigation_company_type_box {
-    display: block;
-    padding-bottom: 1em;
-    .investigation_company_type_title {
-        padding-bottom: 1em;
-        span {
-            font-size: 1.2em;
-        }
-    }
-    .investigation_company_type_ul {
-        display: block;
-        padding-left: 1em;
-        overflow: hidden;
-        li {
-            float: left;
-            width: 33%;
-            padding-bottom: 1em;
-            line-height: 1em;
-        }
-        input {
-            float: left;
-        }
-        span {
-            float: left;
-            padding-left: 0.2em;
-        }
-    }
-}
-
 .investigation_company_duty_box {
     display: block;
     padding-bottom: 1em;
+    color: $primary-text-color;
+    overflow: hidden;
     .investigation_duty_type_title {
         padding-bottom: 1em;
         span {
@@ -207,7 +187,6 @@ input[type=checkbox]:checked:after {
     .investigation_company_duty_ul {
         display: block;
         padding-left: 1em;
-        overflow: hidden;
         li {
             float: left;
             width: 33%;
