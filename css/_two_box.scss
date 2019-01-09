@@ -24,6 +24,9 @@
             line-height: 2em;
         }
     }
+    .investigation_direction_message:nth-of-type(odd) {
+        background-color: $background-color;
+    }
     .investigation_un_leaf_ul {
         float: left;
         width: 100%;
@@ -115,6 +118,7 @@
         float: left;
         width: 100%;
         line-height: 2em;
+        position: relative;
         padding-bottom: 1em;
         span {
             float: left;
@@ -132,10 +136,13 @@
             margin-right: 2px;
         }
     }
-    .investigation_direction_message.is_leaf {
-        position: relative;
+    .investigation_direction_message:nth-of-type(odd) {
         background-color: $background-color;
     }
+    // .investigation_direction_message.is_leaf {
+    //     position: relative;
+    //     background-color: $background-color;
+    // }
     .investigation_direction_message.is_leaf::before,
     .investigation_direction_message.is_leaf::after {
         position: absolute;

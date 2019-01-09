@@ -1,0 +1,112 @@
+.login_box {
+    display: block;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    padding: 3em 2em 1em 2em;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1px;
+    background-color: $background-color;
+    color: $primary-text-color;
+    border-bottom: 1em solid $border_bottom-color;
+    margin-bottom: 5em;
+    .investigation_people_name,
+    .login_telephone_box,
+    .login_code_box {
+        float: left;
+        overflow: hidden;
+        width: 100%;
+        line-height: 2em;
+        background-color: $primary-color-text;
+        border-radius: 4px;
+        margin-bottom: 0.5em;
+        input {
+            margin-top: 0.4em;
+        }
+    }
+    .investigation_people_tel,
+        {
+        button {
+            float: left;
+        }
+    }
+    button {
+        border: 0;
+        outline: none;
+        color: $primary-color-text;
+        background-color: $accent-color;
+        line-height: 2em;
+        border-radius: 0.5em;
+    }
+    label {
+        float: left;
+        width: 6em;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 2em;
+    }
+    input {
+        box-sizing: border-box;
+        padding-left: 0.5em;
+        border: none;
+        outline: none;
+        float: left;
+        opacity: 0.1;
+        background-color: $primary-color;
+    }
+    .investigation_submit {
+        margin-top: 1em;
+        line-height: 2em;
+        width: 100%;
+        text-align: center;
+    }
+    label {
+        position: relative;
+        line-height: 2em;
+    }
+    label::before {
+        position: absolute;
+        content: ' ';
+        display: block;
+        width: 1em;
+        height: 2em;
+        left: 4px;
+        top: 2px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .investigation_people_name {
+        input {
+            width: 17.5em;
+        }
+        label::before {
+            background-image: url(src/name_logo-07.png);
+        }
+    }
+    .login_telephone_box {
+        label::before {
+            background-image: url(src/phone_num-07.png);
+        }
+        input {
+            width: 18em;
+        }
+    }
+    .login_code_box {
+        position: relative;
+        label::before {
+            background-image: url(src/code_log-07.png);
+        }
+        #login_code {
+            width: 17.5em;
+        }
+    }
+    #login_get_code {
+        background: transparent;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        color: $primary-color;
+        right: 1em;
+    }
+}

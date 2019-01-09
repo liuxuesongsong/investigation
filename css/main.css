@@ -277,6 +277,8 @@ input[type=checkbox]:checked:after {
     .investigation_child_direction_box .investigation_direction_message label {
       float: left;
       line-height: 2em; }
+  .investigation_child_direction_box .investigation_direction_message:nth-of-type(odd) {
+    background-color: #f5f5f5; }
   .investigation_child_direction_box .investigation_un_leaf_ul {
     float: left;
     width: 100%;
@@ -350,6 +352,7 @@ input[type=checkbox]:checked:after {
     float: left;
     width: 100%;
     line-height: 2em;
+    position: relative;
     padding-bottom: 1em; }
     .investigation_leaf_box .investigation_direction_message span {
       float: left; }
@@ -362,8 +365,7 @@ input[type=checkbox]:checked:after {
       margin-left: 1em;
       margin-top: 0.5em;
       margin-right: 2px; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf {
-    position: relative;
+  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd) {
     background-color: #f5f5f5; }
   .investigation_leaf_box .investigation_direction_message.is_leaf::before,
   .investigation_leaf_box .investigation_direction_message.is_leaf::after {
@@ -449,7 +451,6 @@ input[type=checkbox]:checked:after {
       background-color: #FC766A;
       color: #FFFFFF; }
 .investigation_filter .investigation_course_ul {
-  padding-left: 1em;
   display: block;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -458,12 +459,14 @@ input[type=checkbox]:checked:after {
   max-height: 22em;
   margin-bottom: 1em; }
   .investigation_filter .investigation_course_ul li {
+    box-sizing: border-box;
     float: left;
     width: 100%;
     line-height: 2em;
     margin-bottom: 0.5em;
     color: #5C89CC;
-    overflow: hidden; }
+    overflow: hidden;
+    padding-left: 1em; }
   .investigation_filter .investigation_course_ul li.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
@@ -574,6 +577,7 @@ input[type=checkbox]:checked:after {
 
 .investigation_training_object,
 .investigation_company_type_box,
+.investigation_direction,
 .investigation_company_duty_box {
   background-color: #FFFFFF; }
 
@@ -659,6 +663,121 @@ input[type=checkbox]:checked:after {
     .investigation_form_box .investigation_people_code .code {
       width: 17.5em; }
   .investigation_form_box .get_code {
+    background: transparent;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    color: #5C89CC;
+    right: 1em; }
+
+#start_title {
+  float: left;
+  width: 100%;
+  font-size: 2em;
+  line-height: 2em;
+  color: #5C89CC; }
+
+#start_content {
+  float: left;
+  width: 20em;
+  font-size: 1em;
+  float: left;
+  color: #5C89CC; }
+
+#start_btn,
+#selected_investigation {
+  font-size: 1.5em;
+  float: left;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #FC766A;
+  padding: 0 0.5em;
+  line-height: 2em;
+  margin-top: 2em; }
+
+.login_box {
+  display: block;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  padding: 3em 2em 1em 2em;
+  text-align: center;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1px;
+  background-color: #f5f5f5;
+  color: #5C89CC;
+  border-bottom: 1em solid #F1D661;
+  margin-bottom: 5em; }
+  .login_box .investigation_people_name,
+  .login_box .login_telephone_box,
+  .login_box .login_code_box {
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    line-height: 2em;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 0.5em; }
+    .login_box .investigation_people_name input,
+    .login_box .login_telephone_box input,
+    .login_box .login_code_box input {
+      margin-top: 0.4em; }
+  .login_box .investigation_people_tel button {
+    float: left; }
+  .login_box button {
+    border: 0;
+    outline: none;
+    color: #FFFFFF;
+    background-color: #FC766A;
+    line-height: 2em;
+    border-radius: 0.5em; }
+  .login_box label {
+    float: left;
+    width: 6em;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 2em; }
+  .login_box input {
+    box-sizing: border-box;
+    padding-left: 0.5em;
+    border: none;
+    outline: none;
+    float: left;
+    opacity: 0.1;
+    background-color: #5C89CC; }
+  .login_box .investigation_submit {
+    margin-top: 1em;
+    line-height: 2em;
+    width: 100%;
+    text-align: center; }
+  .login_box label {
+    position: relative;
+    line-height: 2em; }
+  .login_box label::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 1em;
+    height: 2em;
+    left: 4px;
+    top: 2px;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .login_box .investigation_people_name input {
+    width: 17.5em; }
+  .login_box .investigation_people_name label::before {
+    background-image: url(src/name_logo-07.png); }
+  .login_box .login_telephone_box label::before {
+    background-image: url(src/phone_num-07.png); }
+  .login_box .login_telephone_box input {
+    width: 18em; }
+  .login_box .login_code_box {
+    position: relative; }
+    .login_box .login_code_box label::before {
+      background-image: url(src/code_log-07.png); }
+    .login_box .login_code_box #login_code {
+      width: 17.5em; }
+  .login_box #login_get_code {
     background: transparent;
     position: absolute;
     opacity: 1;

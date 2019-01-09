@@ -51,7 +51,6 @@
         }
     }
     .investigation_course_ul {
-        padding-left: 1em;
         display: block;
         overflow-x: hidden;
         overflow-y: scroll;
@@ -60,12 +59,14 @@
         max-height: 22em;
         margin-bottom: 1em;
         li {
+            box-sizing: border-box;
             float: left;
             width: 100%;
             line-height: 2em;
             margin-bottom: 0.5em;
             color: $primary-text-color;
             overflow: hidden;
+            padding-left: 1em;
         }
         li.active {
             background-color: $primary-color;
