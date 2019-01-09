@@ -1,6 +1,5 @@
 .investigation_filter {
     .investigation_course_title {
-        font-size: 1.5em;
         color: $primary-text-color;
         padding-bottom: 1em;
         button {
@@ -12,6 +11,9 @@
                 font-size: 1em;
             }
         }
+    }
+    .investigation_course_title>span {
+        font-size: 1.5em
     }
     .interest_courses {
         overflow: hidden;
@@ -51,11 +53,16 @@
         display: block;
         overflow-x: hidden;
         overflow-y: scroll;
+        color: $primary-text-color;
+        padding-bottom: 1em;
         li {
             float: left;
             width: 100%;
-            line-height: 1em;
+            line-height: 2em;
             margin-bottom: 0.5em;
+        }
+        input{
+            margin-right: 2px;
         }
     }
     .investigation_course_ul::-webkit-scrollbar {

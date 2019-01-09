@@ -1,5 +1,5 @@
 .investigation_child_direction_box {
-    padding: 0 0 1em 4em;
+    padding: 0 0 1em 1em;
     height: 8em;
     box-sizing: border-box;
     .investigation_direction_message {
@@ -67,6 +67,7 @@
     display: block;
     overflow: hidden;
     padding-left: 1em;
+    padding-top: 2em;
     padding-bottom: 2em;
 }
 
@@ -81,6 +82,7 @@
     width: 50%;
     height: 14em;
     overflow-x: hidden;
+    background-color: $primary-color-text;
     overflow-y: scroll;
     .investigation_un_leaf_ul {
         float: left;
@@ -110,14 +112,57 @@
     .investigation_direction_message {
         float: left;
         width: 100%;
-        margin-top: 1em;
-        line-height: 1em;
-        padding-bottom: 0.5em;
+        line-height: 2em;
+        padding-bottom: 1em;
         span {
             float: left;
         }
         input {
             float: left;
+            margin-top: 0.5em;
+            margin-right: 2px;
         }
+    }
+    .investigation_direction_message.is_leaf {
+        position: relative;
+        background-color: $background-color;
+    }
+    .investigation_direction_message.is_leaf::before,
+    .investigation_direction_message.is_leaf::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1em;
+        height: 1em;
+        border: 1px solid $primary-text-color;
+    }
+    .investigation_direction_message.active {
+        background-color: $primary-color;
+        color: $primary-color-text;
+    }
+    .investigation_direction_message.is_leaf.active::before,
+    .investigation_direction_message.is_leaf.active::after {
+        border-color: $primary-color-text;
+    }
+    .investigation_direction_message.is_leaf::before {
+        right: 1.1em;
+        top: 1em;
+        z-index: 1;
+        background-color: $background-color;
+    }
+    .investigation_direction_message.is_leaf.active::before {
+        background-color: $primary-color;
+    }
+    .investigation_direction_message.is_leaf::after {
+        right: 1.5em;
+        top: 0.6em;
+    }
+}
+
+.investigation_child_direction_box {
+    padding-left: 1em;
+    margin-bottom: 1em;
+    .investigation_direction_message {
+        padding-left: 1em;
     }
 }

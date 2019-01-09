@@ -6,23 +6,8 @@
 @import 'three_box.scss';
 @import 'four_box.scss';
 @import 'common_style.scss';
-.investigation_training_object {
-    padding-bottom: 1em;
-}
+@import 'form_box';
 
-.investigation_training_object_label {
-    padding-bottom: 1em;
-}
-
-.investigation_finish_btn {
-    color: $primary-color-text;
-    background-color: $accent-color;
-    text-align: center;
-    width: 6em;
-    line-height: 2em;
-    display: block;
-    margin: auto;
-}
 
 input[type=radio] {
     /*去除浏览器默认样式*/
@@ -121,65 +106,12 @@ input[type=checkbox]:checked:after {
     opacity: 1;
 }
 
-.investigation_form_box {
-    display: block;
-    border: 1px solid #000;
-    overflow: hidden;
-    padding: 1em 0 1em 2em;
-    text-align: center;
-    .investigation_people_name,
-    .investigation_people_tel,
-    .investigation_people_code {
-        float: left;
-        overflow: hidden;
-        width: 100%;
-        line-height: 2em;
-        input {
-            margin-top: 0.5em;
-        }
-    }
-    .investigation_people_tel,
-        {
-        button {
-            float: left;
-        }
-    }
-    button {
-        border: 0;
-        outline: none;
-        background-color: #fff;
-        line-height: 2em;
-    }
-    label {
-        float: left;
-        width: 4em;
-        text-align: right;
-    }
-    input {
-        box-sizing: border-box;
-        padding-left: 0.5em;
-        border: none;
-        width: 9em;
-        outline: none;
-        float: left;
-        background-color: #f5f5f5;
-    }
-    .investigation_submit {
-        margin-top: 1em;
-        border: 1px solid #000;
-        line-height: 2em;
-        width: 8em;
-        text-align: center;
-    }
-}
-
 .investigation_company_duty_box {
     display: block;
     padding-bottom: 1em;
     color: $primary-text-color;
-    overflow: hidden;
     .investigation_duty_type_title {
-        padding-bottom: 1em;
+        overflow: hidden;
         span {
             font-size: 1.2em;
         }
