@@ -57,5 +57,10 @@ $(function(){
     }
 
     })
+    $("#login_submit").click(function(){
+        console.log("登陆成功")
+        //默认成功登陆
+        window.open("report.html","_self")
+    })
 
 })
