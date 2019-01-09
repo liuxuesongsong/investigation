@@ -1,10 +1,11 @@
 .investigation_company_type_box {
     color: $primary-color;
     .investigation_company_type_title {
-        padding-bottom: 1em;
-        span {
-            font-size: 1.2em;
-        }
+        line-height: 2em;
+        overflow: hidden;
+    }
+    .investigation_company_type_title>span {
+        font-size: 1.5em;
     }
     .investigation_company_type_ul {
         display: block;
