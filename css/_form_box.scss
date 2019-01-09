@@ -5,8 +5,11 @@
     padding: 3em 2em 1em 2em;
     text-align: center;
     margin-left: 1em;
+    margin-right: 1px;
     background-color: $background-color;
     color: $primary-text-color;
+    border-bottom: 1em solid $border_bottom-color;
+    margin-bottom: 5em;
     .investigation_people_name,
     .investigation_people_tel,
     .investigation_people_code {
@@ -89,6 +92,7 @@
         }
     }
     .investigation_people_code {
+        position: relative;
         label::before {
             background-image: url(src/code_log-07.png);
         }
@@ -97,6 +101,11 @@
         }
     }
     .get_code {
+        background: transparent;
+        position: absolute;
         opacity: 1;
+        top: 0;
+        color: $primary-color;
+        right: 1em;
     }
 }

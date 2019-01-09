@@ -1,5 +1,5 @@
 .investigation_child_direction_box {
-    padding: 0 0 1em 1em;
+    padding: 0 0 1em 0em;
     height: 8em;
     box-sizing: border-box;
     .investigation_direction_message {
@@ -8,6 +8,7 @@
         overflow: hidden;
         line-height: 1em;
         padding-bottom: 0.5em;
+        box-sizing: border-box;
         padding-top: 1em;
         .investigation_un_leaf_ul {
             float: left;
@@ -17,6 +18,7 @@
             width: 14px;
             height: 14px;
             float: left;
+            margin-right: 2px;
         }
         span {
             float: left;
@@ -80,7 +82,7 @@
     color: $primary-text-color;
     float: left;
     width: 50%;
-    height: 14em;
+    height: 16em;
     overflow-x: hidden;
     background-color: $primary-color-text;
     overflow-y: scroll;
@@ -109,6 +111,7 @@
 .investigation_leaf_box {
     float: left;
     color: $primary-text-color;
+    box-sizing: border-box;
     .investigation_direction_message {
         float: left;
         width: 100%;
@@ -117,8 +120,12 @@
         span {
             float: left;
         }
+        span:first-child {
+            margin-left: 1em;
+        }
         input {
             float: left;
+            margin-left: 1em;
             margin-top: 0.5em;
             margin-right: 2px;
         }
@@ -139,6 +146,12 @@
     .investigation_direction_message.active {
         background-color: $primary-color;
         color: $primary-color-text;
+        input[type=checkbox] {
+            border-color: $primary-color-text;
+        }
+        input[type=checkbox]:after {
+            color: $primary-color-text;
+        }
     }
     .investigation_direction_message.is_leaf.active::before,
     .investigation_direction_message.is_leaf.active::after {
@@ -160,9 +173,21 @@
 }
 
 .investigation_child_direction_box {
-    padding-left: 1em;
     margin-bottom: 1em;
+    box-sizing: border-box;
     .investigation_direction_message {
         padding-left: 1em;
+    }
+}
+
+.investigation_direction_message.is_radio.active {
+    background-color: #5C89CC;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    input[type=checkbox] {
+        border-color: #FFFFFF;
+    }
+    input[type=checkbox]:after {
+        color: #FFFFFF;
     }
 }

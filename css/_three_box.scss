@@ -7,12 +7,14 @@
             color: $primary-color-text;
         }
         .investigation_reset_box {
-            span {
+            span,
+            lable {
                 font-size: 1em;
             }
         }
     }
-    .investigation_course_title>span {
+    .investigation_course_title>span,
+    lable {
         font-size: 1.5em
     }
     .interest_courses {
@@ -55,14 +57,31 @@
         overflow-y: scroll;
         color: $primary-text-color;
         padding-bottom: 1em;
+        max-height: 22em;
+        margin-bottom: 1em;
         li {
             float: left;
             width: 100%;
             line-height: 2em;
             margin-bottom: 0.5em;
+            color: $primary-text-color;
         }
-        input{
+        li.active {
+            background-color: $primary-color;
+            color: $primary-color-text;
+            input[type=checkbox] {
+                border-color: $primary-color-text;
+            }
+            input[type=checkbox]:after {
+                color: $primary-color-text;
+            }
+        }
+        input {
+            margin-top: 0.5em;
             margin-right: 2px;
+        }
+        span {
+            line-height: 2em;
         }
     }
     .investigation_course_ul::-webkit-scrollbar {
@@ -70,12 +89,12 @@
         width: 6px;
         height: 0;
         border-radius: 4px;
-        background-color: #c9c9c9;
+        background-color: $theme_right_bgcolor;
     }
     .investigation_course_ul::-webkit-scrollbar-thumb {
         display: block;
         width: 6px;
         border-radius: 4px;
-        background-color: #757575;
+        background-color: $primary-color;
     }
 }
