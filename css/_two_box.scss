@@ -44,50 +44,6 @@
     }
 }
 
-.investigation_direction {
-    position: relative;
-    box-sizing: border-box;
-    margin: 1em;
-    margin-right: 1px;
-    margin-bottom: 2em;
-    color: $primary-text-color;
-    background-color: $primary-color-text;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-    border-bottom: 0.5em solid $border_bottom-color;
-    .investigation_direction_label {
-        padding-bottom: 1em;
-        color: $primary-color;
-        font-size: 1.5em;
-    }
-}
-
-.investigation_direction::after {
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    transform: rotate(224deg);
-    border-width: 16px;
-    border-color: $border_bottom-color transparent transparent $border_bottom-color;
-    border-style: solid;
-    border-top-left-radius: 0.8em;
-    right: 3em;
-    bottom: -22px;
-}
-
-.investigation_direction::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid $primary-color-text;
-    right: 4em;
-    bottom: -14px;
-    z-index: 1;
-}
-
 .investigation_direction_label {
     button {
         background-color: $accent-color;
@@ -95,8 +51,21 @@
     }
 }
 
+.investigation_direction_label {
+    color: $primary-color;
+    span {
+        font-size: 1.5em
+    }
+    .investigation_reset_box {
+        span {
+            font-size: 1em;
+        }
+    }
+}
+
 .investigation_direction_box {
     display: block;
+    overflow: hidden;
     padding-left: 1em;
     padding-bottom: 2em;
 }
@@ -107,8 +76,10 @@
 
 .investigation_leaf_box,
 .investigation_child_direction_box {
+    color: $primary-text-color;
     float: left;
     width: 50%;
+    height: 14em;
     overflow-x: hidden;
     overflow-y: scroll;
     .investigation_un_leaf_ul {
@@ -135,6 +106,7 @@
 
 .investigation_leaf_box {
     float: left;
+    color: $primary-text-color;
     .investigation_direction_message {
         float: left;
         width: 100%;

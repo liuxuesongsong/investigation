@@ -1,0 +1,27 @@
+.investigation_company_type_box {
+    color: $primary-color;
+    .investigation_company_type_title {
+        padding-bottom: 1em;
+        span {
+            font-size: 1.2em;
+        }
+    }
+    .investigation_company_type_ul {
+        display: block;
+        padding-left: 1em;
+        overflow: hidden;
+        li {
+            float: left;
+            width: 33%;
+            padding-bottom: 1em;
+            line-height: 1em;
+        }
+        input {
+            float: left;
+        }
+        span {
+            float: left;
+            padding-left: 0.2em;
+        }
+    }
+}
