@@ -22,22 +22,8 @@ $(function(){
        close = function(){
         $(".main").fadeOut()
       }
-    $("#investigation_form").on("click","#investigation_submit",function investigation_submit(){
-       if($("#account").val()==""){
-            $(".main").fadeIn();
-            $("#alert_msg").html("请输入姓名")
-            setInterval(close, 3000);
-       }
-       if($("#telephone").val()==""){
-            $(".main").fadeIn();
-            $("#alert_msg").html("请输入电话号码")
-            setInterval(close, 3000);
-         }
-        if($("#code").val()==""){
-            $(".main").fadeIn();
-            $("#alert_msg").html("请输入验证码")
-            setInterval(close, 3000);
-        }
+    $("#again_investigation_submit").click(function(){
+       
    
         //问题1 checked_training_object_arr
         //问题2 checked_direction_arr
@@ -52,9 +38,6 @@ $(function(){
             dataType: "json", //数据格式:JSON
             url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_courses', //目标地址
             data: {
-               name:$("#account").val(),
-               number:$("#telephone").val(),
-               code:$("#code").val(),
                course_object:checked_training_object_arr,
                list_object:checked_direction_arr,
                filter:course_ids_arr,
@@ -66,9 +49,6 @@ $(function(){
                 // console.log(msg.codeid);
             },
             success: function(data) {
-                if(data.error==0){
-                    window.open("")
-                }
                 is_selected("check_duty_type",data.msg)
                 // codeid = msg.codeid;
 

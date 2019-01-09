@@ -5,10 +5,10 @@ $(function(){
             // console.log(company_type)
             for(var i = 0;i<company_type.length;i++){
                 var company_type_li = $("<li></li");
-                var company_type_input = $("<input value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")
-                var company_type_span = $("<span>"+company_type[i].name+"</span>");
+                var company_type_input = $("<input id ='company_type_input+"+i+"' value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")
+                var company_type_label = $("<label for ='company_type_input+"+i+"'>"+company_type[i].name+"</label>");
                 $(company_type_li).append(company_type_input);
-                $(company_type_li).append(company_type_span);
+                $(company_type_li).append(company_type_label);
                 $("#investigation_company_type_ul").append(company_type_li);
             }
             $("input:checkbox").click(function(){
@@ -26,19 +26,17 @@ $(function(){
             for(var i = 0;i<duty_type.length;i++){
                
                 var duty_type_li = $("<li></li");
-                var duty_type_input = $("<input value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
-                var duty_type_span = $("<span>"+duty_type[i].name+"</span>");
+                var duty_type_input = $("<input id ='duty_type_input+"+i+"' value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
+                var duty_type_label = $("<label for ='duty_type_input+"+i+"'>"+duty_type[i].name+"</label>");
                 $(duty_type_li).append(duty_type_input);
-                $(duty_type_li).append(duty_type_span);
+                $(duty_type_li).append(duty_type_label);
                 $("#investigation_duty_type_ul").append(duty_type_li);
             }
             $("input:radio").click(function(){
-                console.log("in")
                 var check_duty_type = document.getElementsByName("check_duty_type");
                 for(var m = 0;m<check_duty_type.length;m++){
                     
                     if(check_duty_type[m].checked){
-                        console.log($(check_duty_type[m]).parent())
                         $(check_duty_type[m]).parent().addClass("active")
                     }else{
                         $(check_duty_type[m]).parent().removeClass("active")

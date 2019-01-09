@@ -8,7 +8,6 @@ $(function(){
         if(is_selected_sum==0){
             return false
         }
-        console.log("问题3完成咯");
         //关闭问题3内容，5,表单
         $("#course_message,#investigation_duty_type,#investigation_form").addClass("none");
         //打开问题4和内容,打开问题3重置
