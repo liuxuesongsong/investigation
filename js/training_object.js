@@ -11,8 +11,8 @@ $(function(){
     // var type = JSON.parse(sessionStorage.type).data;
         for(var i = 0;i<type.length;i++){
             var li = $("<li class='training_object_li'></li>");
-            var input =$("<input id='train_object_input+"+i+"' value="+type[i].id+" name='check_training_object' type='checkbox'/>");
-            var label = $("<label for='train_object_input+"+i+"'>"+type[i].name+"</label>");
+            var input =$("<input id='train_object_input"+type[i].id+"' value="+type[i].id+" name='check_training_object' type='checkbox'/>");
+            var label = $("<label for='train_object_input"+type[i].id+"'>"+type[i].name+"</label>");
             $(li).append(input);
             $(li).append(label);
             $("#training_object_ul").append(li);
@@ -73,8 +73,8 @@ $(function(){
                                 
                                 var leaf_div=$("<div class='investigation_direction_message'></div>");
                                 //   var leaf_radio=$("<input value="+child_list[j].id+" name='investigation' type='radio'/>");
-                                var leaf_label=$("<label for='direction_message+"+j+"'>"+child_list[j].name+"</label>");
-                                var leaf_input=$("<input id='direction_message+"+j+"' value="+child_list[j].id+" name='check_direction' type='checkbox'/>");
+                                var leaf_label=$("<label for='direction_message"+child_list[j].id+"'>"+child_list[j].name+"</label>");
+                                var leaf_input=$("<input id='direction_message"+child_list[j].id+"' value="+child_list[j].id+" name='check_direction' type='checkbox'/>");
                                 //   $(leaf_div).append(leaf_radio);
                                 $(leaf_div).append(leaf_input);
                                 $(leaf_div).append(leaf_label);
@@ -98,8 +98,8 @@ $(function(){
                                 for(var m = 0;m<un_leaf_child_list.length;m++){
                                     var un_leaf_div=$("<div id='un_leaf"+un_leaf_child_list[m].id+"' class='investigation_direction_message none is_radio'></div>");
                                     //   console.log(un_leaf_child_list[j])
-                                    var un_leaf_input=$("<input id='un_leaf_input+"+m+"' value="+un_leaf_child_list[m].id+" name='check_direction' type='checkbox'/>");
-                                    var un_leaf_label=$("<label for='un_leaf_input+"+m+"'>"+un_leaf_child_list[m].name+"</label>");
+                                    var un_leaf_input=$("<input id='un_leaf_input"+un_leaf_child_list[m].id+"' value="+un_leaf_child_list[m].id+" name='check_direction' type='checkbox'/>");
+                                    var un_leaf_label=$("<label for='un_leaf_input"+un_leaf_child_list[m].id+"'>"+un_leaf_child_list[m].name+"</label>");
                                     $(un_leaf_div).append(un_leaf_input);
                                     $(un_leaf_div).append(un_leaf_label);
                                    

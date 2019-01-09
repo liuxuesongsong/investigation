@@ -59,8 +59,24 @@ $(function(){
     })
     $("#login_submit").click(function(){
         console.log("登陆成功")
+        $.ajax({
+            type: "POST", //用POST方式传输
+            dataType: "json", //数据格式:JSON
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_courses', //目标地址
+            data: {
+                number: $("#login_telephone").val(),
+                code:$("#login_code").val()
+            },
+            error: function(data) {
+                is_selected("check_duty_type",data.msg)
+            },
+            success: function(msg) {
+                // codeid = msg.codeid;
+
+            }
+        });
         //默认成功登陆
-        window.open("report.html","_self")
+        // window.open("report.html","_self")
        
        
     })

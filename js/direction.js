@@ -91,8 +91,8 @@ for(var p = 0;p<splice_filter_list_arr.length;p++){
                 filter_all_data.push(course_data[a]);
                 filter_all_datas.push(course_data[a])
             var course_li = $("<li></li>");
-            var course_input = $("<input id ='course_input+"+a+"' value="+course_data[a].id+" name='check_course' type='checkbox'/>");
-            var course_label = $("<label for ='course_input+"+a+"' >"+course_data[a].name+"</label>");
+            var course_input = $("<input id ='course_input"+course_data[a].id+"' value="+course_data[a].id+" name='check_course' type='checkbox'/>");
+            var course_label = $("<label for ='course_input"+course_data[a].id+"' >"+course_data[a].name+"</label>");
             $(course_li).append(course_input);
             $(course_li).append(course_label);
             $("#investigation_course_ul").append(course_li);
@@ -155,8 +155,8 @@ $("input:checkbox").click(function(){
       $("#investigation_course_ul").html("");
       for(var m = 0;m<splice_filter_same_arr.length;m++){
           var course_li = $("<li></li>");
-          var course_input = $("<input id ='filter_course_input+"+m+"' value="+splice_filter_same_arr[m].id+" name='check_course' type='checkbox'/>");
-          var course_label = $("<label for ='filter_course_input+"+m+"'>"+splice_filter_same_arr[m].name+"</label>");
+          var course_input = $("<input id ='filter_course_input"+splice_filter_same_arr[m].id+"' value="+splice_filter_same_arr[m].id+" name='check_course' type='checkbox'/>");
+          var course_label = $("<label for ='filter_course_input"+splice_filter_same_arr[m].id+"'>"+splice_filter_same_arr[m].name+"</label>");
           $(course_li).append(course_input);
           $(course_li).append(course_label);
           $("#investigation_course_ul").append(course_li);
