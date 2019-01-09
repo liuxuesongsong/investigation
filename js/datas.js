@@ -1,5 +1,5 @@
 
-var data=[
+var course_data=[
     {
         "id": "4",
         "name": "需求分析最佳实践",

@@ -2,7 +2,6 @@ $(function(){
         // 问题4
         company_type_list()
         function company_type_list(){
-            console.log("hhh")
             // console.log(company_type)
             for(var i = 0;i<company_type.length;i++){
                 var company_type_li = $("<li></li");
@@ -12,6 +11,13 @@ $(function(){
                 $(company_type_li).append(company_type_span);
                 $("#investigation_company_type_ul").append(company_type_li);
             }
+            $("input:checkbox").click(function(){
+                if($(this).prop("checked")){
+                    $(this).parent().addClass("active")
+                }else{
+                    $(this).parent().removeClass("active")
+                }
+            })
            
         }
         //问题5
@@ -26,6 +32,20 @@ $(function(){
                 $(duty_type_li).append(duty_type_span);
                 $("#investigation_duty_type_ul").append(duty_type_li);
             }
+            $("input:radio").click(function(){
+                console.log("in")
+                var check_duty_type = document.getElementsByName("check_duty_type");
+                for(var m = 0;m<check_duty_type.length;m++){
+                    
+                    if(check_duty_type[m].checked){
+                        console.log($(check_duty_type[m]).parent())
+                        $(check_duty_type[m]).parent().addClass("active")
+                    }else{
+                        $(check_duty_type[m]).parent().removeClass("active")
+                    }
+                }
+            })
+            
            
         }
         //点击完成问题4 
