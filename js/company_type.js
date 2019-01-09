@@ -5,8 +5,8 @@ $(function(){
             // console.log(company_type)
             for(var i = 0;i<company_type.length;i++){
                 var company_type_li = $("<li></li");
-                var company_type_input = $("<input id ='company_type_input+"+i+"' value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")
-                var company_type_label = $("<label for ='company_type_input+"+i+"'>"+company_type[i].name+"</label>");
+                var company_type_input = $("<input id ='company_type_input"+company_type[i].id+"' value="+company_type[i].id+" name='check_company_type' type='checkbox'/>")
+                var company_type_label = $("<label for ='company_type_input"+company_type[i].id+"'>"+company_type[i].name+"</label>");
                 $(company_type_li).append(company_type_input);
                 $(company_type_li).append(company_type_label);
                 $("#investigation_company_type_ul").append(company_type_li);
@@ -26,8 +26,8 @@ $(function(){
             for(var i = 0;i<duty_type.length;i++){
                
                 var duty_type_li = $("<li></li");
-                var duty_type_input = $("<input id ='duty_type_input+"+i+"' value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
-                var duty_type_label = $("<label for ='duty_type_input+"+i+"'>"+duty_type[i].name+"</label>");
+                var duty_type_input = $("<input id ='duty_type_input"+duty_type[i].id+"' value="+duty_type[i].id+" name='check_duty_type' type='radio'/>")
+                var duty_type_label = $("<label for ='duty_type_input"+duty_type[i].id+"'>"+duty_type[i].name+"</label>");
                 $(duty_type_li).append(duty_type_input);
                 $(duty_type_li).append(duty_type_label);
                 $("#investigation_duty_type_ul").append(duty_type_li);
