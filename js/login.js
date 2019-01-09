@@ -61,6 +61,33 @@ $(function(){
         console.log("登陆成功")
         //默认成功登陆
         window.open("report.html","_self")
+       
+       
     })
+    export_data_function()
+    function export_data_function(){
+        // 成功登陆得到的数据
+        // 问题1答案
+        export_list_function(all_type_data,export_data.course_object,"#export_training_object")
+         // 问题2答案
+        export_list_function(all_type_data,export_data.list_object,"#export_investigation")
+         // 问题3答案
+         export_list_function(course_data,export_data.filter,"#export_course")
+        // 问题4答案
+        export_list_function(company_type,export_data.company_type,"#export_company_type")
+        // 问题5答案
+        export_list_function(duty_type,export_data.job_type,"#export_duty_type")
+           
+    } 
+    function export_list_function(data,export_data,li_id){
+        for(var m = 0;m<data.length;m++){
+            for(var n = 0;n<export_data.length;n++){
+                if(data[m].id ==export_data[n]){
+                    var li = $("<li>"+data[m].name+"</li>");
+                    $(li_id).append(li)
+                }
+            }
+         }
+    }
 
 })

@@ -11,7 +11,6 @@ $(function(){
     //关闭问题2列表,4,5,提交的表单
     $("#direction_message,#investigation_company_type,#investigation_duty_type,#investigation_form").addClass("none");
     //  checked_training_object_arr=[];
-    console.log(checked_training_object_arr)
     //checked_training_object_arr问题1 被选中的id数组
     var training_child_list_arr =[];
     for(var m = 0;m<checked_training_object_arr.length;m++){
@@ -51,21 +50,14 @@ $(function(){
             for(var j = 0;j<direction_arr.length;j++){
                 if(check_direction[i].value==direction_arr[j].id){
                     checked_direction_arr.push(direction_arr[j].id)
-                    console.log(direction_arr[j].filter_list)
-
                     for(var t = 0;t<direction_arr[j].filter_list.length;t++){
                         filter_list_arr.push(direction_arr[j].filter_list[t])  
                     }
-                    // filter_list_arr.push(direction_arr[j].filter_list)
-                    // console.log(direction_arr[j].filter_list)
                 }
             }
             // console.log(check_direction[i].value)
         }
     }
-    // var filter_list_arr = [1,23,1,1,1,3,23,5,6,7,9,9,8,5];
-    //
-    //  $("#selected_message_two").html(checked_direction_arr.length);
 
 splice_filter_list_arr = removeDuplicatedItem(filter_list_arr);
 console.log(splice_filter_list_arr);
@@ -99,24 +91,32 @@ console.log("问题2完成")
  filter_all_data=[];
  filter_all_datas=[];
  $("#investigation_course_ul").html("");
-    for(var a = 0;a<data.length;a++){
+    for(var a = 0;a<course_data.length;a++){
         for(var b = 0;b<checked_direction_arr.length;b++){
-            if(data[a].parent_id==checked_direction_arr[b]){
-                filter_all_data.push(data[a]);
-                filter_all_datas.push(data[a])
+            if(course_data[a].parent_id==checked_direction_arr[b]){
+                filter_all_data.push(course_data[a]);
+                filter_all_datas.push(course_data[a])
             var course_li = $("<li></li>");
-            var course_input = $("<input value="+data[a].id+" name='check_course' type='checkbox'/>");
-            var course_span = $("<span>"+data[a].name+"</span>");
+            var course_input = $("<input value="+course_data[a].id+" name='check_course' type='checkbox'/>");
+            var course_span = $("<span>"+course_data[a].name+"</span>");
             $(course_li).append(course_input);
             $(course_li).append(course_span);
             $("#investigation_course_ul").append(course_li);
-                // console.log(data[a])
+                // console.log(course_data[a])
             }
         }
     }
-
+console.log(course_input)
+$("input:checkbox").click(function(){
+    if($(this).prop("checked")){
+        $(this).parent().addClass("active")
+    }else{
+        $(this).parent().removeClass("active")
+    }
+})
 
  })  
+
  $("#filter_list").on("click",".filter_list_li", function filter_value_list_btn(){
      var filter_value_list_state=document.getElementsByClassName("filter_value_list");
     //  console.log($(".filter_value_list")[0][attr("data_state")])
@@ -182,7 +182,7 @@ console.log("问题2完成")
     //  }
     //筛选点击的筛选项
     
-    
+  
     // console.log(filter_same_arr)
     //  if($(this).attr("data_state")=="0"){
     //     $(this).attr("data_state","1")
@@ -192,7 +192,6 @@ console.log("问题2完成")
     //     $(this).attr("data_state","0")
     //  }
 // console.log($(this).attr("data_state"))
-
  })
  function removeDuplicatedItem(arr) {
     for(var u = 0; u < arr.length-1; u++){
@@ -205,5 +204,5 @@ console.log("问题2完成")
     }
     return arr;
  }
-  
+ 
 })
