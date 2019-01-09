@@ -1,6 +1,8 @@
 $(function(){
     //点击问题3完成
-    $("#investigation_course").on("click","#course_btn",function course_btn(){
+    $("#course_btn").click(function(){
+        $("#reset_course").addClass("open")
+        $("#reset_course").removeClass("close")
        //判断是否选中
         is_selected("check_course","请选择感兴趣的课程")
         //问题被选中的个数信息

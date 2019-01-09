@@ -47,8 +47,10 @@ $(function(){
            
         }
         //点击完成问题4 
-        $("#investigation_company_type").on("click","#company_type_btn",function company_type_btn(){
-           //判断是否选中
+        $("#company_type_btn").click(function(){
+            $("#reset_company_type").addClass("open")
+            $("#reset_company_type").removeClass("close")
+            //判断是否选中
             is_selected("check_company_type","请选择您的企业战略类型")
             if(is_selected_sum==0){
                 return false
@@ -63,8 +65,10 @@ $(function(){
             company_type_arr = selected_message_ids;
         })
          //点击完成问题5
-        $("#investigation_duty_type").on("click","#duty_type_btn",function duty_type_btn(){
-             //判断是否选中
+        $("#duty_type_btn").click(function(){
+            $("#reset_duty_type").addClass("open")
+            $("#reset_duty_type").removeClass("close")
+            //判断是否选中
             is_selected("check_duty_type","请选择您本人在公司的职务类型")
             if(is_selected_sum==0){
                 return false

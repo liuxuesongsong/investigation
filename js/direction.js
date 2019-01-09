@@ -1,6 +1,8 @@
 $(function(){
      //点击问题2完成
- $("#investigation_direction").on("click","#direction_btn",function direction_btn(){
+ $("#direction_btn").click(function(){
+    $("#reset_direction").addClass("open")
+    $("#reset_direction").removeClass("close")
      //判断是否选中
     is_selected("check_direction","请选择需要的课程方向")
     if(is_selected_sum==0){

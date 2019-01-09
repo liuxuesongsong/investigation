@@ -28,6 +28,8 @@ $(function(){
     })
   //点击问题1中的完成按钮
     $("#training_object_btn").click(function(){
+      $("#reset_training_object").addClass("open")
+      $("#reset_training_object").removeClass("close")
        //判断是否选中
        is_selected("check_training_object","请选择培训的对象")
        if(is_selected_sum==0){
@@ -160,7 +162,7 @@ $(function(){
                 }
             }
         })
-
+          
     })
    
     
