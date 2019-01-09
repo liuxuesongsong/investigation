@@ -2,8 +2,18 @@ $(function(){
     //重选的函数
     function reset_fun(id,show_id,button_id){
         $(id).click(function(){
+           console.log( $(show_id).hasClass("none"))
+           if( $(show_id).hasClass("none")){
+               $(id).removeClass("close")
+               $(id).addClass("open")
             $(show_id).removeClass("none");
             $(button_id).html("重选")
+           }else{
+            $(show_id).addClass("none");
+            $(id).removeClass("open")
+            $(id).addClass("close")
+           }
+            
         })
         // $(parent_id).on("click",$(id),function reset_message(){
           
