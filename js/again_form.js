@@ -29,8 +29,8 @@ $(function(){
         $(".main").fadeOut()
       }
     $("#again_investigation_submit").click(function(){
-       
-   
+        var report_datas =JSON.parse(sessionStorage.report_data);
+        console.log(report_datas.token)
         //问题1 checked_training_object_arr
         //问题2 checked_direction_arr
         //问题3 course_ids_arr

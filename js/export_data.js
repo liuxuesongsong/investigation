@@ -5,8 +5,10 @@ var export_data = {
     list_object:["3","7","29"],//问题2
     filter:["4","5","6"],//问题3
     company_type:["2","3"],//问题4
-    job_type:["1"]//问题5
+    job_type:["1"],//问题5
+    token:"123456"
 };
+sessionStorage.report_data=JSON.stringify(export_data)
 var all_type_data = [
     {
         "id": "1",
