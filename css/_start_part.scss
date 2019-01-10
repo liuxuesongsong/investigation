@@ -1,4 +1,4 @@
-#start_title {
+.title_messgae {
     float: left;
     width: 100%;
     font-size: 2em;
@@ -6,7 +6,7 @@
     color: $primary-text-color;
 }
 
-#start_content {
+.content_message {
     float: left;
     width: 20em;
     font-size: 1em;
@@ -14,8 +14,8 @@
     color: $primary-text-color;
 }
 
-#start_btn,
-#selected_investigation {
+.enter_investigation,
+.login_investigation {
     font-size: 1.5em;
     float: left;
     text-align: center;

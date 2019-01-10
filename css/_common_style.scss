@@ -22,7 +22,7 @@
 // 完成按钮统一样式
 .investigation_finish_btn {
     color: $primary-color-text;
-    background-color: $accent-color;
+    background-color: blue;
     text-align: center;
     width: 6em;
     line-height: 2em;
@@ -36,7 +36,8 @@
 .investigation_direction,
 .investigation_filter,
 .investigation_company_type_box,
-.investigation_company_duty_box {
+.investigation_company_duty_box,
+.investigation_start_info {
     margin: 1em;
     margin-right: 1px;
     background-color: $background-color;
