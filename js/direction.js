@@ -129,25 +129,43 @@ $("input:checkbox").click(function(){
      if(sum0==filter_value_list_arr.length){
         filter_same_arr=filter_all_data;
      }
+    //  var filter_data_arr = {};
+    //  var filter_name_arr = [];
+    var filter_level_arr=[];
+    var filter_is_short_arr=[];
+    var filter_is_cert=[];
     $("li[data_state='1']").each(function(){
         sum1++;
          var name=$(this).attr("name");
          var filter_id = $(this).attr("filter_id");
-    // var filter_filter_data=filter_all_data;
-    //筛选器筛选后的课程
-    for(var i = 0;i<filter_all_data.length;i++){
-        if(filter_all_data[i][name]!=undefined){
-            if(filter_all_data[i][name]==filter_id){
-                filter_same_arr.push(filter_all_data[i])
-            }
+         if(name=="level"){
+            filter_level_arr.push(filter_id)
+        }else if(name=="is_short"){
+            filter_is_short_arr.push(filter_id)
+        }else if(name=="is_cert"){
+            filter_is_cert.push(filter_id)
         }
-        // else{
-        //     filter_same_arr.push(filter_all_data[i])
-        // }
-    }
-  
-        // console.log(name)
+    //筛选器筛选后的课程
+
+    // for(var i = 0;i<filter_all_data.length;i++){
+    //     if(filter_all_data[i][name]!=undefined){
+    //         if(filter_all_data[i][name]==filter_id){
+    //             filter_same_arr.push(filter_all_data[i])
+    //         }
+    //     }
+    //     // else{
+    //     //     filter_same_arr.push(filter_all_data[i])
+    //     // }
+    // }
   });
+  let Conditions = {
+    level: filter_level_arr,
+    is_short:filter_is_short_arr,
+    is_cert:filter_is_cert
+}
+console.log(Conditions)
+  filter_same_arr = dofilter(filter_all_data,Conditions);
+  console.log(filter_same_arr)
   if(sum1==filter_value_list_arr.length){
     filter_same_arr=filter_all_data;
  }
@@ -182,5 +200,27 @@ $("input:checkbox").click(function(){
     }
     return arr;
  }
- 
+//  let dofilter=(condition,data)=>{
+//      console.log(condition)
+//     return data.filter( item => {
+//         console.log(item)
+//         return Object.keys( condition ).every( key => {
+//             console.log(key)
+//         return String( item[ key ] ).toLowerCase().includes( 
+//                 String( condition[ key ] ).trim().toLowerCase() )
+//             } )
+//     } )
+//     }
+     function dofilter(array, filters) {
+        const filterKeys = Object.keys(filters)
+        // filters all elements passing the criteria
+        return array.filter((item) => {
+          // dynamically validate all filter criteria
+          return filterKeys.every(key => {
+              //ignore when the filter is empty Anne
+            if(!filters[key].length) return true
+            return !!~filters[key].indexOf(item[key])
+          })
+        })
+      }
 })
