@@ -279,7 +279,7 @@ li {
   padding: 0 0 1em 0em;
   height: 8em;
   box-sizing: border-box; }
-  .investigation_child_direction_box .investigation_direction_message, .investigation_child_direction_box .investigation_filter .investigation_course_ul li, .investigation_filter .investigation_course_ul .investigation_child_direction_box li {
+  .investigation_child_direction_box .investigation_direction_message {
     float: left;
     width: 100%;
     overflow: hidden;
@@ -288,17 +288,17 @@ li {
     -webkit-transition: all ease-in-out 300ms;
     -moz-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms; }
-    .investigation_child_direction_box .investigation_direction_message .investigation_un_leaf_ul, .investigation_child_direction_box .investigation_filter .investigation_course_ul li .investigation_un_leaf_ul, .investigation_filter .investigation_course_ul .investigation_child_direction_box li .investigation_un_leaf_ul {
+    .investigation_child_direction_box .investigation_direction_message .investigation_un_leaf_ul {
       float: left;
       width: 100%; }
-    .investigation_child_direction_box .investigation_direction_message input, .investigation_child_direction_box .investigation_filter .investigation_course_ul li input, .investigation_filter .investigation_course_ul .investigation_child_direction_box li input {
+    .investigation_child_direction_box .investigation_direction_message input {
       margin-top: 0.4em;
       float: left;
       margin-right: 2px; }
-    .investigation_child_direction_box .investigation_direction_message label, .investigation_child_direction_box .investigation_filter .investigation_course_ul li label, .investigation_filter .investigation_course_ul .investigation_child_direction_box li label {
+    .investigation_child_direction_box .investigation_direction_message label {
       float: left;
       line-height: 2em; }
-  .investigation_child_direction_box .investigation_direction_message:nth-of-type(odd), .investigation_child_direction_box .investigation_filter .investigation_course_ul li:nth-of-type(odd), .investigation_filter .investigation_course_ul .investigation_child_direction_box li:nth-of-type(odd) {
+  .investigation_child_direction_box .investigation_direction_message:nth-of-type(odd) {
     background-color: #f5f5f5; }
   .investigation_child_direction_box .investigation_un_leaf_ul {
     float: left;
@@ -337,11 +337,7 @@ li {
 .direction_box {
   overflow: hidden; }
 
-.investigation_leaf_box, #export_training_object,
-#export_investigation,
-#export_course,
-#export_company_type,
-#export_duty_type,
+.investigation_leaf_box, .report_third_ask ul,
 .investigation_child_direction_box {
   color: #5C89CC;
   float: left;
@@ -350,19 +346,11 @@ li {
   overflow-x: hidden;
   background-color: #FFFFFF;
   overflow-y: scroll; }
-  .investigation_leaf_box .investigation_un_leaf_ul, #export_training_object .investigation_un_leaf_ul,
-  #export_investigation .investigation_un_leaf_ul,
-  #export_course .investigation_un_leaf_ul,
-  #export_company_type .investigation_un_leaf_ul,
-  #export_duty_type .investigation_un_leaf_ul,
+  .investigation_leaf_box .investigation_un_leaf_ul, .report_third_ask ul .investigation_un_leaf_ul,
   .investigation_child_direction_box .investigation_un_leaf_ul {
     float: left; }
 
-.investigation_leaf_box::-webkit-scrollbar, #export_training_object::-webkit-scrollbar,
-#export_investigation::-webkit-scrollbar,
-#export_course::-webkit-scrollbar,
-#export_company_type::-webkit-scrollbar,
-#export_duty_type::-webkit-scrollbar,
+.investigation_leaf_box::-webkit-scrollbar, .report_third_ask ul::-webkit-scrollbar,
 .investigation_child_direction_box::-webkit-scrollbar {
   display: block;
   width: 6px;
@@ -370,38 +358,18 @@ li {
   border-radius: 4px;
   background-color: #BAB7D4; }
 
-.investigation_leaf_box::-webkit-scrollbar-thumb, #export_training_object::-webkit-scrollbar-thumb,
-#export_investigation::-webkit-scrollbar-thumb,
-#export_course::-webkit-scrollbar-thumb,
-#export_company_type::-webkit-scrollbar-thumb,
-#export_duty_type::-webkit-scrollbar-thumb,
+.investigation_leaf_box::-webkit-scrollbar-thumb, .report_third_ask ul::-webkit-scrollbar-thumb,
 .investigation_child_direction_box::-webkit-scrollbar-thumb {
   display: block;
   width: 6px;
   border-radius: 4px;
   background-color: #5C89CC; }
 
-.investigation_leaf_box, #export_training_object,
-#export_investigation,
-#export_course,
-#export_company_type,
-#export_duty_type {
+.investigation_leaf_box, .report_third_ask ul {
   float: left;
   color: #5C89CC;
   box-sizing: border-box; }
-  .investigation_leaf_box .investigation_direction_message, #export_training_object .investigation_direction_message,
-  #export_investigation .investigation_direction_message,
-  #export_course .investigation_direction_message,
-  #export_company_type .investigation_direction_message,
-  #export_duty_type .investigation_direction_message, .investigation_leaf_box .investigation_filter .investigation_course_ul li, .investigation_filter .investigation_course_ul .investigation_leaf_box li, #export_training_object .investigation_filter .investigation_course_ul li, .investigation_filter .investigation_course_ul #export_training_object li,
-  #export_investigation .investigation_filter .investigation_course_ul li,
-  .investigation_filter .investigation_course_ul #export_investigation li,
-  #export_course .investigation_filter .investigation_course_ul li,
-  .investigation_filter .investigation_course_ul #export_course li,
-  #export_company_type .investigation_filter .investigation_course_ul li,
-  .investigation_filter .investigation_course_ul #export_company_type li,
-  #export_duty_type .investigation_filter .investigation_course_ul li,
-  .investigation_filter .investigation_course_ul #export_duty_type li {
+  .investigation_leaf_box .investigation_direction_message, .report_third_ask ul .investigation_direction_message {
     float: left;
     width: 100%;
     line-height: 3em;
@@ -409,251 +377,63 @@ li {
     -webkit-transition: all ease-in-out 300ms;
     -moz-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms; }
-    .investigation_leaf_box .investigation_direction_message span, #export_training_object .investigation_direction_message span,
-    #export_investigation .investigation_direction_message span,
-    #export_course .investigation_direction_message span,
-    #export_company_type .investigation_direction_message span,
-    #export_duty_type .investigation_direction_message span, .investigation_leaf_box .investigation_filter .investigation_course_ul li span, .investigation_filter .investigation_course_ul .investigation_leaf_box li span, #export_training_object .investigation_filter .investigation_course_ul li span, .investigation_filter .investigation_course_ul #export_training_object li span,
-    #export_investigation .investigation_filter .investigation_course_ul li span,
-    .investigation_filter .investigation_course_ul #export_investigation li span,
-    #export_course .investigation_filter .investigation_course_ul li span,
-    .investigation_filter .investigation_course_ul #export_course li span,
-    #export_company_type .investigation_filter .investigation_course_ul li span,
-    .investigation_filter .investigation_course_ul #export_company_type li span,
-    #export_duty_type .investigation_filter .investigation_course_ul li span,
-    .investigation_filter .investigation_course_ul #export_duty_type li span {
+    .investigation_leaf_box .investigation_direction_message span, .report_third_ask ul .investigation_direction_message span {
       float: left; }
-    .investigation_leaf_box .investigation_direction_message span:first-child, #export_training_object .investigation_direction_message span:first-child,
-    #export_investigation .investigation_direction_message span:first-child,
-    #export_course .investigation_direction_message span:first-child,
-    #export_company_type .investigation_direction_message span:first-child,
-    #export_duty_type .investigation_direction_message span:first-child, .investigation_leaf_box .investigation_filter .investigation_course_ul li span:first-child, .investigation_filter .investigation_course_ul .investigation_leaf_box li span:first-child, #export_training_object .investigation_filter .investigation_course_ul li span:first-child, .investigation_filter .investigation_course_ul #export_training_object li span:first-child,
-    #export_investigation .investigation_filter .investigation_course_ul li span:first-child,
-    .investigation_filter .investigation_course_ul #export_investigation li span:first-child,
-    #export_course .investigation_filter .investigation_course_ul li span:first-child,
-    .investigation_filter .investigation_course_ul #export_course li span:first-child,
-    #export_company_type .investigation_filter .investigation_course_ul li span:first-child,
-    .investigation_filter .investigation_course_ul #export_company_type li span:first-child,
-    #export_duty_type .investigation_filter .investigation_course_ul li span:first-child,
-    .investigation_filter .investigation_course_ul #export_duty_type li span:first-child {
+    .investigation_leaf_box .investigation_direction_message span:first-child, .report_third_ask ul .investigation_direction_message span:first-child {
       margin-left: 0.5em; }
-    .investigation_leaf_box .investigation_direction_message label, #export_training_object .investigation_direction_message label,
-    #export_investigation .investigation_direction_message label,
-    #export_course .investigation_direction_message label,
-    #export_company_type .investigation_direction_message label,
-    #export_duty_type .investigation_direction_message label, .investigation_leaf_box .investigation_filter .investigation_course_ul li label, .investigation_filter .investigation_course_ul .investigation_leaf_box li label, #export_training_object .investigation_filter .investigation_course_ul li label, .investigation_filter .investigation_course_ul #export_training_object li label,
-    #export_investigation .investigation_filter .investigation_course_ul li label,
-    .investigation_filter .investigation_course_ul #export_investigation li label,
-    #export_course .investigation_filter .investigation_course_ul li label,
-    .investigation_filter .investigation_course_ul #export_course li label,
-    #export_company_type .investigation_filter .investigation_course_ul li label,
-    .investigation_filter .investigation_course_ul #export_company_type li label,
-    #export_duty_type .investigation_filter .investigation_course_ul li label,
-    .investigation_filter .investigation_course_ul #export_duty_type li label {
+    .investigation_leaf_box .investigation_direction_message label, .report_third_ask ul .investigation_direction_message label {
       float: left; }
-    .investigation_leaf_box .investigation_direction_message input, #export_training_object .investigation_direction_message input,
-    #export_investigation .investigation_direction_message input,
-    #export_course .investigation_direction_message input,
-    #export_company_type .investigation_direction_message input,
-    #export_duty_type .investigation_direction_message input, .investigation_leaf_box .investigation_filter .investigation_course_ul li input, .investigation_filter .investigation_course_ul .investigation_leaf_box li input, #export_training_object .investigation_filter .investigation_course_ul li input, .investigation_filter .investigation_course_ul #export_training_object li input,
-    #export_investigation .investigation_filter .investigation_course_ul li input,
-    .investigation_filter .investigation_course_ul #export_investigation li input,
-    #export_course .investigation_filter .investigation_course_ul li input,
-    .investigation_filter .investigation_course_ul #export_course li input,
-    #export_company_type .investigation_filter .investigation_course_ul li input,
-    .investigation_filter .investigation_course_ul #export_company_type li input,
-    #export_duty_type .investigation_filter .investigation_course_ul li input,
-    .investigation_filter .investigation_course_ul #export_duty_type li input {
+    .investigation_leaf_box .investigation_direction_message input, .report_third_ask ul .investigation_direction_message input {
       float: left;
       margin-left: 1em;
       margin-top: 0.9em;
       margin-right: 2px; }
-  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd), #export_training_object .investigation_direction_message:nth-of-type(odd),
-  #export_investigation .investigation_direction_message:nth-of-type(odd),
-  #export_course .investigation_direction_message:nth-of-type(odd),
-  #export_company_type .investigation_direction_message:nth-of-type(odd),
-  #export_duty_type .investigation_direction_message:nth-of-type(odd), .investigation_leaf_box .investigation_filter .investigation_course_ul li:nth-of-type(odd), .investigation_filter .investigation_course_ul .investigation_leaf_box li:nth-of-type(odd), #export_training_object .investigation_filter .investigation_course_ul li:nth-of-type(odd), .investigation_filter .investigation_course_ul #export_training_object li:nth-of-type(odd),
-  #export_investigation .investigation_filter .investigation_course_ul li:nth-of-type(odd),
-  .investigation_filter .investigation_course_ul #export_investigation li:nth-of-type(odd),
-  #export_course .investigation_filter .investigation_course_ul li:nth-of-type(odd),
-  .investigation_filter .investigation_course_ul #export_course li:nth-of-type(odd),
-  #export_company_type .investigation_filter .investigation_course_ul li:nth-of-type(odd),
-  .investigation_filter .investigation_course_ul #export_company_type li:nth-of-type(odd),
-  #export_duty_type .investigation_filter .investigation_course_ul li:nth-of-type(odd),
-  .investigation_filter .investigation_course_ul #export_duty_type li:nth-of-type(odd) {
+  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd), .report_third_ask ul .investigation_direction_message:nth-of-type(odd) {
     background-color: #f5f5f5; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::before, #export_training_object .investigation_direction_message.is_leaf::before,
-  #export_investigation .investigation_direction_message.is_leaf::before,
-  #export_course .investigation_direction_message.is_leaf::before,
-  #export_company_type .investigation_direction_message.is_leaf::before,
-  #export_duty_type .investigation_direction_message.is_leaf::before, .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf::before, .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf::before, #export_training_object .investigation_filter .investigation_course_ul li.is_leaf::before, .investigation_filter .investigation_course_ul #export_training_object li.is_leaf::before,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf::before,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf::before,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf::before,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf::before,
+  .investigation_leaf_box .investigation_direction_message.is_leaf::before, .report_third_ask ul .investigation_direction_message.is_leaf::before,
   .investigation_leaf_box .investigation_direction_message.is_leaf::after,
-  #export_training_object .investigation_direction_message.is_leaf::after,
-  #export_investigation .investigation_direction_message.is_leaf::after,
-  #export_course .investigation_direction_message.is_leaf::after,
-  #export_company_type .investigation_direction_message.is_leaf::after,
-  #export_duty_type .investigation_direction_message.is_leaf::after,
-  .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf::after,
-  #export_training_object .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_training_object li.is_leaf::after,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf::after,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf::after,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf::after,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf::after {
+  .report_third_ask ul .investigation_direction_message.is_leaf::after {
     position: absolute;
     content: '';
     display: block;
     width: 1em;
     height: 1em;
     border: 1px solid #5C89CC; }
-  .investigation_leaf_box .investigation_direction_message.active, #export_training_object .investigation_direction_message.active,
-  #export_investigation .investigation_direction_message.active,
-  #export_course .investigation_direction_message.active,
-  #export_company_type .investigation_direction_message.active,
-  #export_duty_type .investigation_direction_message.active, .investigation_leaf_box .investigation_filter .investigation_course_ul li.active, .investigation_filter .investigation_course_ul .investigation_leaf_box li.active, #export_training_object .investigation_filter .investigation_course_ul li.active, .investigation_filter .investigation_course_ul #export_training_object li.active,
-  #export_investigation .investigation_filter .investigation_course_ul li.active,
-  .investigation_filter .investigation_course_ul #export_investigation li.active,
-  #export_course .investigation_filter .investigation_course_ul li.active,
-  .investigation_filter .investigation_course_ul #export_course li.active,
-  #export_company_type .investigation_filter .investigation_course_ul li.active,
-  .investigation_filter .investigation_course_ul #export_company_type li.active,
-  #export_duty_type .investigation_filter .investigation_course_ul li.active,
-  .investigation_filter .investigation_course_ul #export_duty_type li.active {
+  .investigation_leaf_box .investigation_direction_message.active, .report_third_ask ul .investigation_direction_message.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
-    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox], #export_training_object .investigation_direction_message.active input[type=checkbox],
-    #export_investigation .investigation_direction_message.active input[type=checkbox],
-    #export_course .investigation_direction_message.active input[type=checkbox],
-    #export_company_type .investigation_direction_message.active input[type=checkbox],
-    #export_duty_type .investigation_direction_message.active input[type=checkbox], .investigation_leaf_box .investigation_filter .investigation_course_ul li.active input[type=checkbox], .investigation_filter .investigation_course_ul .investigation_leaf_box li.active input[type=checkbox], #export_training_object .investigation_filter .investigation_course_ul li.active input[type=checkbox], .investigation_filter .investigation_course_ul #export_training_object li.active input[type=checkbox],
-    #export_investigation .investigation_filter .investigation_course_ul li.active input[type=checkbox],
-    .investigation_filter .investigation_course_ul #export_investigation li.active input[type=checkbox],
-    #export_course .investigation_filter .investigation_course_ul li.active input[type=checkbox],
-    .investigation_filter .investigation_course_ul #export_course li.active input[type=checkbox],
-    #export_company_type .investigation_filter .investigation_course_ul li.active input[type=checkbox],
-    .investigation_filter .investigation_course_ul #export_company_type li.active input[type=checkbox],
-    #export_duty_type .investigation_filter .investigation_course_ul li.active input[type=checkbox],
-    .investigation_filter .investigation_course_ul #export_duty_type li.active input[type=checkbox] {
+    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox], .report_third_ask ul .investigation_direction_message.active input[type=checkbox] {
       border-color: #FFFFFF; }
-    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox]:after, #export_training_object .investigation_direction_message.active input[type=checkbox]:after,
-    #export_investigation .investigation_direction_message.active input[type=checkbox]:after,
-    #export_course .investigation_direction_message.active input[type=checkbox]:after,
-    #export_company_type .investigation_direction_message.active input[type=checkbox]:after,
-    #export_duty_type .investigation_direction_message.active input[type=checkbox]:after, .investigation_leaf_box .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after, .investigation_filter .investigation_course_ul .investigation_leaf_box li.active input[type=checkbox]:after, #export_training_object .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after, .investigation_filter .investigation_course_ul #export_training_object li.active input[type=checkbox]:after,
-    #export_investigation .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after,
-    .investigation_filter .investigation_course_ul #export_investigation li.active input[type=checkbox]:after,
-    #export_course .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after,
-    .investigation_filter .investigation_course_ul #export_course li.active input[type=checkbox]:after,
-    #export_company_type .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after,
-    .investigation_filter .investigation_course_ul #export_company_type li.active input[type=checkbox]:after,
-    #export_duty_type .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after,
-    .investigation_filter .investigation_course_ul #export_duty_type li.active input[type=checkbox]:after {
+    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox]:after, .report_third_ask ul .investigation_direction_message.active input[type=checkbox]:after {
       color: #FFFFFF; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, #export_training_object .investigation_direction_message.is_leaf.active::before,
-  #export_investigation .investigation_direction_message.is_leaf.active::before,
-  #export_course .investigation_direction_message.is_leaf.active::before,
-  #export_company_type .investigation_direction_message.is_leaf.active::before,
-  #export_duty_type .investigation_direction_message.is_leaf.active::before, .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf.active::before, .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf.active::before, #export_training_object .investigation_filter .investigation_course_ul li.is_leaf.active::before, .investigation_filter .investigation_course_ul #export_training_object li.is_leaf.active::before,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf.active::before,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf.active::before,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf.active::before,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf.active::before,
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, .report_third_ask ul .investigation_direction_message.is_leaf.active::before,
   .investigation_leaf_box .investigation_direction_message.is_leaf.active::after,
-  #export_training_object .investigation_direction_message.is_leaf.active::after,
-  #export_investigation .investigation_direction_message.is_leaf.active::after,
-  #export_course .investigation_direction_message.is_leaf.active::after,
-  #export_company_type .investigation_direction_message.is_leaf.active::after,
-  #export_duty_type .investigation_direction_message.is_leaf.active::after,
-  .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf.active::after,
-  .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf.active::after,
-  #export_training_object .investigation_filter .investigation_course_ul li.is_leaf.active::after,
-  .investigation_filter .investigation_course_ul #export_training_object li.is_leaf.active::after,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf.active::after,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf.active::after,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf.active::after,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf.active::after,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf.active::after,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf.active::after,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf.active::after,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf.active::after {
+  .report_third_ask ul .investigation_direction_message.is_leaf.active::after {
     border-color: #FFFFFF; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::before, #export_training_object .investigation_direction_message.is_leaf::before,
-  #export_investigation .investigation_direction_message.is_leaf::before,
-  #export_course .investigation_direction_message.is_leaf::before,
-  #export_company_type .investigation_direction_message.is_leaf::before,
-  #export_duty_type .investigation_direction_message.is_leaf::before, .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf::before, .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf::before, #export_training_object .investigation_filter .investigation_course_ul li.is_leaf::before, .investigation_filter .investigation_course_ul #export_training_object li.is_leaf::before,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf::before,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf::before,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf::before,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf::before,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf::before {
+  .investigation_leaf_box .investigation_direction_message.is_leaf::before, .report_third_ask ul .investigation_direction_message.is_leaf::before {
     right: 1.1em;
     top: 1em;
     z-index: 1;
     background-color: #f5f5f5; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, #export_training_object .investigation_direction_message.is_leaf.active::before,
-  #export_investigation .investigation_direction_message.is_leaf.active::before,
-  #export_course .investigation_direction_message.is_leaf.active::before,
-  #export_company_type .investigation_direction_message.is_leaf.active::before,
-  #export_duty_type .investigation_direction_message.is_leaf.active::before, .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf.active::before, .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf.active::before, #export_training_object .investigation_filter .investigation_course_ul li.is_leaf.active::before, .investigation_filter .investigation_course_ul #export_training_object li.is_leaf.active::before,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf.active::before,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf.active::before,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf.active::before,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf.active::before,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf.active::before {
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, .report_third_ask ul .investigation_direction_message.is_leaf.active::before {
     background-color: #5C89CC; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::after, #export_training_object .investigation_direction_message.is_leaf::after,
-  #export_investigation .investigation_direction_message.is_leaf::after,
-  #export_course .investigation_direction_message.is_leaf::after,
-  #export_company_type .investigation_direction_message.is_leaf::after,
-  #export_duty_type .investigation_direction_message.is_leaf::after, .investigation_leaf_box .investigation_filter .investigation_course_ul li.is_leaf::after, .investigation_filter .investigation_course_ul .investigation_leaf_box li.is_leaf::after, #export_training_object .investigation_filter .investigation_course_ul li.is_leaf::after, .investigation_filter .investigation_course_ul #export_training_object li.is_leaf::after,
-  #export_investigation .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_investigation li.is_leaf::after,
-  #export_course .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_course li.is_leaf::after,
-  #export_company_type .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_company_type li.is_leaf::after,
-  #export_duty_type .investigation_filter .investigation_course_ul li.is_leaf::after,
-  .investigation_filter .investigation_course_ul #export_duty_type li.is_leaf::after {
+  .investigation_leaf_box .investigation_direction_message.is_leaf::after, .report_third_ask ul .investigation_direction_message.is_leaf::after {
     right: 1.5em;
     top: 0.6em; }
 
 .investigation_child_direction_box {
   margin-bottom: 1em;
   box-sizing: border-box; }
-  .investigation_child_direction_box .investigation_direction_message, .investigation_child_direction_box .investigation_filter .investigation_course_ul li, .investigation_filter .investigation_course_ul .investigation_child_direction_box li {
+  .investigation_child_direction_box .investigation_direction_message {
     padding-left: 1em; }
 
-.investigation_direction_message.is_radio.active, .investigation_filter .investigation_course_ul li.is_radio.active {
+.investigation_direction_message.is_radio.active {
   background-color: #5C89CC;
   color: #FFFFFF;
   box-sizing: border-box; }
-  .investigation_direction_message.is_radio.active input[type=checkbox], .investigation_filter .investigation_course_ul li.is_radio.active input[type=checkbox] {
+  .investigation_direction_message.is_radio.active input[type=checkbox] {
     border-color: #FFFFFF; }
-  .investigation_direction_message.is_radio.active input[type=checkbox]:after, .investigation_filter .investigation_course_ul li.is_radio.active input[type=checkbox]:after {
+  .investigation_direction_message.is_radio.active input[type=checkbox]:after {
     color: #FFFFFF; }
 
 .investigation_filter .investigation_course_title {
@@ -670,7 +450,8 @@ li {
   font-size: 1.5em; }
 .investigation_filter .interest_courses {
   overflow: hidden;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: #f5f5f5; }
   .investigation_filter .interest_courses .filter_list_ul {
     display: block;
     float: left;
@@ -702,16 +483,18 @@ li {
   color: #5C89CC;
   padding-bottom: 1em;
   max-height: 22em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  background-color: #f5f5f5; }
   .investigation_filter .investigation_course_ul li {
     box-sizing: border-box;
     float: left;
     width: 100%;
     line-height: 2em;
-    margin-bottom: 0.5em;
     color: #5C89CC;
     overflow: hidden;
     padding-left: 1em; }
+  .investigation_filter .investigation_course_ul li:nth-of-type(odd) {
+    background-color: #FFFFFF; }
   .investigation_filter .investigation_course_ul li.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
@@ -824,8 +607,10 @@ li {
 
 .investigation_start_info {
   overflow: hidden;
-  background-color: #FFFFFF;
   padding: 0;
+  padding: 2em; }
+
+.report_box {
   padding: 2em; }
 
 .investigation_form_box {
@@ -927,7 +712,7 @@ li {
   float: left;
   width: 100%;
   font-size: 1em;
-  color: #5C89CC; }
+  color: #BAB7D4; }
 
 .enter_investigation {
   font-size: 1.5em;
@@ -1035,12 +820,55 @@ li {
     color: #5C89CC;
     right: 1em; }
 
-#export_training_object,
-#export_investigation,
-#export_course,
-#export_company_type,
-#export_duty_type {
-  width: 100%; }
+.report_title_box {
+  font-size: 2em;
+  color: #FC766A; }
+
+.report_title {
+  width: 100%;
+  line-height: 2em;
+  color: #5C89CC;
+  float: left; }
+
+.report_common_div {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 5em; }
+
+.report_ul {
+  height: inherit;
+  padding-left: 1.5em;
+  float: left;
+  color: #FC766A;
+  box-sizing: border-box; }
+  .report_ul li {
+    box-sizing: border-box;
+    float: left;
+    line-height: 2em;
+    widows: 6em;
+    padding: 0 0.5em; }
+
+.report_third_ask ul {
+  padding: 0.2em;
+  height: inherit;
+  width: 100%;
+  background-color: #f5f5f5; }
+  .report_third_ask ul li {
+    width: 100%;
+    background-color: #FFFFFF;
+    line-height: 2em;
+    color: #FC766A;
+    padding-left: 1em; }
+
+.re_input_btn {
+  display: block;
+  width: 8em;
+  margin-left: 5em;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  background-color: #FC766A;
+  line-height: 2em;
+  padding: 0 0.5em; }
 
 .investigation_company_duty_box {
   display: block;

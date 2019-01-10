@@ -1,10 +1,60 @@
-#export_training_object,
-#export_investigation,
-#export_course,
-#export_company_type,
-#export_duty_type {
-    @extend .investigation_leaf_box;
+.report_title_box {
+    font-size: 2em;
+    color: $secondary-text-color;
+}
+
+.report_title {
     width: 100%;
-    li{
+    line-height: 2em;
+    color: $primary-text-color;
+    float: left;
+}
+
+.report_common_div {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 5em;
+}
+
+.report_ul {
+    height: inherit;
+    padding-left: 1.5em;
+    float: left;
+    color: $secondary-text-color;
+    box-sizing: border-box;
+    li {
+        box-sizing: border-box;
+        float: left;
+        line-height: 2em;
+        widows: 6em;
+        padding: 0 0.5em;
     }
+}
+
+.report_third_ask {
+    ul {
+        padding: 0.2em;
+        height: inherit;
+        @extend .investigation_leaf_box;
+        width: 100%;
+        background-color: $background-color;
+        li {
+            width: 100%;
+            background-color: $primary-color-text;
+            line-height: 2em;
+            color: $secondary-text-color;
+            padding-left: 1em;
+        }
+    }
+}
+
+.re_input_btn {
+    display: block;
+    width: 8em;
+    margin-left: 5em;
+    font-size: 1.5em;
+    color: $primary-color-text;
+    background-color: $accent-color;
+    line-height: 2em;
+    padding: 0 0.5em;
 }

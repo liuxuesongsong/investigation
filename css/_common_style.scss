@@ -51,8 +51,11 @@
 
 .investigation_start_info {
     overflow: hidden;
-    background-color: $primary-color-text;
     padding: 0;
+    padding: 2em;
+}
+
+.report_box {
     padding: 2em;
 }
 
