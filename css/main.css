@@ -870,6 +870,20 @@ li {
   line-height: 2em;
   padding: 0 0.5em; }
 
+.mainbox .close {
+  color: #5C89CC;
+  line-height: 2em;
+  font-size: 1.5em; }
+.mainbox button {
+  display: block;
+  width: 6em;
+  margin: auto;
+  margin-top: 2em;
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #FFFFFF;
+  background-color: #FC766A; }
+
 .investigation_company_duty_box {
   display: block;
   padding-bottom: 1em;
