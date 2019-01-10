@@ -81,13 +81,16 @@ $(function(){
             //  selected_message("check_duty_type","#selected_message_five")
             var selected_message_val="";
             var check_duty_type = document.getElementsByName("check_duty_type");
+            duty_type_arr=[];
             for(var i = 0;i<check_duty_type.length;i++){
                 if(check_duty_type[i].checked){
                     $("#selected_message_five_label").html($(check_duty_type[i]).siblings().eq(0).html())
+                    duty_type_arr.push(check_duty_type[i].value)
                 }
             }
               //问题5被选中的id
-              duty_type_arr = selected_message_ids;
+            //   console.log(selected_message_ids)
+            //   duty_type_arr = selected_message_ids;
         })
         // 问题选中的值
          selected_message = function(check_name,id,label_id){

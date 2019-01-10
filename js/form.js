@@ -60,25 +60,59 @@ $(function(){
                name:$("#account").val(),
                number:$("#telephone").val(),
                code:$("#code").val(),
-               course_object:checked_training_object_arr,
-               list_object:checked_direction_arr,
-               filter:course_ids_arr,
+               student_type:checked_training_object_arr,
+               course_type:checked_direction_arr,
+               course:course_ids_arr,
                company_type:company_type_arr,
-               job_type:duty_type_arr
+               duty_type:duty_type_arr
             },
             error: function(data) {
+              
                 alert_fun(data.msg)
                 // console.log(msg.codeid);
             },
             success: function(data) {
                 if(data.error==0){
-                    window.open("")
+                    sessionStorage.token=data.data.token;
+                    return_report_data()
+                    // window.open("report.html","_self")
+                }else{
+                    alert_fun(data.msg)
                 }
-                alert_fun(data.msg)
+                
                 // codeid = msg.codeid;
 
             }
         });
 
     })
+      //获取调查报告数据
+      function return_report_data(){
+        $.ajax({
+            type: "POST", //用POST方式传输
+            dataType: "json", //数据格式:JSON
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=see', //目标地址
+            data: {
+               token:sessionStorage.token
+            },
+            error: function(data) {
+                alert_fun(data.msg)
+            },
+            success: function(data) {
+                if(data.error==0){
+                    sessionStorage.report_data=JSON.stringify(data.data)
+                    //调查报告数据
+
+                    report_data_function()
+                    window.open("report.html","_self")
+                }else{
+                    alert_fun(data.msg)
+                }
+                // codeid = msg.codeid;
+
+            }
+        });
+    }
+    
+
 })

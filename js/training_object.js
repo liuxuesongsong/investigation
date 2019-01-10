@@ -50,10 +50,10 @@ $(function(){
          //问题被选中的个数信息
         selected_message("check_training_object","#selected_message_one","#selected_message_one_label")
         //创建问题2的内容
-        var main_direction_title=$("<div>主要方向</div>");  
-        $("#direction_box").append(main_direction_title);
-        var child_direction_title=$("<div>子方向</div>");  
-        $("#child_direction_box").append(child_direction_title);
+        // var main_direction_title=$("<div>主要方向</div>");  
+        // $("#direction_box").append(main_direction_title);
+        // var child_direction_title=$("<div>子方向</div>");  
+        // $("#child_direction_box").append(child_direction_title);
         //循环问题1中复选框
         for(var c = 0;c<check_training_object.length;c++){
             if(check_training_object[c].checked){
@@ -89,7 +89,7 @@ $(function(){
                             //   console.log("非叶子节点")
                                 var un_leaf_div=$("<div name='is_leaf' data_id="+child_list[j].id+" class='investigation_direction_message is_leaf'></div>");
                                 // var un_leaf_radio=$("<input value="+child_list[j].id+" name='investigation' type='radio'/>");
-                                var un_leaf_span=$("<span>"+child_list[j].name+"</span><span>》</span>");
+                                var un_leaf_span=$("<span>"+child_list[j].name+"</span><span></span>");
                                 // $(un_leaf_div).append(un_leaf_radio);
                                 $(un_leaf_div).append(un_leaf_span);
                                 $("#direction_box").append(un_leaf_div);

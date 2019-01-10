@@ -1,14 +1,14 @@
-var export_data = {
-    name:"姓名",
-    number:"13611366048",
-    course_object:["1","27"],//问题1
-    list_object:["3","7","29"],//问题2
-    filter:["4","5","6"],//问题3
-    company_type:["2","3"],//问题4
-    job_type:["1"],//问题5
-    token:"123456"
-};
-sessionStorage.report_data=JSON.stringify(export_data)
+// var report_data = {
+//     name:"姓名",
+//     number:"13611366048",
+//     student_type:["1","27"],//问题1
+//     course_type:["3","7","29"],//问题2
+//     course:["4","5","6"],//问题3
+//     company_type:["2","3"],//问题4
+//     duty_type:["1"],//问题5
+//     token:"123456"
+// };
+// sessionStorage.report_data=JSON.stringify(report_data)
 var all_type_data = [
     {
         "id": "1",
