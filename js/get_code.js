@@ -41,9 +41,12 @@ $(function(){
                 number: mobile
             },
             error: function(data) {
-                is_selected("check_duty_type",data.msg)
+                alert_fun(data.msg)
             },
-            success: function(msg) {
+            success: function(data) {
+                if(data.error==1){
+                    alert_fun(data.msg)
+                }
                 // codeid = msg.codeid;
 
             }

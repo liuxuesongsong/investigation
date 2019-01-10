@@ -16,6 +16,12 @@ $(function(){
         }
 
     }
+    alert_fun = function(msg){
+        console.log(msg)
+        $(".main").fadeIn();
+        $("#alert_msg").html(msg)
+        setInterval(close, 3000);
+    }
     $("#close_alert_msg").click(function(){
         $(".main").fadeOut()
       })

@@ -58,6 +58,7 @@ $(function(){
 
     })
     $("#login_submit").click(function(){
+        alert_fun("hhh")
         console.log("登陆成功")
         $.ajax({
             type: "POST", //用POST方式传输
@@ -68,9 +69,14 @@ $(function(){
                 code:$("#login_code").val()
             },
             error: function(data) {
-                is_selected("check_duty_type",data.msg)
+                alert_fun(data.msg)
             },
-            success: function(msg) {
+            success: function(data) {
+                if(data.error==0){
+                    sessionStorage.report_data=JSON.stringify(data.data)
+                }else{
+                    alert_fun(data.msg)
+                }
                 // codeid = msg.codeid;
 
             }
