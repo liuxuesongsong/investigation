@@ -51,8 +51,7 @@
         border: none;
         outline: none;
         float: left;
-        opacity: 0.1;
-        background-color: $primary-color;
+        background-color: #eef3f9;
     }
     .investigation_submit {
         margin-top: 1em;
@@ -88,7 +87,7 @@
             background-image: url(src/phone_num-07.png);
         }
         input {
-            width: 18em;
+            width: 17.5em;
         }
     }
     .investigation_people_code {
