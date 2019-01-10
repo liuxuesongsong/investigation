@@ -758,9 +758,7 @@ input[type=checkbox]:checked:after {
     padding-left: 0.5em;
     border: none;
     outline: none;
-    float: left;
-    opacity: 0.1;
-    background-color: #5C89CC; }
+    float: left; }
   .login_box .investigation_submit {
     margin-top: 1em;
     line-height: 2em;
