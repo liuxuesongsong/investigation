@@ -9,20 +9,44 @@
     }
     .investigation_company_type_ul {
         display: block;
+        margin-top: 1em;
         padding-left: 1em;
         overflow: hidden;
         li {
             float: left;
             width: 33%;
-            padding-bottom: 1em;
             line-height: 1em;
         }
         input {
             float: left;
         }
-        span {
+        label {
             float: left;
             padding-left: 0.2em;
+        }
+    }
+    .investigation_company_type_ul li {
+        padding-left: 0.8em;
+        float: left;
+        width: 30%;
+        box-sizing: border-box;
+        margin-right: 0.5em;
+        line-height: 2em;
+        border-radius: 4px;
+        margin-bottom: 1em;
+        background-color: $background-color;
+        input {
+            margin-top: 0.5em;
+        }
+    }
+    .investigation_company_type_ul li.active {
+        background-color: $primary-color;
+        color: $primary-color-text;
+        input[type=checkbox] {
+            border-color: $primary-color-text;
+        }
+        input[type=checkbox]:after {
+            color: $primary-color-text;
         }
     }
 }

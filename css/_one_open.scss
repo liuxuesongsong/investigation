@@ -14,7 +14,6 @@
     padding-bottom: 1em;
 }
 
-
 .investigation_reset_box {
     float: right;
     margin-right: 0.5em;
@@ -43,13 +42,9 @@
     }
 }
 
-.investigation_training_object_ul span {
-    color: $primary-text-color;
-    font-size: 1em;
-}
-
 .investigation_training_object_ul li {
     background-color: $background-color;
+    color: $primary-text-color;
 }
 
 .investigation_training_object_ul li.active {
@@ -63,7 +58,6 @@
 .investigation_training_object_ul {
     overflow: hidden;
     margin-top: 1em;
-    padding-left: 1em;
     li {
         padding-left: 0.8em;
         float: left;
@@ -71,15 +65,16 @@
         box-sizing: border-box;
         margin-right: 0.5em;
         line-height: 2em;
-        border-radius: 2px;
+        border-radius: 4px;
         margin-bottom: 1em;
+        background-color: $background-color;
     }
     input {
         margin-top: 6px;
         margin-right: 4px;
         float: left;
     }
-    span {
+    label {
         float: left;
     }
 }

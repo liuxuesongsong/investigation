@@ -1,0 +1,27 @@
+#start_title {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    line-height: 2em;
+    color: $primary-text-color;
+}
+
+#start_content {
+    float: left;
+    width: 20em;
+    font-size: 1em;
+    float: left;
+    color: $primary-text-color;
+}
+
+#start_btn,
+#selected_investigation {
+    font-size: 1.5em;
+    float: left;
+    text-align: center;
+    color: $primary-color-text;
+    background-color: $accent-color;
+    padding: 0 0.5em;
+    line-height: 2em;
+    margin-top: 2em;
+}

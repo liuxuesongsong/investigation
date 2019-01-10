@@ -1,9 +1,10 @@
-.investigation_form_box {
+.login_box {
     display: block;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     overflow: hidden;
     padding: 3em 2em 1em 2em;
     text-align: center;
+    margin-top: 1em;
     margin-left: 1em;
     margin-right: 1px;
     background-color: $background-color;
@@ -11,8 +12,8 @@
     border-bottom: 1em solid $border_bottom-color;
     margin-bottom: 5em;
     .investigation_people_name,
-    .investigation_people_tel,
-    .investigation_people_code {
+    .login_telephone_box,
+    .login_code_box {
         float: left;
         overflow: hidden;
         width: 100%;
@@ -83,7 +84,7 @@
             background-image: url(src/name_logo-07.png);
         }
     }
-    .investigation_people_tel {
+    .login_telephone_box {
         label::before {
             background-image: url(src/phone_num-07.png);
         }
@@ -91,16 +92,16 @@
             width: 18em;
         }
     }
-    .investigation_people_code {
+    .login_code_box {
         position: relative;
         label::before {
             background-image: url(src/code_log-07.png);
         }
-        .code {
+        #login_code {
             width: 17.5em;
         }
     }
-    .get_code {
+    #login_get_code {
         background: transparent;
         position: absolute;
         opacity: 1;
