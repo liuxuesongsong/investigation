@@ -21,7 +21,7 @@
             margin-right: 2px;
         }
         label {
-            float: left;
+            display: block;
             line-height: 2em;
         }
     }
@@ -70,7 +70,6 @@
 
 .investigation_direction_box {
     display: block;
-    overflow: hidden;
     padding-left: 1em;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -130,7 +129,7 @@
             margin-left: 0.5em;
         }
         label {
-            float: left;
+            display: block;
         }
         input {
             float: left;

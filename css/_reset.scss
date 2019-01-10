@@ -82,6 +82,10 @@ button {
     border: 0;
 }
 
+div {
+    box-sizing: border-box;
+}
+
 input[type=radio] {
     /*去除浏览器默认样式*/
     -webkit-appearance: none;
@@ -178,8 +182,7 @@ input[type=checkbox]:after {
     background-color: $primary-text-color;
     color: $primary-text-color;
     text-align: center;
-    line-height: 12px;
-    // -webkit-transition: all ease-in-out 300ms;
+    line-height: 12px; // -webkit-transition: all ease-in-out 300ms;
     // -moz-transition: all ease-in-out 300ms;
     // transition: all ease-in-out 300ms;
     border-radius: 50%;
