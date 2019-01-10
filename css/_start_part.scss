@@ -8,14 +8,12 @@
 
 .content_message {
     float: left;
-    width: 20em;
+    width: 100%;
     font-size: 1em;
-    float: left;
     color: $primary-text-color;
 }
 
-.enter_investigation,
-.login_investigation {
+.enter_investigation {
     font-size: 1.5em;
     float: left;
     text-align: center;
@@ -24,4 +22,13 @@
     padding: 0 0.5em;
     line-height: 2em;
     margin-top: 2em;
+}
+
+.login_investigation {
+    margin-left: 1em;
+    margin-top: 2.5em;
+    font-size: 1.5em;
+    float: left;
+    text-align: center;
+    color: $primary-text-color;
 }
