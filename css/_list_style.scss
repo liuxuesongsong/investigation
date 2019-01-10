@@ -1,0 +1,10 @@
+#export_training_object,
+#export_investigation,
+#export_course,
+#export_company_type,
+#export_duty_type {
+    @extend .investigation_leaf_box;
+    width: 100%;
+    li{
+    }
+}

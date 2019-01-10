@@ -59,6 +59,7 @@
         max-height: 22em;
         margin-bottom: 1em;
         li {
+            @extend .investigation_direction_message;
             box-sizing: border-box;
             float: left;
             width: 100%;

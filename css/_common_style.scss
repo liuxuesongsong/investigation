@@ -37,10 +37,11 @@
 .investigation_filter,
 .investigation_company_type_box,
 .investigation_company_duty_box,
-.investigation_start_info {
+.investigation_start_info,
+.report_box {
     margin: 1em;
     margin-right: 1px;
-    background-color: $background-color;
+    background-color: $primary-color-text;
     box-shadow: 0 0 0.5em rgba(49, 34, 34, 0.6);
     border-bottom: 1em solid $border_bottom-color;
     position: relative;
@@ -55,9 +56,7 @@
     padding: 2em;
 }
 
-.investigation_training_object,
-.investigation_company_type_box,
-.investigation_direction,
-.investigation_company_duty_box {
-    background-color: $primary-color-text;
-}
+// .investigation_training_object,
+// .investigation_company_type_box,
+// .investigation_direction,
+// .investigation_company_duty_box {}
