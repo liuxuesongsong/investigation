@@ -20,6 +20,7 @@
     .interest_courses {
         overflow: hidden;
         padding-left: 1em;
+        background-color: $background-color;
         .filter_list_ul {
             display: block;
             float: left;
@@ -58,15 +59,18 @@
         padding-bottom: 1em;
         max-height: 22em;
         margin-bottom: 1em;
+        background-color: $background-color;
         li {
             box-sizing: border-box;
             float: left;
             width: 100%;
             line-height: 2em;
-            margin-bottom: 0.5em;
             color: $primary-text-color;
             overflow: hidden;
             padding-left: 1em;
+        }
+        li:nth-of-type(odd) {
+            background-color: $primary-color-text;
         }
         li.active {
             background-color: $primary-color;

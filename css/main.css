@@ -161,9 +161,6 @@ input[type=checkbox]:after {
   color: #5C89CC;
   text-align: center;
   line-height: 12px;
-  -webkit-transition: all ease-in-out 300ms;
-  -moz-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
   border-radius: 50%;
   opacity: 0; }
 
@@ -176,6 +173,11 @@ input[type=checkbox]:checked:after {
 input[type=checkbox]:checked {
   border-color: #FFFFFF;
   background-color: #FFFFFF; }
+
+li {
+  -webkit-transition: all ease-in-out 300ms;
+  -moz-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms; }
 
 .investigation_box {
   position: relative;
@@ -217,8 +219,7 @@ input[type=checkbox]:checked {
   float: right;
   margin-right: 0.5em;
   overflow: hidden;
-  line-height: 2em;
-  width: 5em; }
+  line-height: 2em; }
   .investigation_reset_box span {
     float: left;
     font-size: 1em; }
@@ -283,7 +284,10 @@ input[type=checkbox]:checked {
     width: 100%;
     overflow: hidden;
     line-height: 1em;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms; }
     .investigation_child_direction_box .investigation_direction_message .investigation_un_leaf_ul {
       float: left;
       width: 100%; }
@@ -333,7 +337,7 @@ input[type=checkbox]:checked {
 .direction_box {
   overflow: hidden; }
 
-.investigation_leaf_box,
+.investigation_leaf_box, .report_third_ask ul,
 .investigation_child_direction_box {
   color: #5C89CC;
   float: left;
@@ -342,11 +346,11 @@ input[type=checkbox]:checked {
   overflow-x: hidden;
   background-color: #FFFFFF;
   overflow-y: scroll; }
-  .investigation_leaf_box .investigation_un_leaf_ul,
+  .investigation_leaf_box .investigation_un_leaf_ul, .report_third_ask ul .investigation_un_leaf_ul,
   .investigation_child_direction_box .investigation_un_leaf_ul {
     float: left; }
 
-.investigation_leaf_box::-webkit-scrollbar,
+.investigation_leaf_box::-webkit-scrollbar, .report_third_ask ul::-webkit-scrollbar,
 .investigation_child_direction_box::-webkit-scrollbar {
   display: block;
   width: 6px;
@@ -354,62 +358,66 @@ input[type=checkbox]:checked {
   border-radius: 4px;
   background-color: #BAB7D4; }
 
-.investigation_leaf_box::-webkit-scrollbar-thumb,
+.investigation_leaf_box::-webkit-scrollbar-thumb, .report_third_ask ul::-webkit-scrollbar-thumb,
 .investigation_child_direction_box::-webkit-scrollbar-thumb {
   display: block;
   width: 6px;
   border-radius: 4px;
   background-color: #5C89CC; }
 
-.investigation_leaf_box {
+.investigation_leaf_box, .report_third_ask ul {
   float: left;
   color: #5C89CC;
   box-sizing: border-box; }
-  .investigation_leaf_box .investigation_direction_message {
+  .investigation_leaf_box .investigation_direction_message, .report_third_ask ul .investigation_direction_message {
     float: left;
     width: 100%;
-    line-height: 2em;
+    line-height: 3em;
     position: relative;
-    padding-bottom: 1em; }
-    .investigation_leaf_box .investigation_direction_message span {
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms; }
+    .investigation_leaf_box .investigation_direction_message span, .report_third_ask ul .investigation_direction_message span {
       float: left; }
-    .investigation_leaf_box .investigation_direction_message span:first-child {
-      margin-left: 1em; }
-    .investigation_leaf_box .investigation_direction_message label {
+    .investigation_leaf_box .investigation_direction_message span:first-child, .report_third_ask ul .investigation_direction_message span:first-child {
+      margin-left: 0.5em; }
+    .investigation_leaf_box .investigation_direction_message label, .report_third_ask ul .investigation_direction_message label {
       float: left; }
-    .investigation_leaf_box .investigation_direction_message input {
+    .investigation_leaf_box .investigation_direction_message input, .report_third_ask ul .investigation_direction_message input {
       float: left;
-      margin-left: 1em;
-      margin-top: 0.5em;
+      margin-left: 0.5em;
+      margin-top: 0.9em;
       margin-right: 2px; }
-  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd) {
+  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd), .report_third_ask ul .investigation_direction_message:nth-of-type(odd) {
     background-color: #f5f5f5; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::before,
-  .investigation_leaf_box .investigation_direction_message.is_leaf::after {
+  .investigation_leaf_box .investigation_direction_message.is_leaf::before, .report_third_ask ul .investigation_direction_message.is_leaf::before,
+  .investigation_leaf_box .investigation_direction_message.is_leaf::after,
+  .report_third_ask ul .investigation_direction_message.is_leaf::after {
     position: absolute;
     content: '';
     display: block;
     width: 1em;
     height: 1em;
     border: 1px solid #5C89CC; }
-  .investigation_leaf_box .investigation_direction_message.active {
+  .investigation_leaf_box .investigation_direction_message.active, .report_third_ask ul .investigation_direction_message.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
-    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox] {
+    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox], .report_third_ask ul .investigation_direction_message.active input[type=checkbox] {
       border-color: #FFFFFF; }
-    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox]:after {
+    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox]:after, .report_third_ask ul .investigation_direction_message.active input[type=checkbox]:after {
       color: #FFFFFF; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before,
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::after {
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, .report_third_ask ul .investigation_direction_message.is_leaf.active::before,
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active::after,
+  .report_third_ask ul .investigation_direction_message.is_leaf.active::after {
     border-color: #FFFFFF; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::before {
+  .investigation_leaf_box .investigation_direction_message.is_leaf::before, .report_third_ask ul .investigation_direction_message.is_leaf::before {
     right: 1.1em;
     top: 1em;
     z-index: 1;
     background-color: #f5f5f5; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before {
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, .report_third_ask ul .investigation_direction_message.is_leaf.active::before {
     background-color: #5C89CC; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::after {
+  .investigation_leaf_box .investigation_direction_message.is_leaf::after, .report_third_ask ul .investigation_direction_message.is_leaf::after {
     right: 1.5em;
     top: 0.6em; }
 
@@ -442,7 +450,8 @@ input[type=checkbox]:checked {
   font-size: 1.5em; }
 .investigation_filter .interest_courses {
   overflow: hidden;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: #f5f5f5; }
   .investigation_filter .interest_courses .filter_list_ul {
     display: block;
     float: left;
@@ -474,16 +483,18 @@ input[type=checkbox]:checked {
   color: #5C89CC;
   padding-bottom: 1em;
   max-height: 22em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  background-color: #f5f5f5; }
   .investigation_filter .investigation_course_ul li {
     box-sizing: border-box;
     float: left;
     width: 100%;
     line-height: 2em;
-    margin-bottom: 0.5em;
     color: #5C89CC;
     overflow: hidden;
     padding-left: 1em; }
+  .investigation_filter .investigation_course_ul li:nth-of-type(odd) {
+    background-color: #FFFFFF; }
   .investigation_filter .investigation_course_ul li.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
@@ -583,10 +594,11 @@ input[type=checkbox]:checked {
 .investigation_filter,
 .investigation_company_type_box,
 .investigation_company_duty_box,
-.investigation_start_info {
+.investigation_start_info,
+.report_box {
   margin: 1em;
   margin-right: 1px;
-  background-color: #f5f5f5;
+  background-color: #FFFFFF;
   box-shadow: 0 0 0.5em rgba(49, 34, 34, 0.6);
   border-bottom: 1em solid #F1D661;
   position: relative;
@@ -595,15 +607,11 @@ input[type=checkbox]:checked {
 
 .investigation_start_info {
   overflow: hidden;
-  background-color: #FFFFFF;
   padding: 0;
   padding: 2em; }
 
-.investigation_training_object,
-.investigation_company_type_box,
-.investigation_direction,
-.investigation_company_duty_box {
-  background-color: #FFFFFF; }
+.report_box {
+  padding: 2em; }
 
 .investigation_form_box {
   display: block;
@@ -652,8 +660,7 @@ input[type=checkbox]:checked {
     border: none;
     outline: none;
     float: left;
-    line-height: 1em;
-    background-color: #eef3f9; }
+    line-height: 1em; }
   .investigation_form_box .investigation_submit {
     margin-top: 1em;
     line-height: 2em;
@@ -705,7 +712,7 @@ input[type=checkbox]:checked {
   float: left;
   width: 100%;
   font-size: 1em;
-  color: #5C89CC; }
+  color: #BAB7D4; }
 
 .enter_investigation {
   font-size: 1.5em;
@@ -812,6 +819,70 @@ input[type=checkbox]:checked {
     top: 0;
     color: #5C89CC;
     right: 1em; }
+
+.report_title_box {
+  font-size: 2em;
+  color: #FC766A; }
+
+.report_title {
+  width: 100%;
+  line-height: 2em;
+  color: #5C89CC;
+  float: left; }
+
+.report_common_div {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 5em; }
+
+.report_ul {
+  height: inherit;
+  padding-left: 1.5em;
+  float: left;
+  color: #FC766A;
+  box-sizing: border-box; }
+  .report_ul li {
+    box-sizing: border-box;
+    float: left;
+    line-height: 2em;
+    width: 30%;
+    padding: 0 0.5em; }
+
+.report_third_ask ul {
+  padding: 0.2em;
+  height: inherit;
+  width: 100%;
+  background-color: #f5f5f5; }
+  .report_third_ask ul li {
+    width: 100%;
+    background-color: #FFFFFF;
+    line-height: 2em;
+    color: #FC766A;
+    padding-left: 1em; }
+
+.re_input_btn {
+  display: block;
+  width: 8em;
+  margin-left: 3em;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  background-color: #FC766A;
+  line-height: 2em;
+  padding: 0 0.5em; }
+
+.mainbox .close {
+  color: #5C89CC;
+  line-height: 2em;
+  font-size: 1.5em; }
+.mainbox button {
+  display: block;
+  width: 6em;
+  margin: auto;
+  margin-top: 2em;
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #FFFFFF;
+  background-color: #FC766A; }
 
 .investigation_company_duty_box {
   display: block;

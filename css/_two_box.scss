@@ -8,6 +8,9 @@
         overflow: hidden;
         line-height: 1em;
         box-sizing: border-box;
+        -webkit-transition: all ease-in-out 300ms;
+        -moz-transition: all ease-in-out 300ms;
+        transition: all ease-in-out 300ms;
         .investigation_un_leaf_ul {
             float: left;
             width: 100%;
@@ -115,22 +118,24 @@
     .investigation_direction_message {
         float: left;
         width: 100%;
-        line-height: 2em;
+        line-height: 3em;
         position: relative;
-        padding-bottom: 1em;
+        -webkit-transition: all ease-in-out 300ms;
+        -moz-transition: all ease-in-out 300ms;
+        transition: all ease-in-out 300ms;
         span {
             float: left;
         }
         span:first-child {
-            margin-left: 1em;
+            margin-left: 0.5em;
         }
         label {
             float: left;
         }
         input {
             float: left;
-            margin-left: 1em;
-            margin-top: 0.5em;
+            margin-left: 0.5em;
+            margin-top: 0.9em;
             margin-right: 2px;
         }
     }

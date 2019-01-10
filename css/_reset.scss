@@ -179,9 +179,9 @@ input[type=checkbox]:after {
     color: $primary-text-color;
     text-align: center;
     line-height: 12px;
-    -webkit-transition: all ease-in-out 300ms;
-    -moz-transition: all ease-in-out 300ms;
-    transition: all ease-in-out 300ms;
+    // -webkit-transition: all ease-in-out 300ms;
+    // -moz-transition: all ease-in-out 300ms;
+    // transition: all ease-in-out 300ms;
     border-radius: 50%;
     opacity: 0;
 }
@@ -197,3 +197,11 @@ input[type=checkbox]:checked {
     border-color: $primary-color-text;
     background-color: $primary-color-text;
 }
+
+li {
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+}
+
+// li 变化动画
