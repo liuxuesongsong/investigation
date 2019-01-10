@@ -568,7 +568,7 @@ input[type=checkbox]:checked:after {
 
 .investigation_finish_btn {
   color: #FFFFFF;
-  background-color: blue;
+  background-color: #FC766A;
   text-align: center;
   width: 6em;
   line-height: 2em;
@@ -644,6 +644,7 @@ input[type=checkbox]:checked:after {
     border: none;
     outline: none;
     float: left;
+    line-height: 1em;
     background-color: #eef3f9; }
   .investigation_form_box .investigation_submit {
     margin-top: 1em;
