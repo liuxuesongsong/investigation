@@ -385,7 +385,7 @@ li {
       float: left; }
     .investigation_leaf_box .investigation_direction_message input, .report_third_ask ul .investigation_direction_message input {
       float: left;
-      margin-left: 1em;
+      margin-left: 0.5em;
       margin-top: 0.9em;
       margin-right: 2px; }
   .investigation_leaf_box .investigation_direction_message:nth-of-type(odd), .report_third_ask ul .investigation_direction_message:nth-of-type(odd) {
@@ -845,7 +845,7 @@ li {
     box-sizing: border-box;
     float: left;
     line-height: 2em;
-    widows: 6em;
+    width: 30%;
     padding: 0 0.5em; }
 
 .report_third_ask ul {
@@ -863,7 +863,7 @@ li {
 .re_input_btn {
   display: block;
   width: 8em;
-  margin-left: 5em;
+  margin-left: 3em;
   font-size: 1.5em;
   color: #FFFFFF;
   background-color: #FC766A;

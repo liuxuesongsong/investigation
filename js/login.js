@@ -72,7 +72,9 @@ $(function(){
             },
             success: function(data) {
                 if(data.error==0){
-                    sessionStorage.token=data.data.token
+                    sessionStorage.token=data.data.token;
+                    //登录成功获取调查报告数据
+                    get_report_data()
                 }else{
                     alert_fun(data.msg)
                 }
@@ -85,11 +87,12 @@ $(function(){
        
        
     })
-    function get_export_data(){
+    //获取调查报告数据
+    function get_report_data(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=login', //目标地址
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=see', //目标地址
             data: {
                token:sessionStorage.token
             },
@@ -98,7 +101,11 @@ $(function(){
             },
             success: function(data) {
                 if(data.error==0){
-                    sessionStorage.export_data=data.data
+                    sessionStorage.report_data=JSON.stringify(data.data)
+                    //调查报告数据
+                    report_data_function()
+                    window.open("report.html","_self")
+
                 }else{
                     alert_fun(data.msg)
                 }
@@ -107,24 +114,25 @@ $(function(){
             }
         });
     }
-    export_data_function()
-    function export_data_function(){
+
+    // 
+     report_data_function = function(){
         // 成功登陆得到的数据
-        console.log(JSON.parse(sessionStorage.report_data))
         var report_datas =JSON.parse(sessionStorage.report_data);
         // 问题1答案
-        export_list_function(all_type_data,report_datas.course_object,"#export_training_object")
+        report_list_function(all_type_data,report_datas.student_type,"#report_training_object")
          // 问题2答案
-        export_list_function(all_type_data,report_datas.list_object,"#export_investigation")
+        report_list_function(all_type_data,report_datas.course_type,"#report_investigation")
          // 问题3答案
-         export_list_function(course_data,report_datas.filter,"#export_course")
+         report_list_function(course_data,report_datas.course,"#report_course")
         // 问题4答案
-        export_list_function(company_type,report_datas.company_type,"#export_company_type")
+        report_list_function(company_type,report_datas.company_type,"#report_company_type")
         // 问题5答案
-        export_list_function(duty_type,report_datas.job_type,"#export_duty_type")
+        report_list_function(duty_type,report_datas.duty_type,"#report_duty_type")
            
     } 
-    function export_list_function(data,report_datas,li_id){
+    report_data_function()
+    function report_list_function(data,report_datas,li_id){
         for(var m = 0;m<data.length;m++){
             for(var n = 0;n<report_datas.length;n++){
                 if(data[m].id ==report_datas[n]){

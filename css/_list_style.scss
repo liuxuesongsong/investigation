@@ -26,7 +26,7 @@
         box-sizing: border-box;
         float: left;
         line-height: 2em;
-        widows: 6em;
+        width: 30%;
         padding: 0 0.5em;
     }
 }
@@ -51,7 +51,7 @@
 .re_input_btn {
     display: block;
     width: 8em;
-    margin-left: 5em;
+    margin-left: 3em;
     font-size: 1.5em;
     color: $primary-color-text;
     background-color: $accent-color;
