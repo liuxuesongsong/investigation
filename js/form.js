@@ -16,6 +16,11 @@ $(function(){
         }
 
     }
+    alert_fun = function(msg){
+        $(".main").fadeIn();
+        $("#alert_msg").html(msg)
+        setInterval(close, 3000);
+    }
     $("#close_alert_msg").click(function(){
         $(".main").fadeOut()
       })
@@ -62,14 +67,14 @@ $(function(){
                job_type:duty_type_arr
             },
             error: function(data) {
-                is_selected("check_duty_type",data.msg)
+                alert_fun(data.msg)
                 // console.log(msg.codeid);
             },
             success: function(data) {
                 if(data.error==0){
                     window.open("")
                 }
-                is_selected("check_duty_type",data.msg)
+                alert_fun(data.msg)
                 // codeid = msg.codeid;
 
             }

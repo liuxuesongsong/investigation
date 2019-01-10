@@ -62,15 +62,20 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_courses', //目标地址
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=login', //目标地址
             data: {
                 number: $("#login_telephone").val(),
                 code:$("#login_code").val()
             },
             error: function(data) {
-                is_selected("check_duty_type",data.msg)
+                alert_fun(data.msg)
             },
-            success: function(msg) {
+            success: function(data) {
+                if(data.error==0){
+                    sessionStorage.token=data.data.token
+                }else{
+                    alert_fun(data.msg)
+                }
                 // codeid = msg.codeid;
 
             }
@@ -80,25 +85,49 @@ $(function(){
        
        
     })
+    function get_export_data(){
+        $.ajax({
+            type: "POST", //用POST方式传输
+            dataType: "json", //数据格式:JSON
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=login', //目标地址
+            data: {
+               token:sessionStorage.token
+            },
+            error: function(data) {
+                alert_fun(data.msg)
+            },
+            success: function(data) {
+                if(data.error==0){
+                    sessionStorage.export_data=data.data
+                }else{
+                    alert_fun(data.msg)
+                }
+                // codeid = msg.codeid;
+
+            }
+        });
+    }
     export_data_function()
     function export_data_function(){
         // 成功登陆得到的数据
+        console.log(JSON.parse(sessionStorage.report_data))
+        var report_datas =JSON.parse(sessionStorage.report_data);
         // 问题1答案
-        export_list_function(all_type_data,export_data.course_object,"#export_training_object")
+        export_list_function(all_type_data,report_datas.course_object,"#export_training_object")
          // 问题2答案
-        export_list_function(all_type_data,export_data.list_object,"#export_investigation")
+        export_list_function(all_type_data,report_datas.list_object,"#export_investigation")
          // 问题3答案
-         export_list_function(course_data,export_data.filter,"#export_course")
+         export_list_function(course_data,report_datas.filter,"#export_course")
         // 问题4答案
-        export_list_function(company_type,export_data.company_type,"#export_company_type")
+        export_list_function(company_type,report_datas.company_type,"#export_company_type")
         // 问题5答案
-        export_list_function(duty_type,export_data.job_type,"#export_duty_type")
+        export_list_function(duty_type,report_datas.job_type,"#export_duty_type")
            
     } 
-    function export_list_function(data,export_data,li_id){
+    function export_list_function(data,report_datas,li_id){
         for(var m = 0;m<data.length;m++){
-            for(var n = 0;n<export_data.length;n++){
-                if(data[m].id ==export_data[n]){
+            for(var n = 0;n<report_datas.length;n++){
+                if(data[m].id ==report_datas[n]){
                     var li = $("<li>"+data[m].name+"</li>");
                     $(li_id).append(li)
                 }

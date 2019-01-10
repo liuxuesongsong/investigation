@@ -16,6 +16,12 @@ $(function(){
         }
 
     }
+    alert_fun = function(msg){
+        console.log(msg)
+        $(".main").fadeIn();
+        $("#alert_msg").html(msg)
+        setInterval(close, 3000);
+    }
     $("#close_alert_msg").click(function(){
         $(".main").fadeOut()
       })
@@ -23,8 +29,8 @@ $(function(){
         $(".main").fadeOut()
       }
     $("#again_investigation_submit").click(function(){
-       
-   
+        var report_datas =JSON.parse(sessionStorage.report_data);
+        console.log(report_datas.token)
         //问题1 checked_training_object_arr
         //问题2 checked_direction_arr
         //问题3 course_ids_arr
