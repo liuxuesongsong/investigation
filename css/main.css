@@ -131,6 +131,8 @@ input[type=checkbox] {
   -moz-appearance: none;
   appearance: none;
   position: relative;
+  display: block;
+  box-sizing: border-box;
   width: 12px;
   height: 12px;
   min-width: 12px;
@@ -143,35 +145,37 @@ input[type=checkbox] {
   position: relative; }
 
 input[type=checkbox]:after {
-  content: '●';
+  content: ' ';
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   position: absolute;
   display: block;
-  width: 3px;
-  height: 3px;
-  top: -1px;
+  width: 8px;
+  height: 8px;
+  top: 1px;
   left: 1px;
   min-width: 3px;
   min-height: 3px;
-  border-radius: 50%;
+  background-color: #5C89CC;
   color: #5C89CC;
   text-align: center;
   line-height: 12px;
   -webkit-transition: all ease-in-out 300ms;
   -moz-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  border-radius: 50%;
   opacity: 0; }
 
 input[type=checkbox]:checked:after {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   opacity: 1; }
+
+input[type=checkbox]:checked {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF; }
 
 .investigation_box {
   position: relative;
@@ -285,8 +289,6 @@ input[type=checkbox]:checked:after {
       width: 100%; }
     .investigation_child_direction_box .investigation_direction_message input {
       margin-top: 0.4em;
-      width: 14px;
-      height: 14px;
       float: left;
       margin-right: 2px; }
     .investigation_child_direction_box .investigation_direction_message label {
@@ -591,6 +593,12 @@ input[type=checkbox]:checked:after {
   margin-bottom: 2em;
   padding: 1em; }
 
+.investigation_start_info {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  padding: 0;
+  padding: 2em; }
+
 .investigation_training_object,
 .investigation_company_type_box,
 .investigation_direction,
@@ -695,13 +703,11 @@ input[type=checkbox]:checked:after {
 
 .content_message {
   float: left;
-  width: 20em;
+  width: 100%;
   font-size: 1em;
-  float: left;
   color: #5C89CC; }
 
-.enter_investigation,
-.login_investigation {
+.enter_investigation {
   font-size: 1.5em;
   float: left;
   text-align: center;
@@ -710,6 +716,14 @@ input[type=checkbox]:checked:after {
   padding: 0 0.5em;
   line-height: 2em;
   margin-top: 2em; }
+
+.login_investigation {
+  margin-left: 1em;
+  margin-top: 2.5em;
+  font-size: 1.5em;
+  float: left;
+  text-align: center;
+  color: #5C89CC; }
 
 .login_box {
   display: block;

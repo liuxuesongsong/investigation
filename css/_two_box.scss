@@ -14,8 +14,6 @@
         }
         input {
             margin-top: 0.4em;
-            width: 14px;
-            height: 14px;
             float: left;
             margin-right: 2px;
         }
@@ -138,8 +136,7 @@
     }
     .investigation_direction_message:nth-of-type(odd) {
         background-color: $background-color;
-    }
-    // .investigation_direction_message.is_leaf {
+    } // .investigation_direction_message.is_leaf {
     //     position: relative;
     //     background-color: $background-color;
     // }
