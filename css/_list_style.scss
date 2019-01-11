@@ -26,13 +26,16 @@
         box-sizing: border-box;
         float: left;
         line-height: 2em;
-        width: 30%;
         padding: 0 0.5em;
     }
 }
 
+.report_first_ul {
+    padding-left: 6.5em;
+}
+
 .report_third_ask {
-    ul {
+    .report_ul {
         padding: 0.2em;
         height: inherit;
         @extend .investigation_leaf_box;

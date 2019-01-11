@@ -27,6 +27,7 @@
     }
     .investigation_direction_message:nth-of-type(odd) {
         background-color: $background-color;
+     
     }
     .investigation_un_leaf_ul {
         float: left;
@@ -50,6 +51,7 @@
 }
 
 .investigation_direction_label {
+    line-height: 2em;
     button {
         background-color: $accent-color;
         color: $primary-color-text;
