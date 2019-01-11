@@ -58,6 +58,19 @@ $(function(){
 
     })
     $("#login_submit").click(function(){
+        if($("#login_telephone").val()==""){
+            $(".main").fadeIn();
+            $("#alert_msg").html("请输入姓名")
+            setInterval(close, 3000);
+            return false;
+        }
+       
+            if($("#login_code").val()==""){
+                $(".main").fadeIn();
+                $("#alert_msg").html("请输入姓名")
+                setInterval(close, 3000);
+                return false;
+            }
         console.log("登陆成功")
         $.ajax({
             type: "POST", //用POST方式传输
@@ -122,20 +135,23 @@ $(function(){
     // 
      report_data_function = function(){
         // 成功登陆得到的数据
-        var report_datas =JSON.parse(sessionStorage.report_data);
-        // 问题1答案
-        report_list_function(all_type_data,report_datas.student_type,"#report_training_object")
-         // 问题2答案
-        report_list_function(all_type_data,report_datas.course_type,"#report_investigation")
-         // 问题3答案
-         report_list_function(course_data,report_datas.course,"#report_course")
-        // 问题4答案
-        report_list_function(company_type,report_datas.company_type,"#report_company_type")
-        // 问题5答案
-        report_list_function(duty_type,report_datas.duty_type,"#report_duty_type")
+        if(sessionStorage.report_data!=undefined){
+            var report_datas =JSON.parse(sessionStorage.report_data);
+            // 问题1答案
+            report_list_function(all_type_data,report_datas.student_type,"#report_training_object")
+             // 问题2答案
+            report_list_function(all_type_data,report_datas.course_type,"#report_investigation")
+             // 问题3答案
+             report_list_function(course_data,report_datas.course,"#report_course")
+            // 问题4答案
+            report_list_function(company_type,report_datas.company_type,"#report_company_type")
+            // 问题5答案
+            report_list_function(duty_type,report_datas.duty_type,"#report_duty_type")
+        }
+      
            
     } 
-     report_data_function()
+    report_data_function()
     function report_list_function(data,report_datas,li_id){
         for(var m = 0;m<data.length;m++){
             for(var n = 0;n<report_datas.length;n++){
