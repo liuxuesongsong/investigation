@@ -67,13 +67,21 @@ $(function(){
                 // console.log(msg.codeid);
             },
             success: function(data) {
+                // send_courses(data.data.token)
+                // sessionStorage.token=data.data.token;
                 if(data.error==0){
+                    console.log(data.data.token)
                     send_courses(data.data.token)
                     sessionStorage.token=data.data.token;
                     // return_report_data()
                     // window.open("report.html","_self")
                 }else{
-                    alert_fun(data.msg)
+                    if(data.code==1030){
+                        window.open("login.html","_self")
+                    }else{
+                        alert_fun(data.msg)
+                    }
+                   
                 }
                 
                 // codeid = msg.codeid;
@@ -86,7 +94,7 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_data', //目标地址
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_courses', //目标地址
             data: {
                token:token,
                student_type:checked_training_object_arr,
@@ -102,7 +110,7 @@ $(function(){
             },
             success: function(data) {
                 if(data.error==0){
-                    sessionStorage.token=data.data.token;
+                    // sessionStorage.token=data.data.token;
                     return_report_data()
                     // window.open("report.html","_self")
                 }else{
