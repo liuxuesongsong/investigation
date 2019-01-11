@@ -340,7 +340,7 @@ body {
   .investigation_training_object_ul label {
     display: block; }
 
-.investigation_finish_btn button {
+.investigation_finish_btn button, .investigation_submit button {
   display: block;
   width: 6em;
   line-height: 2em;
@@ -651,7 +651,7 @@ body {
 .open_message.close {
   background-image: url(src/close.png); }
 
-.investigation_finish_btn {
+.investigation_finish_btn, .investigation_submit {
   color: #FFFFFF;
   background-color: #FC766A;
   text-align: center;
@@ -733,11 +733,6 @@ body {
     outline: none;
     float: left;
     line-height: 1em; }
-  .investigation_form_box .investigation_submit {
-    margin-top: 1em;
-    line-height: 2em;
-    width: 100%;
-    text-align: center; }
   .investigation_form_box label {
     position: relative;
     line-height: 2em; }
@@ -772,6 +767,16 @@ body {
     top: 0;
     color: #5C89CC;
     right: 1em; }
+
+.investigation_submit {
+  margin-top: 1em;
+  line-height: 2em;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2em;
+  width: 6em;
+  margin: auto; }
 
 .title_messgae {
   float: left;
