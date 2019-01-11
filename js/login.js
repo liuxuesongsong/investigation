@@ -62,7 +62,7 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=login', //目标地址
+            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_tel', //目标地址
             data: {
                 number: $("#login_telephone").val(),
                 code:$("#login_code").val()
@@ -131,7 +131,7 @@ $(function(){
         report_list_function(duty_type,report_datas.duty_type,"#report_duty_type")
            
     } 
-    // report_data_function()
+     report_data_function()
     function report_list_function(data,report_datas,li_id){
         for(var m = 0;m<data.length;m++){
             for(var n = 0;n<report_datas.length;n++){
