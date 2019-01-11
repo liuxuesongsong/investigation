@@ -40,6 +40,10 @@ $(function(){
         //
         //关闭问题1的选择。关闭3,4,5,提交的表单
         $("#training_object_message,#investigation_course,#investigation_company_type,#investigation_duty_type,#investigation_form").addClass("none");
+        //选择的个数信息更新
+        $("#selected_message_two_label,#selected_message_three_label,#selected_message_four_label").html("可以选多个")
+        $("#selected_message_two,#selected_message_three,#selected_message_four").html("")
+        $("#selected_message_five_label").html("单选")
         checked_training_object_arr=[];
         var check_training_object = document.getElementsByName("check_training_object");
         //选择问题1后显示选择信息

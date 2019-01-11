@@ -111,6 +111,10 @@ $("input:checkbox").click(function(){
  })  
 
  $("#filter_list").on("click",".filter_list_li", function filter_value_list_btn(){
+      //选择的个数信息更新
+      $("#selected_message_three_label,#selected_message_four_label").html("可以选多个")
+      $("#selected_message_three,#selected_message_four").html("")
+      $("#selected_message_five_label").html("单选")
      var filter_value_list_state=document.getElementsByClassName("filter_value_list");
     //  console.log($(".filter_value_list")[0][attr("data_state")])
       if($(this).attr("data_state")=="0"){

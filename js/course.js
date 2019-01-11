@@ -1,6 +1,9 @@
 $(function(){
     //点击问题3完成
     $("#course_btn").click(function(){
+        $("#selected_message_four_label").html("可以选多个")
+        $("#selected_message_four").html("")
+        $("#selected_message_five_label").html("单选")
         $("#reset_course").addClass("open")
         $("#reset_course").removeClass("close")
        //判断是否选中

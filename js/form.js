@@ -1,21 +1,24 @@
 $(function(){
     //判断选中
     $("#investigation_submit").click(function(){
-    //    if($("#account").val()==""){
-    //         $(".main").fadeIn();
-    //         $("#alert_msg").html("请输入姓名")
-    //         setInterval(close, 3000);
-    //    }
-    //    if($("#telephone").val()==""){
-    //         $(".main").fadeIn();
-    //         $("#alert_msg").html("请输入电话号码")
-    //         setInterval(close, 3000);
-    //      }
-    //     if($("#code").val()==""){
-    //         $(".main").fadeIn();
-    //         $("#alert_msg").html("请输入验证码")
-    //         setInterval(close, 3000);
-    //     }
+       if($("#account").val()==""){
+            $(".main").fadeIn();
+            $("#alert_msg").html("请输入姓名")
+            setInterval(close, 3000);
+            return false;
+       }
+       if($("#telephone").val()==""){
+            $(".main").fadeIn();
+            $("#alert_msg").html("请输入电话号码")
+            setInterval(close, 3000);
+            return false;
+         }
+        if($("#code").val()==""){
+            $(".main").fadeIn();
+            $("#alert_msg").html("请输入验证码")
+            setInterval(close, 3000);
+            return false;
+        }
    
         //问题1 checked_training_object_arr
         //问题2 checked_direction_arr
