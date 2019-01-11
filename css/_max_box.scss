@@ -38,7 +38,6 @@ body {
 }
 
 .investigation_box>div {
-    float: left;
     @media screen and (max-width: 768px) {
         width: calc(100% - 1.1em);
     }
@@ -49,10 +48,12 @@ body {
     content: ' ';
 }
 
-.investigation_box>div:nth-of-type(odd) {}
+.investigation_box>div:nth-of-type(odd) {
+    float: left;
+}
 
 .investigation_box>div:nth-of-type(even) {
-    clear: right;
+    float: right;
 }
 
 .investigation_training_object,
