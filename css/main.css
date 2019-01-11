@@ -72,6 +72,38 @@ button {
 div {
   box-sizing: border-box; }
 
+.none {
+  display: none; }
+
+.box {
+  width: 100%; }
+
+.main {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+  display: none;
+  position: fixed;
+  z-index: 1; }
+
+.mainbox {
+  width: 70%;
+  height: 100px;
+  top: 100px;
+  left: 10%;
+  margin: 0 auto;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px; }
+
+.kkk {
+  width: 100%; }
+
+.close {
+  color: red;
+  cursor: pointer; }
+
 input[type=radio] {
   /*去除浏览器默认样式*/
   -webkit-appearance: none;
