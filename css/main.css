@@ -69,6 +69,9 @@ button {
   outline: none;
   border: 0; }
 
+div {
+  box-sizing: border-box; }
+
 input[type=radio] {
   /*去除浏览器默认样式*/
   -webkit-appearance: none;
@@ -179,29 +182,26 @@ li {
   -moz-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms; }
 
+body {
+  background: linear-gradient(90deg, #71D4A5 0%, #71D4A5 30%, #f5f5f5 30%, #f5f5f5 100%); }
+
 .investigation_box {
   position: relative;
   padding-top: 1em; }
-  .investigation_box .investigation_box_bgcolor {
-    top: 0;
-    left: 0;
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 120vh;
-    z-index: -10; }
-    .investigation_box .investigation_box_bgcolor .investigation_box_left {
-      float: left;
-      display: block;
-      width: 30%;
-      height: 100%;
-      background-color: #71D4A5; }
-    .investigation_box .investigation_box_bgcolor .investigation_box_right {
-      float: left;
-      display: block;
-      width: 70%;
-      background: #f5f5f5;
-      height: 100%; }
+
+.investigation_box > div:nth-of-type(odd) {
+  float: left; }
+
+@media screen and (max-width: 768px) {
+  padding: 0;
+  padding-top: 1em; }
+@media screen and (max-width: 768px) {
+  padding-top: 1em;
+  padding-left: 10%;
+  padding-right: 10%; }
+.investigation_box::before {
+  display: table;
+  content: ' '; }
 
 .investigation_training_object_label {
   color: #5C89CC;
@@ -266,7 +266,7 @@ li {
     margin-right: 4px;
     float: left; }
   .investigation_training_object_ul label {
-    float: left; }
+    display: block; }
 
 .investigation_finish_btn button {
   display: block;
@@ -296,7 +296,7 @@ li {
       float: left;
       margin-right: 2px; }
     .investigation_child_direction_box .investigation_direction_message label {
-      float: left;
+      display: block;
       line-height: 2em; }
   .investigation_child_direction_box .investigation_direction_message:nth-of-type(odd) {
     background-color: #f5f5f5; }
@@ -329,7 +329,6 @@ li {
 
 .investigation_direction_box {
   display: block;
-  overflow: hidden;
   padding-left: 1em;
   padding-top: 2em;
   padding-bottom: 2em; }
@@ -382,7 +381,7 @@ li {
     .investigation_leaf_box .investigation_direction_message span:first-child, .report_third_ask ul .investigation_direction_message span:first-child {
       margin-left: 0.5em; }
     .investigation_leaf_box .investigation_direction_message label, .report_third_ask ul .investigation_direction_message label {
-      float: left; }
+      display: block; }
     .investigation_leaf_box .investigation_direction_message input, .report_third_ask ul .investigation_direction_message input {
       float: left;
       margin-left: 0.5em;
@@ -507,7 +506,7 @@ li {
     margin-top: 0.5em;
     margin-right: 2px; }
   .investigation_filter .investigation_course_ul label {
-    float: left;
+    display: block;
     line-height: 2em; }
 .investigation_filter .investigation_course_ul::-webkit-scrollbar {
   display: block;
@@ -540,7 +539,7 @@ li {
     .investigation_company_type_box .investigation_company_type_ul input {
       float: left; }
     .investigation_company_type_box .investigation_company_type_ul label {
-      float: left;
+      display: block;
       padding-left: 0.2em; }
   .investigation_company_type_box .investigation_company_type_ul li {
     padding-left: 0.8em;
@@ -649,7 +648,7 @@ li {
     line-height: 2em;
     border-radius: 0.5em; }
   .investigation_form_box label {
-    float: left;
+    display: block;
     width: 6em;
     text-align: left;
     box-sizing: border-box;
@@ -741,7 +740,7 @@ li {
   margin-top: 1em;
   margin-left: 1em;
   margin-right: 1px;
-  background-color: #f5f5f5;
+  background-color: #FFFFFF;
   color: #5C89CC;
   border-bottom: 1em solid #F1D661;
   margin-bottom: 5em; }
@@ -752,7 +751,7 @@ li {
     overflow: hidden;
     width: 100%;
     line-height: 2em;
-    background-color: #FFFFFF;
+    background-color: #f5f5f5;
     border-radius: 4px;
     margin-bottom: 0.5em; }
     .login_box .investigation_people_name input,
@@ -779,7 +778,9 @@ li {
     padding-left: 0.5em;
     border: none;
     outline: none;
-    float: left; }
+    float: left;
+    background: transparent;
+    width: calc(100% - 6em); }
   .login_box .investigation_submit {
     margin-top: 1em;
     line-height: 2em;
@@ -798,27 +799,22 @@ li {
     top: 2px;
     background-size: contain;
     background-repeat: no-repeat; }
-  .login_box .investigation_people_name input {
-    width: 17.5em; }
   .login_box .investigation_people_name label::before {
     background-image: url(src/name_logo-07.png); }
   .login_box .login_telephone_box label::before {
     background-image: url(src/phone_num-07.png); }
-  .login_box .login_telephone_box input {
-    width: 18em; }
   .login_box .login_code_box {
     position: relative; }
     .login_box .login_code_box label::before {
       background-image: url(src/code_log-07.png); }
-    .login_box .login_code_box #login_code {
-      width: 17.5em; }
   .login_box #login_get_code {
     background: transparent;
     position: absolute;
     opacity: 1;
     top: 0;
     color: #5C89CC;
-    right: 1em; }
+    right: 1em;
+    width: auto; }
 
 .report_title_box {
   font-size: 2em;
@@ -919,7 +915,7 @@ li {
       float: left;
       margin-top: 0.4em; }
     .investigation_company_duty_box .investigation_company_duty_ul label {
-      float: left;
+      display: block;
       line-height: 2em;
       padding-left: 0.2em; }
 

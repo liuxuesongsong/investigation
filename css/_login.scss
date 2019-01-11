@@ -7,7 +7,7 @@
     margin-top: 1em;
     margin-left: 1em;
     margin-right: 1px;
-    background-color: $background-color;
+    background-color: $primary-color-text;
     color: $primary-text-color;
     border-bottom: 1em solid $border_bottom-color;
     margin-bottom: 5em;
@@ -18,7 +18,7 @@
         overflow: hidden;
         width: 100%;
         line-height: 2em;
-        background-color: $primary-color-text;
+        background-color: $background-color;
         border-radius: 4px;
         margin-bottom: 0.5em;
         input {
@@ -52,6 +52,8 @@
         border: none;
         outline: none;
         float: left;
+        background: transparent;
+        width: calc(100% - 6em);
     }
     .investigation_submit {
         margin-top: 1em;
@@ -75,9 +77,6 @@
         background-repeat: no-repeat;
     }
     .investigation_people_name {
-        input {
-            width: 17.5em;
-        }
         label::before {
             background-image: url(src/name_logo-07.png);
         }
@@ -86,17 +85,11 @@
         label::before {
             background-image: url(src/phone_num-07.png);
         }
-        input {
-            width: 18em;
-        }
     }
     .login_code_box {
         position: relative;
         label::before {
             background-image: url(src/code_log-07.png);
-        }
-        #login_code {
-            width: 17.5em;
         }
     }
     #login_get_code {
@@ -106,5 +99,6 @@
         top: 0;
         color: $primary-color;
         right: 1em;
+        width: auto;
     }
 }
