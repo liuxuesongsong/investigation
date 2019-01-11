@@ -1,33 +1,6 @@
 $(function(){
     //判断选中
-     is_selected=function (name,msg){
-        is_selected_sum = 0;
-        var is_selected = document.getElementsByName(name);
-        for(var i = 0;i<is_selected.length;i++){
-            if(is_selected[i].checked){
-                is_selected_sum++;
-            }
-        }
-        if(is_selected_sum==0){
-            $(".main").fadeIn();
-            $("#alert_msg").html(msg)
-            setInterval(close, 3000);
-            // return false;
-        }
 
-    }
-    alert_fun = function(msg){
-        console.log(msg)
-        $(".main").fadeIn();
-        $("#alert_msg").html(msg)
-        setInterval(close, 3000);
-    }
-    $("#close_alert_msg").click(function(){
-        $(".main").fadeOut()
-      })
-       close = function(){
-        $(".main").fadeOut()
-      }
     $("#again_investigation_submit").click(function(){
         var report_datas =JSON.parse(sessionStorage.report_data);
         console.log(report_datas.token)

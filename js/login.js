@@ -77,6 +77,10 @@ $(function(){
                     get_report_data()
                 }else{
                     alert_fun(data.msg)
+                    if(data.code==1033){
+                        window.open("investigation.html","_self")  
+                    }
+                  
                 }
                 // codeid = msg.codeid;
 
