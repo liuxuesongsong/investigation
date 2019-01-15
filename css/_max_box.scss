@@ -32,6 +32,7 @@ body {
     }
 }
 
+
 .investigation_box::after {
     display: table;
     content: ' ';
@@ -43,17 +44,14 @@ body {
     }
 }
 
-.investigation_box>div:nth-of-type(odd)::after {
-    clear: both;
-    content: ' ';
-}
-
 .investigation_box>div:nth-of-type(odd) {
     float: left;
+    clear: left;
 }
 
 .investigation_box>div:nth-of-type(even) {
     float: right;
+    clear: right;
 }
 
 .investigation_training_object,

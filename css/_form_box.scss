@@ -39,8 +39,8 @@
         border-radius: 0.5em;
     }
     label {
-        display: block;
-        width: 6em;
+        float: left;
+        width: 5.5em;
         text-align: left;
         box-sizing: border-box;
         padding-left: 2em;
@@ -113,4 +113,8 @@
     line-height: 2em;
     width: 6em;
     margin: auto;
+}
+
+.submit_btn_box {
+    width: 100%;
 }
