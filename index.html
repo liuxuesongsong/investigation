@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>调查问卷</title>
-		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/language.js" type="text/javascript" charset="utf-8"></script>
-        
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-	<body>
-        <div class="investigation_start_info">
-            <div class="title_messgae" id="start_title">
-                
-            </div>
-            <div class="content_message" id="start_content">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>调查问卷</title>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/language.js" type="text/javascript" charset="utf-8"></script>
 
-            </div>
-            <p></p>
-            <a class="enter_investigation" id="start_btn" target="_self" href="investigation.html"></a>
-            <a class="login_investigation" id="selected_investigation" target="_self" href="login.html">我已填过该问卷</a>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="investigation_start_info">
+        <div class="title_messgae" id="start_title">
+
         </div>
-        
-    </body>
-    <script>
-    $(function(){
+        <div class="content_message" id="start_content">
+
+        </div>
+        <p></p>
+        <a class="enter_investigation" id="start_btn" target="_self" href="investigation.html"></a>
+
+    </div>
+    <div class="login_investigation_div"><span>我已填写完该问卷，</span><a class="login_investigation" id="selected_investigation"
+            target="_self" href="login.html">登录</a>
+        <span>
+            以查看表单以及重新填写 </span></div>
+
+</body>
+<script>
+    $(function () {
         $("#start_title").html(language.title)
         $("#start_content").html(language.content)
         $("#start_btn").html(language.start_btn)
     })
-    </script>
+</script>
 
 </html>

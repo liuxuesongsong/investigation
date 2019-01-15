@@ -246,19 +246,6 @@ body {
       padding-right: 20%;
       padding-top: 1em; } }
 
-@media screen and (min-width: 768px) and (max-width: 960px) {
-  .report_box {
-    margin-left: calc(40% - 15em); } }
-@media screen and (min-width: 960px) and (max-width: 1280px) {
-  .report_box {
-    margin-left: calc(40% - 15em); } }
-@media screen and (min-width: 1280px) and (max-width: 1440px) {
-  .report_box {
-    margin-left: calc(40% - 15em); } }
-@media screen and (min-width: 1440px) {
-  .report_box {
-    margin-left: calc(40% - 15em); } }
-
 .investigation_box::after {
   display: table;
   content: ' '; }
@@ -813,7 +800,7 @@ body {
   float: left;
   width: 20em;
   font-size: 1em;
-  color: #BAB7D4; }
+  color: #5C89CC; }
 
 .enter_investigation {
   font-size: 1.5em;
@@ -821,20 +808,30 @@ body {
   text-align: center;
   color: #FFFFFF;
   background-color: #FC766A;
-  padding: 0 0.5em;
+  padding: 0 1em;
   line-height: 2em;
   margin-top: 2em; }
 
-.login_investigation {
-  margin-left: 1em;
-  margin-top: 2.5em;
-  font-size: 1.5em;
-  float: left;
-  text-align: center;
-  color: #5C89CC; }
+.login_investigation_div {
+  overflow: hidden;
+  width: 30em; }
+  @media screen and (min-width: 768px) {
+    .login_investigation_div {
+      margin-left: calc(30% + 1em); } }
+  .login_investigation_div a {
+    float: left;
+    display: block;
+    line-height: 2em;
+    color: #FC766A; }
+  .login_investigation_div span {
+    line-height: 2em;
+    float: left;
+    color: #BAB7D4; }
+  .login_investigation_div span:first-child {
+    width: 100%; }
 
 .login_box {
-  display: block;
+  box-sizing: border-box;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   padding: 3em 2em 1em 2em;
@@ -846,6 +843,33 @@ body {
   color: #5C89CC;
   border-bottom: 1em solid #F1D661;
   margin-bottom: 5em; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .login_box {
+      margin: 0;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 1em; } }
+  @media screen and (min-width: 768px) {
+    .login_box {
+      width: 30em; } }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .login_box {
+      margin: 0;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 1em; } }
+  @media screen and (min-width: 1280px) and (max-width: 1440px) {
+    .login_box {
+      margin: 0;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-top: 1em; } }
+  @media screen and (min-width: 1440px) {
+    .login_box {
+      margin: 0;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 1em; } }
   .login_box .investigation_people_name,
   .login_box .login_telephone_box,
   .login_box .login_code_box {
@@ -917,6 +941,15 @@ body {
     color: #5C89CC;
     right: 1em;
     width: auto; }
+
+.login_back {
+  float: left;
+  line-height: 2em;
+  background-color: #FC766A;
+  color: #FFFFFF;
+  padding: 0 0.5em;
+  border-radius: 0.5em;
+  margin-bottom: 2em; }
 
 .report_title_box {
   font-size: 2em;
