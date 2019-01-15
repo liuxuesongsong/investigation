@@ -24,6 +24,11 @@
     margin-top: 2em;
 }
 
+.enter_investigation:hover {
+    color: $primary-color-text;
+    background-color: $primary-color;
+}
+
 // .login_investigation {
 //     margin-left: 1em;
 //     margin-top: 2.5em;
@@ -35,9 +40,7 @@
 .login_investigation_div {
     overflow: hidden;
     width: 30em;
-    @media screen and (min-width: 768px) {
-        margin-left:calc(30% + 1em);
-    }
+    margin-left: calc(30% + 1em);
     a {
         float: left;
         display: block;

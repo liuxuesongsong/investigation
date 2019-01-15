@@ -132,10 +132,37 @@
 
 .login_back {
     float: left;
+    width: 4em;
+    text-align: center;
     line-height: 2em;
     background-color: $accent-color;
     color: $primary-color-text;
     padding: 0 0.5em;
     border-radius: 0.5em;
+}
+
+.login_back {
+    margin: 0;
+    margin-top: 1em;
     margin-bottom: 2em;
+    @media screen and (max-width: 768px) {
+        margin-left: 2em;
+        margin-right: 100%;
+    }
+    @media screen and (min-width: 768px) and (max-width:960px) {
+        margin-left: 5%;
+        margin-right: 100%;
+    }
+    @media screen and (min-width: 960px) and (max-width:1280px) {
+        margin-left: 10%;
+        margin-right: 100%;
+    }
+    @media screen and (min-width:1280px) and (max-width:1440px) {
+        margin-left: 15%;
+        margin-right: 100%;
+    }
+    @media screen and (min-width:1440px) {
+        margin-left: 20%;
+        margin-right: 100%;
+    }
 }

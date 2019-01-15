@@ -45,8 +45,8 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: #cd0200;
-  text-decoration: underline; }
+  color: #FFFFFF;
+  text-decoration: none; }
 
 em {
   font-style: normal; }
@@ -684,7 +684,7 @@ body {
   padding: 2em; }
   @media screen and (min-width: 768px) {
     .investigation_start_info {
-      margin-left: calc(40% - 15em); } }
+      margin-left: calc(30% - 10em); } }
 
 .report_box {
   padding: 2em; }
@@ -812,12 +812,14 @@ body {
   line-height: 2em;
   margin-top: 2em; }
 
+.enter_investigation:hover {
+  color: #FFFFFF;
+  background-color: #5C89CC; }
+
 .login_investigation_div {
   overflow: hidden;
-  width: 30em; }
-  @media screen and (min-width: 768px) {
-    .login_investigation_div {
-      margin-left: calc(30% + 1em); } }
+  width: 30em;
+  margin-left: calc(30% + 1em); }
   .login_investigation_div a {
     float: left;
     display: block;
@@ -944,12 +946,38 @@ body {
 
 .login_back {
   float: left;
+  width: 4em;
+  text-align: center;
   line-height: 2em;
   background-color: #FC766A;
   color: #FFFFFF;
   padding: 0 0.5em;
-  border-radius: 0.5em;
+  border-radius: 0.5em; }
+
+.login_back {
+  margin: 0;
+  margin-top: 1em;
   margin-bottom: 2em; }
+  @media screen and (max-width: 768px) {
+    .login_back {
+      margin-left: 2em;
+      margin-right: 100%; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .login_back {
+      margin-left: 5%;
+      margin-right: 100%; } }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .login_back {
+      margin-left: 10%;
+      margin-right: 100%; } }
+  @media screen and (min-width: 1280px) and (max-width: 1440px) {
+    .login_back {
+      margin-left: 15%;
+      margin-right: 100%; } }
+  @media screen and (min-width: 1440px) {
+    .login_back {
+      margin-left: 20%;
+      margin-right: 100%; } }
 
 .report_title_box {
   font-size: 2em;
