@@ -19,6 +19,7 @@ fieldset,
 legend,
 input,
 textarea,
+button,
 select {
   margin: 0;
   padding: 0; }
