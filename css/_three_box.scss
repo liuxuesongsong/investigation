@@ -29,11 +29,11 @@
             overflow: hidden;
             margin-bottom: 1em;
             li {
-                border: 1px solid $accent-color;
+                border: 1px solid $third-color;
                 float: left;
                 line-height: 2em;
                 padding: 0 0.5em;
-                color: $secondary-text-color;
+                color: $third-color;
                 background-color: $primary-color-text;
             }
             li:first-child {
@@ -48,7 +48,7 @@
             }
             li.active {
                 background-color: $accent-color;
-                color: $primary-color-text;
+                color: $primary-color-text; // border-color: $accent-color;
             }
         }
     }
@@ -80,6 +80,7 @@
                 border-color: $primary-color-text;
             }
             input[type=checkbox]:after {
+                background-color: $primary-color-text;
                 color: $primary-color-text;
             }
         }

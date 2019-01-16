@@ -187,10 +187,10 @@ input[type=checkbox]:after {
   appearance: none;
   position: absolute;
   display: block;
-  width: 8px;
-  height: 8px;
-  top: 1px;
-  left: 1px;
+  width: 4px;
+  height: 4px;
+  top: 3px;
+  left: 3px;
   min-width: 3px;
   min-height: 3px;
   background-color: #5C89CC;
@@ -206,17 +206,13 @@ input[type=checkbox]:checked:after {
   border-radius: 50%;
   opacity: 1; }
 
-input[type=checkbox]:checked {
-  border-color: #FFFFFF;
-  background-color: #FFFFFF; }
-
 li {
   -webkit-transition: all ease-in-out 300ms;
   -moz-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms; }
 
 body {
-  background: linear-gradient(90deg, #71D4A5 0%, #71D4A5 30%, #f5f5f5 30%, #f5f5f5 100%); }
+  background: linear-gradient(90deg, #5C89CC 0%, #5C89CC 30%, #f5f5f5 30%, #f5f5f5 100%); }
 
 .investigation_box {
   position: relative;
@@ -296,7 +292,7 @@ body {
     float: left;
     font-size: 1em; }
   .investigation_reset_box span:first-child {
-    color: #FC766A; }
+    color: #9d9d9d; }
   .investigation_reset_box span:first-child {
     font-size: 1em; }
   .investigation_reset_box span:nth-of-type(2) {
@@ -311,12 +307,10 @@ body {
     margin-left: 4px; }
 
 .investigation_training_object_ul li {
-  background-color: #f5f5f5;
   color: #5C89CC; }
 
 .investigation_training_object_ul li.active {
-  background-color: #5C89CC;
-  color: #FFFFFF; }
+  background-color: #ededed; }
   .investigation_training_object_ul li.active input[type=checkbox] {
     background-color: #FFFFFF; }
 
@@ -331,8 +325,7 @@ body {
     margin-right: 0.5em;
     line-height: 2em;
     border-radius: 4px;
-    margin-bottom: 1em;
-    background-color: #f5f5f5; }
+    margin-bottom: 1em; }
   .investigation_training_object_ul input {
     margin-top: 6px;
     margin-right: 4px;
@@ -460,28 +453,28 @@ body {
       margin-left: 0.5em;
       margin-top: 0.9em;
       margin-right: 2px; }
-  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd), .report_third_ask .report_ul .investigation_direction_message:nth-of-type(odd) {
-    background-color: #f5f5f5; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf::before, .report_third_ask .report_ul .investigation_direction_message.is_leaf::before,
-  .investigation_leaf_box .investigation_direction_message.is_leaf::after,
-  .report_third_ask .report_ul .investigation_direction_message.is_leaf::after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 1em;
-    height: 1em;
-    border: 1px solid #5C89CC; }
-  .investigation_leaf_box .investigation_direction_message.active, .report_third_ask .report_ul .investigation_direction_message.active {
+  .investigation_leaf_box .investigation_direction_message.is_leaf, .report_third_ask .report_ul .investigation_direction_message.is_leaf {
+    padding-right: 3.5em; }
+    .investigation_leaf_box .investigation_direction_message.is_leaf span:first-child, .report_third_ask .report_ul .investigation_direction_message.is_leaf span:first-child {
+      float: right; }
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active, .report_third_ask .report_ul .investigation_direction_message.is_leaf.active {
     background-color: #5C89CC;
     color: #FFFFFF; }
-    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox], .report_third_ask .report_ul .investigation_direction_message.active input[type=checkbox] {
-      border-color: #FFFFFF; }
-    .investigation_leaf_box .investigation_direction_message.active input[type=checkbox]:after, .report_third_ask .report_ul .investigation_direction_message.active input[type=checkbox]:after {
-      color: #FFFFFF; }
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::before, .report_third_ask .report_ul .investigation_direction_message.is_leaf.active::before,
-  .investigation_leaf_box .investigation_direction_message.is_leaf.active::after,
-  .report_third_ask .report_ul .investigation_direction_message.is_leaf.active::after {
-    border-color: #FFFFFF; }
+  .investigation_leaf_box .investigation_direction_message:nth-of-type(odd), .report_third_ask .report_ul .investigation_direction_message:nth-of-type(odd) {
+    background-color: #f5f5f5; }
+  .investigation_leaf_box .investigation_direction_message.is_leaf::after, .report_third_ask .report_ul .investigation_direction_message.is_leaf::after {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-left: 1em solid #5C89CC;
+    border-top: 0.5em solid transparent;
+    border-bottom: 0.5em solid transparent; }
+  .investigation_leaf_box .investigation_direction_message.active input[type=checkbox]:after, .report_third_ask .report_ul .investigation_direction_message.active input[type=checkbox]:after {
+    color: #FFFFFF; }
+  .investigation_leaf_box .investigation_direction_message.is_leaf.active::after, .report_third_ask .report_ul .investigation_direction_message.is_leaf.active::after {
+    border-left-color: #FFFFFF; }
   .investigation_leaf_box .investigation_direction_message.is_leaf::before, .report_third_ask .report_ul .investigation_direction_message.is_leaf::before {
     right: 1.1em;
     top: 1em;
@@ -491,7 +484,7 @@ body {
     background-color: #5C89CC; }
   .investigation_leaf_box .investigation_direction_message.is_leaf::after, .report_third_ask .report_ul .investigation_direction_message.is_leaf::after {
     right: 1.5em;
-    top: 0.6em; }
+    top: 1em; }
 
 .investigation_child_direction_box {
   margin-bottom: 1em;
@@ -500,13 +493,7 @@ body {
     padding-left: 1em; }
 
 .investigation_direction_message.is_radio.active {
-  background-color: #5C89CC;
-  color: #FFFFFF;
   box-sizing: border-box; }
-  .investigation_direction_message.is_radio.active input[type=checkbox] {
-    border-color: #FFFFFF; }
-  .investigation_direction_message.is_radio.active input[type=checkbox]:after {
-    color: #FFFFFF; }
 
 .investigation_filter .investigation_course_title {
   color: #5C89CC;
@@ -532,11 +519,11 @@ body {
     overflow: hidden;
     margin-bottom: 1em; }
     .investigation_filter .interest_courses .filter_list_ul li {
-      border: 1px solid #FC766A;
+      border: 1px solid #9d9d9d;
       float: left;
       line-height: 2em;
       padding: 0 0.5em;
-      color: #FC766A;
+      color: #9d9d9d;
       background-color: #FFFFFF; }
     .investigation_filter .interest_courses .filter_list_ul li:first-child {
       margin-right: -1px;
@@ -574,6 +561,7 @@ body {
     .investigation_filter .investigation_course_ul li.active input[type=checkbox] {
       border-color: #FFFFFF; }
     .investigation_filter .investigation_course_ul li.active input[type=checkbox]:after {
+      background-color: #FFFFFF;
       color: #FFFFFF; }
   .investigation_filter .investigation_course_ul input {
     float: left;
@@ -623,18 +611,12 @@ body {
     margin-right: 0.5em;
     line-height: 2em;
     border-radius: 4px;
-    margin-bottom: 1em;
-    background-color: #f5f5f5; }
+    margin-bottom: 1em; }
     .investigation_company_type_box .investigation_company_type_ul li input {
       margin-top: 0.5em;
       margin-right: 4px; }
   .investigation_company_type_box .investigation_company_type_ul li.active {
-    background-color: #5C89CC;
-    color: #FFFFFF; }
-    .investigation_company_type_box .investigation_company_type_ul li.active input[type=checkbox] {
-      border-color: #FFFFFF; }
-    .investigation_company_type_box .investigation_company_type_ul li.active input[type=checkbox]:after {
-      color: #FFFFFF; }
+    background-color: #ededed; }
 
 .open_message {
   position: absolute;
@@ -655,7 +637,7 @@ body {
 
 .investigation_finish_btn, .investigation_submit {
   color: #FFFFFF;
-  background-color: #FC766A;
+  background-color: #5C89CC;
   text-align: center;
   width: 6em;
   line-height: 2em;
@@ -703,7 +685,7 @@ body {
   margin-left: 1em;
   margin-right: 1px;
   background-color: #f5f5f5;
-  color: #5C89CC;
+  color: #9d9d9d;
   border-bottom: 1em solid #F1D661;
   margin-bottom: 5em; }
   .investigation_form_box .investigation_people_name,
@@ -726,7 +708,6 @@ body {
     border: 0;
     outline: none;
     color: #FFFFFF;
-    background-color: #FC766A;
     line-height: 2em;
     border-radius: 0.5em; }
   .investigation_form_box label {
@@ -755,18 +736,22 @@ body {
     top: 2px;
     background-size: contain;
     background-repeat: no-repeat; }
+  .investigation_form_box .investigation_people_name label::before,
+  .investigation_form_box .investigation_people_tel label::before {
+    top: 5px;
+    left: 5px; }
   .investigation_form_box .investigation_people_name input {
     width: 17.5em; }
   .investigation_form_box .investigation_people_name label::before {
-    background-image: url(src/name_logo-07.png); }
+    background-image: url(src/form_09.png); }
   .investigation_form_box .investigation_people_tel label::before {
-    background-image: url(src/phone_num-07.png); }
+    background-image: url(src/form_10.png); }
   .investigation_form_box .investigation_people_tel input {
     width: 17.5em; }
   .investigation_form_box .investigation_people_code {
     position: relative; }
     .investigation_form_box .investigation_people_code label::before {
-      background-image: url(src/code_log-07.png); }
+      background-image: url(src/form_11.png); }
     .investigation_form_box .investigation_people_code .code {
       width: 17.5em; }
   .investigation_form_box .get_code {
@@ -774,18 +759,17 @@ body {
     position: absolute;
     opacity: 1;
     top: 0;
-    color: #5C89CC;
+    color: #9d9d9d;
     right: 1em; }
 
 .investigation_submit {
+  margin: auto;
   margin-top: 1em;
   line-height: 2em;
   width: 100%;
-  text-align: center;
   font-size: 1.5em;
-  line-height: 2em;
-  width: 6em;
-  margin: auto; }
+  text-align: center;
+  background-color: #5C89CC; }
 
 .submit_btn_box {
   width: 100%; }
@@ -928,14 +912,17 @@ body {
     top: 2px;
     background-size: contain;
     background-repeat: no-repeat; }
-  .login_box .investigation_people_name label::before {
-    background-image: url(src/name_logo-07.png); }
   .login_box .login_telephone_box label::before {
-    background-image: url(src/phone_num-07.png); }
+    top: 5px;
+    left: 5px; }
+  .login_box .investigation_people_name label::before {
+    background-image: url(src/form_09.png); }
+  .login_box .login_telephone_box label::before {
+    background-image: url(src/form_10.png); }
   .login_box .login_code_box {
     position: relative; }
     .login_box .login_code_box label::before {
-      background-image: url(src/code_log-07.png); }
+      background-image: url(src/form_11.png); }
   .login_box #login_get_code {
     background: transparent;
     position: absolute;
@@ -1066,16 +1053,9 @@ body {
       margin-right: 0.5em;
       line-height: 2em;
       border-radius: 4px;
-      margin-bottom: 1em;
-      background-color: #f5f5f5; }
+      margin-bottom: 1em; }
     .investigation_company_duty_box .investigation_company_duty_ul li.active {
-      background-color: #5C89CC;
-      color: #FFFFFF; }
-      .investigation_company_duty_box .investigation_company_duty_ul li.active input[type=radio] {
-        border-color: #FFFFFF;
-        background-color: #FFFFFF; }
-      .investigation_company_duty_box .investigation_company_duty_ul li.active input[type=radio]:after {
-        background-color: #FFFFFF; }
+      background-color: #ededed; }
     .investigation_company_duty_box .investigation_company_duty_ul input {
       float: left;
       margin-top: 0.4em;

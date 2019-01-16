@@ -34,20 +34,20 @@
         line-height: 2em;
         border-radius: 4px;
         margin-bottom: 1em;
-        background-color: $background-color;
+        // background-color: $background-color;
         input {
             margin-top: 0.5em;
             margin-right: 4px;
         }
     }
     .investigation_company_type_ul li.active {
-        background-color: $primary-color;
-        color: $primary-color-text;
-        input[type=checkbox] {
-            border-color: $primary-color-text;
-        }
-        input[type=checkbox]:after {
-            color: $primary-color-text;
-        }
+        background-color: $bgc-light;
+        // color: $primary-color-text;
+        // input[type=checkbox] {
+        //     border-color: $primary-color-text;
+        // }
+        // input[type=checkbox]:after {
+        //     color: $primary-color-text;
+        // }
     }
 }

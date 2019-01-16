@@ -103,20 +103,27 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+    
+    .login_telephone_box {
+        label::before {
+            top: 5px;
+            left: 5px;
+        }
+    }
     .investigation_people_name {
         label::before {
-            background-image: url(src/name_logo-07.png);
+            background-image: url(src/form_09.png);
         }
     }
     .login_telephone_box {
         label::before {
-            background-image: url(src/phone_num-07.png);
+            background-image: url(src/form_10.png);
         }
     }
     .login_code_box {
         position: relative;
         label::before {
-            background-image: url(src/code_log-07.png);
+            background-image: url(src/form_11.png);
         }
     }
     #login_get_code {

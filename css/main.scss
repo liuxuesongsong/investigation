@@ -34,18 +34,18 @@
             line-height: 2em;
             border-radius: 4px;
             margin-bottom: 1em;
-            background-color: $background-color;
+            // background-color: $background-color;
         }
         li.active {
-            background-color: $primary-color;
-            color: $primary-color-text;
-            input[type=radio] {
-                border-color: $primary-color-text;
-                background-color: $primary-color-text;
-            }
-            input[type=radio]:after {
-                background-color: $primary-color-text;
-            }
+            background-color: $bgc-light;
+            // color: $primary-color-text;
+            // input[type=radio] {
+            //     border-color: $primary-color-text;
+            //     background-color: $primary-color-text;
+            // }
+            // input[type=radio]:after {
+            //     background-color: $primary-color-text;
+            // }
         }
         input {
             float: left;

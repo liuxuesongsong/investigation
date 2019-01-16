@@ -138,34 +138,44 @@
             margin-right: 2px;
         }
     }
+    .investigation_direction_message.is_leaf {
+        padding-right: 3.5em;
+        span:first-child {
+            float: right;
+        }
+    }
+    .investigation_direction_message.is_leaf.active {
+        background-color: $primary-color;
+        color: $primary-color-text;
+    }
     .investigation_direction_message:nth-of-type(odd) {
         background-color: $background-color;
-    } // .investigation_direction_message.is_leaf {
+    } //  .investigation_direction_message.is_leaf {
     //     position: relative;
     //     background-color: $background-color;
     // }
-    .investigation_direction_message.is_leaf::before,
     .investigation_direction_message.is_leaf::after {
         position: absolute;
-        content: '';
+        content: ' ';
         display: block;
-        width: 1em;
-        height: 1em;
-        border: 1px solid $primary-text-color;
+        width: 0px;
+        height: 0px;
+        border-left: 1em solid $primary-color;
+        border-top: 0.5em solid transparent;
+        border-bottom: 0.5em solid transparent;
     }
     .investigation_direction_message.active {
-        background-color: $primary-color;
-        color: $primary-color-text;
-        input[type=checkbox] {
-            border-color: $primary-color-text;
-        }
+        // background-color: $third-color;
+        // color: $primary-color-text;
+        // input[type=checkbox] {
+        //     border-color: $primary-color-text;
+        // }
         input[type=checkbox]:after {
             color: $primary-color-text;
         }
     }
-    .investigation_direction_message.is_leaf.active::before,
     .investigation_direction_message.is_leaf.active::after {
-        border-color: $primary-color-text;
+        border-left-color: $primary-color-text;
     }
     .investigation_direction_message.is_leaf::before {
         right: 1.1em;
@@ -178,7 +188,7 @@
     }
     .investigation_direction_message.is_leaf::after {
         right: 1.5em;
-        top: 0.6em;
+        top: 1em;
     }
 }
 
@@ -191,13 +201,11 @@
 }
 
 .investigation_direction_message.is_radio.active {
-    background-color: #5C89CC;
-    color: #FFFFFF;
-    box-sizing: border-box;
-    input[type=checkbox] {
-        border-color: #FFFFFF;
-    }
-    input[type=checkbox]:after {
-        color: #FFFFFF;
-    }
+    // color: #FFFFFF;
+    box-sizing: border-box; // input[type=checkbox] {
+    //     border-color: #FFFFFF;
+    // }
+    // input[type=checkbox]:after {
+    //     color: #FFFFFF;
+    // }
 }
