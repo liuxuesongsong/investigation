@@ -274,11 +274,19 @@ body {
   color: #5C89CC;
   overflow: hidden;
   line-height: 2em; }
-  .investigation_training_object_label span:first-child {
-    font-size: 1.5em; }
+  .investigation_training_object_label span,
+  .investigation_training_object_label dd {
+    float: left; }
+  .investigation_training_object_label dd {
+    color: #9d9d9d;
+    padding-right: 0.5em; }
   .investigation_training_object_label button {
     background-color: #FC766A;
     color: #FFFFFF; }
+
+.investigation_training_object_label > span {
+  padding-left: 0.5em;
+  font-size: 1.5em; }
 
 .investigation_training_object {
   padding-bottom: 1em; }
@@ -389,10 +397,17 @@ body {
 
 .investigation_direction_label {
   color: #5C89CC; }
-  .investigation_direction_label span {
-    font-size: 1.5em; }
   .investigation_direction_label .investigation_reset_box span {
     font-size: 1em; }
+  .investigation_direction_label span,
+  .investigation_direction_label dd {
+    float: left; }
+  .investigation_direction_label dd {
+    color: #9d9d9d;
+    padding-right: 0.5em; }
+
+.investigation_direction_label > span {
+  font-size: 1.5em; }
 
 .investigation_direction_box {
   padding-left: 1em;
@@ -497,12 +512,17 @@ body {
 
 .investigation_filter .investigation_course_title {
   color: #5C89CC;
-  line-height: 2em; }
+  line-height: 2em;
+  overflow: hidden; }
   .investigation_filter .investigation_course_title button {
     background-color: #FC766A;
     color: #FFFFFF; }
-  .investigation_filter .investigation_course_title .investigation_reset_box span,
-  .investigation_filter .investigation_course_title .investigation_reset_box lable {
+  .investigation_filter .investigation_course_title dd, .investigation_filter .investigation_course_title span {
+    float: left; }
+  .investigation_filter .investigation_course_title dd {
+    padding-right: 0.5em;
+    color: #9d9d9d; }
+  .investigation_filter .investigation_course_title .investigation_reset_box span {
     font-size: 1em; }
 .investigation_filter .investigation_course_title > span,
 .investigation_filter lable {
@@ -587,6 +607,12 @@ body {
   .investigation_company_type_box .investigation_company_type_title {
     line-height: 2em;
     overflow: hidden; }
+    .investigation_company_type_box .investigation_company_type_title dd,
+    .investigation_company_type_box .investigation_company_type_title span {
+      float: left; }
+    .investigation_company_type_box .investigation_company_type_title dd {
+      color: #9d9d9d;
+      padding-right: 0.5em; }
   .investigation_company_type_box .investigation_company_type_title > span {
     font-size: 1.5em; }
   .investigation_company_type_box .investigation_company_type_ul {
@@ -1039,6 +1065,12 @@ body {
   background-color: #FFFFFF; }
   .investigation_company_duty_box .investigation_duty_type_title {
     overflow: hidden; }
+    .investigation_company_duty_box .investigation_duty_type_title dd,
+    .investigation_company_duty_box .investigation_duty_type_title span {
+      float: left; }
+    .investigation_company_duty_box .investigation_duty_type_title dd {
+      padding-right: 0.5em;
+      color: #9d9d9d; }
   .investigation_company_duty_box .investigation_duty_type_title > span {
     font-size: 1.5em; }
   .investigation_company_duty_box .investigation_company_duty_ul {

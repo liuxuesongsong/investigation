@@ -17,6 +17,14 @@
     background-color: $primary-color-text;
     .investigation_duty_type_title {
         overflow: hidden;
+        dd,
+        span {
+            float: left;
+        }
+        dd {
+            padding-right: 0.5em;
+            color: $third-color;
+        }
     }
     .investigation_duty_type_title>span {
         font-size: 1.5em;
@@ -33,12 +41,10 @@
             margin-right: 0.5em;
             line-height: 2em;
             border-radius: 4px;
-            margin-bottom: 1em;
-            // background-color: $background-color;
+            margin-bottom: 1em; // background-color: $background-color;
         }
         li.active {
-            background-color: $bgc-light;
-            // color: $primary-color-text;
+            background-color: $bgc-light; // color: $primary-color-text;
             // input[type=radio] {
             //     border-color: $primary-color-text;
             //     background-color: $primary-color-text;

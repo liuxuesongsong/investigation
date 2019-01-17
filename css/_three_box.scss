@@ -2,17 +2,30 @@
     .investigation_course_title {
         color: $primary-text-color;
         line-height: 2em;
+        overflow: hidden;
         button {
             background-color: $accent-color;
             color: $primary-color-text;
         }
+        dd,span{
+            float: left;
+        }
+        dd{
+            padding-right: 0.5em;
+            color: $third-color;
+        }
         .investigation_reset_box {
             span,
-            lable {
+            {
                 font-size: 1em;
             }
         }
+
     }
+    .investigation_course_title>span{
+        
+    }
+    
     .investigation_course_title>span,
     lable {
         font-size: 1.5em

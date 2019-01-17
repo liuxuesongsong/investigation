@@ -59,14 +59,23 @@
 
 .investigation_direction_label {
     color: $primary-color;
-    span {
-        font-size: 1.5em
-    }
     .investigation_reset_box {
         span {
             font-size: 1em;
         }
     }
+    span,
+    dd {
+        float: left;
+    }
+    dd {
+        color: $third-color;
+        padding-right: 0.5em;
+    }
+}
+
+.investigation_direction_label>span {
+    font-size: 1.5em
 }
 
 .investigation_direction_box {

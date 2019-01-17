@@ -2,13 +2,23 @@
     color: $primary-text-color;
     overflow: hidden;
     line-height: 2em;
-    span:first-child {
-        font-size: 1.5em
+    span,
+    dd {
+        float: left;
+    }
+    dd {
+        color: $third-color;
+        padding-right: 0.5em;
     }
     button {
         background-color: $accent-color;
         color: $primary-color-text;
     }
+}
+
+.investigation_training_object_label>span {
+    padding-left: 0.5em;
+    font-size: 1.5em
 }
 
 .investigation_training_object {
@@ -52,8 +62,7 @@
     background-color: $bgc-light;
     input[type=checkbox] {
         background-color: $primary-color-text;
-    }
-    // color: $primary-color-text;
+    } // color: $primary-color-text;
 }
 
 .investigation_training_object_ul {
@@ -67,8 +76,7 @@
         margin-right: 0.5em;
         line-height: 2em;
         border-radius: 4px;
-        margin-bottom: 1em;
-        // background-color: $background-color;
+        margin-bottom: 1em; // background-color: $background-color;
     }
     input {
         margin-top: 6px;

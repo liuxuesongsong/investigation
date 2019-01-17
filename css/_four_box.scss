@@ -3,6 +3,14 @@
     .investigation_company_type_title {
         line-height: 2em;
         overflow: hidden;
+        dd,
+        span {
+            float: left;
+        }
+        dd {
+            color: $third-color;
+            padding-right: 0.5em;
+        }
     }
     .investigation_company_type_title>span {
         font-size: 1.5em;
@@ -33,16 +41,14 @@
         margin-right: 0.5em;
         line-height: 2em;
         border-radius: 4px;
-        margin-bottom: 1em;
-        // background-color: $background-color;
+        margin-bottom: 1em; // background-color: $background-color;
         input {
             margin-top: 0.5em;
             margin-right: 4px;
         }
     }
     .investigation_company_type_ul li.active {
-        background-color: $bgc-light;
-        // color: $primary-color-text;
+        background-color: $bgc-light; // color: $primary-color-text;
         // input[type=checkbox] {
         //     border-color: $primary-color-text;
         // }
