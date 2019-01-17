@@ -31,6 +31,10 @@
     border-radius: 4px;
 }
 
+.investigation_finish_btn:hover {
+    background-color: $accent-color;
+}
+
 // 卡片共同样式
 .investigation_training_object,
 .investigation_direction,

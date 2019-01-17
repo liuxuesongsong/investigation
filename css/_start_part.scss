@@ -18,17 +18,19 @@
     float: left;
     text-align: center;
     color: $primary-color-text;
-    background-color: $accent-color;
+    background-color: $primary-color;
     padding: 0 1em;
     line-height: 2em;
     margin-top: 2em;
 }
 
 .enter_investigation:hover {
-    color: $primary-color-text;
-    background-color: $primary-color;
+    background-color: $accent-color;
 }
 
+.enter_investigation:active {
+    background-color: $accent-color;
+}
 // .login_investigation {
 //     margin-left: 1em;
 //     margin-top: 2.5em;

@@ -671,6 +671,9 @@ body {
   margin: auto;
   border-radius: 4px; }
 
+.investigation_finish_btn:hover, .investigation_submit:hover {
+  background-color: #FC766A; }
+
 .investigation_training_object,
 .investigation_direction,
 .investigation_filter,
@@ -735,7 +738,7 @@ body {
     outline: none;
     color: #FFFFFF;
     line-height: 2em;
-    border-radius: 0.5em; }
+    border-radius: 4px; }
   .investigation_form_box label {
     float: left;
     width: 5.5em;
@@ -818,14 +821,16 @@ body {
   float: left;
   text-align: center;
   color: #FFFFFF;
-  background-color: #FC766A;
+  background-color: #5C89CC;
   padding: 0 1em;
   line-height: 2em;
   margin-top: 2em; }
 
 .enter_investigation:hover {
-  color: #FFFFFF;
-  background-color: #5C89CC; }
+  background-color: #FC766A; }
+
+.enter_investigation:active {
+  background-color: #FC766A; }
 
 .login_investigation_div {
   overflow: hidden;
@@ -1042,7 +1047,7 @@ body {
   margin-left: 3em;
   font-size: 1.5em;
   color: #FFFFFF;
-  background-color: #FC766A;
+  background-color: #5C89CC;
   line-height: 2em;
   padding: 0 0.5em; }
 
@@ -1057,7 +1062,7 @@ body {
   font-size: 1.5em;
   line-height: 2em;
   color: #FFFFFF;
-  background-color: #FC766A; }
+  background-color: #5C89CC; }
 
 .investigation_company_duty_box {
   padding-bottom: 1em;
