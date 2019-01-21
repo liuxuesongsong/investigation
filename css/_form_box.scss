@@ -75,9 +75,6 @@
         }
     }
     .investigation_people_name {
-        input {
-            width: 17.5em;
-        }
         label::before {
             background-image: url(src/form_09.png);
         }
@@ -86,17 +83,11 @@
         label::before {
             background-image: url(src/form_10.png);
         }
-        input {
-            width: 17.5em;
-        }
     }
     .investigation_people_code {
         position: relative;
         label::before {
             background-image: url(src/form_11.png);
-        }
-        .code {
-            width: 17.5em;
         }
     }
     .get_code {

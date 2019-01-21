@@ -38,7 +38,8 @@ $(function(){
             dataType: "json", //数据格式:JSON
             url: 'http://192.168.4.69/index.php?m=survey&c=code&a=commit', //目标地址
             data: {
-                number: mobile
+                number: mobile,
+                act_token: getCookie("token")
             },
             error: function(data) {
                 alert_fun(data.msg)

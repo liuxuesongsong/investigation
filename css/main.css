@@ -769,20 +769,14 @@ body {
   .investigation_form_box .investigation_people_tel label::before {
     top: 5px;
     left: 5px; }
-  .investigation_form_box .investigation_people_name input {
-    width: 17.5em; }
   .investigation_form_box .investigation_people_name label::before {
     background-image: url(src/form_09.png); }
   .investigation_form_box .investigation_people_tel label::before {
     background-image: url(src/form_10.png); }
-  .investigation_form_box .investigation_people_tel input {
-    width: 17.5em; }
   .investigation_form_box .investigation_people_code {
     position: relative; }
     .investigation_form_box .investigation_people_code label::before {
       background-image: url(src/form_11.png); }
-    .investigation_form_box .investigation_people_code .code {
-      width: 17.5em; }
   .investigation_form_box .get_code {
     background: transparent;
     position: absolute;
@@ -908,7 +902,7 @@ body {
     border: 0;
     outline: none;
     color: #FFFFFF;
-    background-color: #FC766A;
+    background-color: #5C89CC;
     line-height: 2em;
     border-radius: 0.5em; }
   .login_box label {
@@ -1083,11 +1077,11 @@ body {
     margin-top: 1em;
     padding-left: 1em; }
     .investigation_company_duty_box .investigation_company_duty_ul li {
-      padding-left: 0.8em;
+      padding-left: 0.2em;
       float: left;
-      width: 31%;
+      width: 32%;
       box-sizing: border-box;
-      margin-right: 0.5em;
+      margin-right: 0.2em;
       line-height: 2em;
       border-radius: 4px;
       margin-bottom: 1em; }
@@ -1101,5 +1095,7 @@ body {
       display: block;
       line-height: 2em;
       padding-left: 0.2em; }
+    .investigation_company_duty_box .investigation_company_duty_ul .duty_type_box1 {
+      width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

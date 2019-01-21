@@ -31,14 +31,15 @@ $(function(){
         btn.disabled = true; //将按钮置为不可点击
         btn.value = count + '秒后可重新获取';
         clock = setInterval(doLoop, 1000); //一秒执行一次
-
+        // console.log(token);
         //向后台发送处理数据
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
             url: 'http://192.168.4.69/index.php?m=survey&c=code&a=commit', //目标地址
             data: {
-                number: mobile
+                number: mobile,
+                act_token: getCookie("token")
             },
             error: function(data) {
                 is_selected("check_duty_type",data.msg)
@@ -78,7 +79,8 @@ $(function(){
             url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_tel', //目标地址
             data: {
                 number: $("#login_telephone").val(),
-                code:$("#login_code").val()
+                code:$("#login_code").val(),
+                act_token: getCookie("token")
             },
             error: function(data) {
                 alert_fun(data.msg)
@@ -111,7 +113,8 @@ $(function(){
             dataType: "json", //数据格式:JSON
             url: 'http://192.168.4.69/index.php?m=survey&c=code&a=see', //目标地址
             data: {
-               token:sessionStorage.token
+               token:sessionStorage.token,
+               act_token: getCookie("token")
             },
             error: function(data) {
                 alert_fun(data.msg)
