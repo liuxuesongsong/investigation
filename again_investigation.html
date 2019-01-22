@@ -1,145 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>调查问卷</title>
-		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/training_object.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/direction.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/course.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/company_type.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/reset.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/get_code.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/again_form.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/type.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/filter.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/login.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/report_data.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-	<body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>调查问卷</title>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/get_token.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/training_object.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/direction.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/course.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/company_type.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/reset.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/get_code.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/again_form.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/datas.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/type.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/filter.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/report_data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-        <div class="investigation_box">
-            
-                <!-- <a id="selected_investigation" target="_self" href="login.html">我已填过该问卷</a> -->
-            
-                <!-- <button id="selected_investigation">
+<body>
+
+    <div class="investigation_box">
+
+        <!-- <a id="selected_investigation" target="_self" href="login.html">我已填过该问卷</a> -->
+
+        <!-- <button id="selected_investigation">
                 
             </button> -->
-            <!-- 问题1 -->
-            <div id="training_object_box" class="investigation_training_object">
-                <div id="select_training_object" class="investigation_training_object_label">
-                    <span>第1/5题 请选择培训的对象</span>
-                    <div class="investigation_reset_box">
-                        <span id="selected_message_one_label">可以选多个</span>
-                        <span id="selected_message_one"></span>
-                    </div>
-                   
+        <!-- 问题1 -->
+        <div id="training_object_box" class="investigation_training_object">
+            <div id="select_training_object" class="investigation_training_object_label">
+                <span>第1/5题 请选择培训的对象</span>
+                <div class="investigation_reset_box">
+                    <span id="selected_message_one_label">可以选多个</span>
+                    <span id="selected_message_one"></span>
                 </div>
-                <div id="training_object_message">
-                    <ul id="training_object_ul" class="investigation_training_object_ul">
-                    </ul>
-                    <button class="investigation_finish_btn" id="training_object_btn">完成</button>
-                </div>
-                <div id="reset_training_object" class="open_message close"></div>
+
             </div>
-             <!-- 问题2 -->
-            <div id="investigation_direction" class="investigation_direction none">
-                <div id="select_direction" class="investigation_direction_label">
-                    <span>第2/5题 请选择需要的课程方向</span>
-                    <div class="investigation_reset_box">
-                        <span id="selected_message_two_label">可以选多个</span>
-                        <span id="selected_message_two"></span>
-                    </div>
-                   
-                </div>
-                <div id="direction_message" class="investigation_direction_box">
-                    <div id="direction_box" class="investigation_leaf_box">
-                    </div>
-                    <div id="child_direction_box" class="investigation_child_direction_box">
-                            <!-- <div>子方向</div> -->
-                    </div>
-                    <button class="investigation_finish_btn" id="direction_btn">完成</button>
-                </div>
-                <div id="reset_direction" class="open_message close"></div>
+            <div id="training_object_message">
+                <ul id="training_object_ul" class="investigation_training_object_ul">
+                </ul>
+                <button class="investigation_finish_btn" id="training_object_btn">完成</button>
             </div>
-             <!-- 问题3 -->
-            <div id="investigation_course" class="investigation_filter none">
-                <div id="select_course" class="investigation_course_title">
-                    <span>第3/5题 请选择感兴趣的课程</span>
-                    <div class="investigation_reset_box">
-                        <span id="selected_message_three_label">可以选多个</span>
-                        <span id="selected_message_three"></span>
-                    </div>
-                    
-                </div>
-                <div id="course_message">
-                    <div id="filter_list" class="interest_courses">
-                    </div>
-                    <ul id="investigation_course_ul" class="investigation_course_ul">
-                    </ul> 
-                    <button class="investigation_finish_btn" id="course_btn">完成</button>
-                </div>
-                <div id="reset_course" class="open_message close"></div>
-            </div>
-            <!-- 问题4 -->
-            <div id="investigation_company_type" class="investigation_company_type_box none">
-                <div id="select_company_type" class="investigation_company_type_title">
-                        <span>第4/5题 请选择您的企业战略类型</span>
-                        <div class="investigation_reset_box">
-                            <span id="selected_message_four_label">可以选多个</span>
-                            <span id="selected_message_four"></span>
-                        </div>
-                </div>
-                <div id="company_type_message">
-                    <ul id="investigation_company_type_ul" class="investigation_company_type_ul">
-                    </ul>
-                    <button class="investigation_finish_btn" id="company_type_btn">
-                        完成
-                    </button>
-                </div>
-                <div id="reset_company_type" class="open_message close"></div>
-            </div>
-              <!-- 问题5 -->
-            <div id="investigation_duty_type" class="investigation_company_duty_box none">
-                <div id="select_duty_type" class="investigation_duty_type_title">
-                    <span>第5/5题 请选择您本人在公司的职务类型</span>
-                    <div class="investigation_reset_box">
-                        <span id="selected_message_five_label">单选</span>
-                        <span id="selected_message_five"></span>
-                    </div>
-                </div>
-               <div id="duty_type_message" class="duty_type_box1">
-                    <ul id="investigation_duty_type_ul" class="investigation_company_duty_ul">
-                    </ul>
-                    <button class="investigation_finish_btn" id="duty_type_btn">
-                        完成
-                    </button>
-               </div>
-               <div id="reset_duty_type" class="open_message close"></div>
-            </div>
-             <!-- 提交的表单 -->
-           <div id="investigation_form" class="submit_btn_box none">
-                
-                <button id="again_investigation_submit" class="investigation_submit">提交</button>
-           </div>
+            <div id="reset_training_object" class="open_message close"></div>
         </div>
-        <div class="main">
-            <div class="mainbox">
-              <div id="alert_msg" class="close"></div>
-              <button id="close_alert_msg">确定</button>
+        <!-- 问题2 -->
+        <div id="investigation_direction" class="investigation_direction none">
+            <div id="select_direction" class="investigation_direction_label">
+                <span>第2/5题 请选择需要的课程方向</span>
+                <div class="investigation_reset_box">
+                    <span id="selected_message_two_label">可以选多个</span>
+                    <span id="selected_message_two"></span>
+                </div>
+
             </div>
-          </div>
-        <div class="box">
-          <div class="kkk">
+            <div id="direction_message" class="investigation_direction_box">
+                <div id="direction_box" class="investigation_leaf_box">
+                </div>
+                <div id="child_direction_box" class="investigation_child_direction_box">
+                    <!-- <div>子方向</div> -->
+                </div>
+                <button class="investigation_finish_btn" id="direction_btn">完成</button>
+            </div>
+            <div id="reset_direction" class="open_message close"></div>
+        </div>
+        <!-- 问题3 -->
+        <div id="investigation_course" class="investigation_filter none">
+            <div id="select_course" class="investigation_course_title">
+                <span>第3/5题 请选择感兴趣的课程</span>
+                <div class="investigation_reset_box">
+                    <span id="selected_message_three_label">可以选多个</span>
+                    <span id="selected_message_three"></span>
+                </div>
+
+            </div>
+            <div id="course_message">
+                <div id="filter_list" class="interest_courses">
+                </div>
+                <ul id="investigation_course_ul" class="investigation_course_ul">
+                </ul>
+                <button class="investigation_finish_btn" id="course_btn">完成</button>
+            </div>
+            <div id="reset_course" class="open_message close"></div>
+        </div>
+        <!-- 问题4 -->
+        <div id="investigation_company_type" class="investigation_company_type_box none">
+            <div id="select_company_type" class="investigation_company_type_title">
+                <span>第4/5题 请选择您的企业战略类型</span>
+                <div class="investigation_reset_box">
+                    <span id="selected_message_four_label">可以选多个</span>
+                    <span id="selected_message_four"></span>
+                </div>
+            </div>
+            <div id="company_type_message">
+                <ul id="investigation_company_type_ul" class="investigation_company_type_ul">
+                </ul>
+                <button class="investigation_finish_btn" id="company_type_btn">
+                    完成
+                </button>
+            </div>
+            <div id="reset_company_type" class="open_message close"></div>
+        </div>
+        <!-- 问题5 -->
+        <div id="investigation_duty_type" class="investigation_company_duty_box none">
+            <div id="select_duty_type" class="investigation_duty_type_title">
+                <span>第5/5题 请选择您本人在公司的职务类型</span>
+                <div class="investigation_reset_box">
+                    <span id="selected_message_five_label">单选</span>
+                    <span id="selected_message_five"></span>
+                </div>
+            </div>
+            <div id="duty_type_message" class="duty_type_box1">
+                <ul id="investigation_duty_type_ul" class="investigation_company_duty_ul">
+                </ul>
+                <button class="investigation_finish_btn" id="duty_type_btn">
+                    完成
+                </button>
+            </div>
+            <div id="reset_duty_type" class="open_message close"></div>
+        </div>
+        <!-- 提交的表单 -->
+        <div id="investigation_form" class="submit_btn_box none">
+
+            <button id="again_investigation_submit" class="investigation_submit">提交</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainbox">
+            <div id="alert_msg" class="close"></div>
+            <button id="close_alert_msg">确定</button>
+        </div>
+    </div>
+    <div class="box">
+        <div class="kkk">
             <!-- <input class="btn" type="button" value="点击淡入弹窗" /> -->
-          </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
