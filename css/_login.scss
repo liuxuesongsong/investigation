@@ -62,7 +62,7 @@
         border: 0;
         outline: none;
         color: $primary-color-text;
-        background-color:$primary-color;
+        background-color: $primary-color;
         line-height: 2em;
         border-radius: 0.5em;
     }
@@ -80,7 +80,6 @@
         outline: none;
         float: left;
         background: transparent;
-        width: calc(100% - 6em);
     }
     .investigation_submit {
         margin-top: 1em;
@@ -103,7 +102,6 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
-    
     .login_telephone_box {
         label::before {
             top: 5px;
