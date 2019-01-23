@@ -29,7 +29,7 @@ $(document).ready(function () {
     $.ajax({
         type: "post",
         async: false,
-        url: "http://192.168.4.69/index.php?m=survey&c=code&a=index",
+        url: "https://api.csst.com.cn/index.php?m=survey&c=code&a=index",
         dataType: "json",
         data: {
             "act_token": token

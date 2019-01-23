@@ -917,8 +917,7 @@ body {
     border: none;
     outline: none;
     float: left;
-    background: transparent;
-    width: calc(100% - 6em); }
+    background: transparent; }
   .login_box .investigation_submit {
     margin-top: 1em;
     line-height: 2em;

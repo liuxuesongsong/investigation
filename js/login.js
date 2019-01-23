@@ -36,7 +36,7 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=commit', //目标地址
+            url: 'https://api.csst.com.cn/index.php?m=survey&c=code&a=commit', //目标地址
             data: {
                 number: mobile,
                 act_token: getCookie("token")
@@ -76,7 +76,7 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=send_tel', //目标地址
+            url: 'https://api.csst.com.cn/index.php?m=survey&c=code&a=send_tel', //目标地址
             data: {
                 number: $("#login_telephone").val(),
                 code:$("#login_code").val(),
@@ -111,7 +111,7 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=see', //目标地址
+            url: 'https://api.csst.com.cn/index.php?m=survey&c=code&a=see', //目标地址
             data: {
                token:sessionStorage.token,
                act_token: getCookie("token")

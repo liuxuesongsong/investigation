@@ -36,7 +36,7 @@ $(function(){
         $.ajax({
             type: "POST", //用POST方式传输
             dataType: "json", //数据格式:JSON
-            url: 'http://192.168.4.69/index.php?m=survey&c=code&a=commit', //目标地址
+            url: 'https://api.csst.com.cn/index.php?m=survey&c=code&a=commit', //目标地址
             data: {
                 number: mobile,
                 act_token: getCookie("token")
